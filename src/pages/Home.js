@@ -1,8 +1,15 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
+import HeroSection from '../components/HeroSection';
+import { FiServer, FiUsers, FiGrid } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+
+const gradient = "radial-gradient(ellipse 90% 70% at 20% 20%, #181f2a 60%, #6e2ff4 80%, #e94f4f 100%, #ffb347 120%)";
 
 const Home = () => {
   return (
     <div>
+      <Navbar />
       <div className="hero-section">
         <div className="hero-bg"></div>
         <div className="container hero-content">
@@ -24,6 +31,54 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <section className="retail-media-cloud-section">
+        <div className="retail-media-cloud-header">
+          <div className="retail-media-cloud-logo-title">
+            <img src="https://uploads-ssl.webflow.com/5e6b6b2f6e7a6e2b7c7e7e7e/5e6b6b2f6e7a6e2b7c7e7e7e_Raneen One-logo.svg" alt="Retail Media Cloud Logo" className="retail-media-cloud-logo" />
+            <span className="retail-media-cloud-title">retail media cloud<sup>®</sup></span>
+          </div>
+        </div>
+        <div className="retail-media-cloud-cards">
+          <Link className="retail-media-cloud-card" to="/ad-server">
+            <div className='retail-card-header'>
+              <div className="retail-media-cloud-card-icon"><FiServer size={36} /></div>
+              <div className='retail-card-subheader'>
+                <div className="retail-media-cloud-card-title">Raneen One Ad Server</div>
+                <div className="retail-media-cloud-card-subtitle">Flexible ad serving platform</div>
+              </div>
+            </div>
+            <div className="retail-media-cloud-card-desc">
+              Our suite of ad serving APIs powers ad decisioning, campaign management, reporting, and catalog ingestion with advanced ML and AI. Manage all of your owned inventory on-site, in-app, or in-store in one place.
+            </div>
+          </Link>
+          <Link className="retail-media-cloud-card" to="/audience">
+            <div className='retail-card-header'>
+              <div className="retail-media-cloud-card-icon"><FiUsers size={36} /></div>
+              <div className='retail-card-subheader'>
+                <div className="retail-media-cloud-card-title">Raneen One Audience</div>
+                <div className="retail-media-cloud-card-subtitle">AI audience segmentation tool</div>
+              </div>
+            </div>
+            <div className="retail-media-cloud-card-desc">
+              Our audience segmentation tool harnesses your first-party data into a single customer view for AI-powered segmentation, audience activation, and ad personalization. Push segments anywhere in your network, onsite or offsite.
+            </div>
+          </Link>
+          <Link className="retail-media-cloud-card" to="/console">
+            <div className='retail-card-header'>
+              <div className="retail-media-cloud-card-icon"><FiGrid size={36} /></div>
+              <div className='retail-card-subheader'>
+                <div className="retail-media-cloud-card-title">Raneen One Console</div>
+                <div className="retail-media-cloud-card-subtitle">Campaign management UI</div>
+              </div>
+            </div>
+            <div className="retail-media-cloud-card-desc">
+              Our out-of-the-box omnichannel campaign management user interface with AI automation features and self-service capabilities to help you scale your retail media network from day one.
+            </div>
+          </Link>
+        </div>
+      </section>
+
       <section className="trusted-by">
         <div className="container trusted-logos">
           <img src="https://dummyimage.com/120x40/ff6600/fff&text=Orange+Apron" alt="Orange Apron Media" />
@@ -36,6 +91,12 @@ const Home = () => {
           <img src="https://dummyimage.com/120x40/ff0000/fff&text=iFood" alt="iFood" />
         </div>
       </section>
+
+      <footer className="footer">
+        <div className="container">
+          <p>&copy; 2024 Raneen One. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 };
