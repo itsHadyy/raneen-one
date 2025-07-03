@@ -1,10 +1,8 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
       <div className="hero-section">
         <div className="hero-bg"></div>
         <div className="container hero-content">

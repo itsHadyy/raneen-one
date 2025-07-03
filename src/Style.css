@@ -16,27 +16,39 @@ body {
 
 #root > div {
   border-radius: 24px;
-  margin: 16px;
+  margin: 20px;
   box-shadow: 0 8px 40px 0 rgba(0,0,0,0.18);
   background: linear-gradient(120deg, rgba(13,27,42,0.98) 60%, rgba(110,47,244,0.7) 100%);
   overflow: hidden;
+  height: 90vh;
 }
 
 .container {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 0 48px;
 }
 
 .header {
-  background: rgba(18, 22, 34, 0.82);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 24px 0 0 0;
-  position: sticky;
-  top: 0;
+  background: transparent;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  transition: background 0.3s, box-shadow 0.3s, backdrop-filter 0.3s;
+  box-shadow: none;
+  padding: 24px 0;
+  position: fixed;
+  top: 20px;
   z-index: 10;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  width: 90%;
+  left: 5%;
+  border-radius: 20px;
+}
+
+.header.scrolled {
+  background: #ffffff44;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+  border: 1px solid #ffffff44;
 }
 
 .nav-container {
@@ -144,7 +156,7 @@ body {
   z-index: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse 90% 70% at 20% 20%, #181f2a 60%, #6e2ff4 80%, #e94f4f 100%, #ffb347 120%);
+  background: var(--hero-gradient, radial-gradient(ellipse 90% 70% at 20% 20%, #181f2a 60%, #6e2ff4 80%, #e94f4f 100%, #ffb347 120%));
   background-size: 200% 200%;
   animation: moveGradientBody 18s ease-in-out infinite alternate;
   opacity: 0.78;
