@@ -1,13 +1,69 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import NavDropdown from './NavDropdown';
+import { FiZap, FiBookOpen, FiTool, FiHeart, FiChevronDown } from 'react-icons/fi';
+
+const NAV_ITEMS = [
+  { label: 'Products', link: '#' },
+  { label: 'Solutions', link: '#' },
+  {
+    label: 'Developers',
+    dropdown: [
+      {
+        icon: <FiZap size={24} color="#181f2a" />,
+        title: 'API Quickstart',
+        desc: 'Test the API in just minutes',
+        link: '/api-quickstart'
+      },
+      {
+        icon: <FiBookOpen size={24} color="#181f2a" />,
+        title: 'Knowledge Base',
+        desc: 'Docs about the platform',
+        link: '/knowledge-base'
+      },
+      {
+        icon: <FiTool size={24} color="#181f2a" />,
+        title: 'Tools & Libraries',
+        desc: 'Pre-built tools',
+        link: '/tools',
+        flyout: [
+          { title: 'SDKs', link: '/tools/sdks' },
+          { title: 'CLI', link: '/tools/cli' }
+        ]
+      },
+      {
+        icon: <FiHeart size={24} color="#181f2a" />,
+        title: 'API Status',
+        desc: 'Real-time updates on API uptimes',
+        link: '/api-status'
+      }
+    ]
+  },
+  { label: 'Customers', link: '#' },
+  { label: 'Resources', link: '#' },
+  { label: 'Company', link: '#' }
+];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openFlyout, setOpenFlyout] = useState(null);
+  const navRefs = useRef([]);
+  const closeTimeout = useRef();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  // Dropdown open/close handlers with delay
+  const handleDropdownOpen = idx => {
+    clearTimeout(closeTimeout.current);
+    setOpenDropdown(idx);
+  };
+  const handleDropdownClose = () => {
+    closeTimeout.current = setTimeout(() => setOpenDropdown(null), 120);
+  };
 
   return (
     <header className={`header${scrolled ? ' scrolled' : ''}`}>
@@ -20,12 +76,35 @@ const Navbar = () => {
           Raneen <span>One</span>
         </div>
         <nav className="nav">
-          <a href="#">Products</a>
-          <a href="#">Solutions</a>
-          <a href="#">Developers</a>
-          <a href="#">Customers</a>
-          <a href="#">Resources</a>
-          <a href="#">Company</a>
+          {NAV_ITEMS.map((item, idx) => {
+            const hasDropdown = !!item.dropdown;
+            const isOpen = openDropdown === idx;
+            return (
+              <div
+                key={item.label}
+                className={`nav-item-wrapper${isOpen ? ' nav-item-open' : ''}`}
+                onMouseEnter={() => hasDropdown ? handleDropdownOpen(idx) : setOpenDropdown(null)}
+                onMouseLeave={hasDropdown ? handleDropdownClose : undefined}
+                onFocus={() => hasDropdown ? handleDropdownOpen(idx) : setOpenDropdown(null)}
+                onBlur={hasDropdown ? handleDropdownClose : undefined}
+                tabIndex={0}
+                ref={el => navRefs.current[idx] = el}
+                style={{ position: 'relative', display: 'inline-block' }}
+              >
+                <a href={item.link || '#'} className="nav-link">
+                  {item.label}
+                  {hasDropdown && <FiChevronDown style={{ marginLeft: 6, verticalAlign: 'middle' }} size={18} />}
+                </a>
+                {hasDropdown && isOpen && (
+                  <NavDropdown
+                    items={item.dropdown}
+                    openFlyout={openFlyout}
+                    setOpenFlyout={setOpenFlyout}
+                  />
+                )}
+              </div>
+            );
+          })}
         </nav>
         <div className="header-actions">
           <button className="icon-btn" aria-label="Search">
