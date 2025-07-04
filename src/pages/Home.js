@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import { FiServer, FiUsers, FiGrid } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import AIDrivenRetailMediaSection from '../components/AIDrivenRetailMediaSection';
+import BusinessSolutionsSection from '../components/BusinessSolutionsSection';
 
 const gradient = "radial-gradient(ellipse 90% 70% at 20% 20%, #181f2a 60%, #6e2ff4 80%, #e94f4f 100%, #ffb347 120%)";
 
@@ -31,6 +33,19 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <section className="trusted-by">
+        <div className="container trusted-logos">
+          <img src="https://dummyimage.com/120x40/ff6600/fff&text=Orange+Apron" alt="Orange Apron Media" />
+          <img src="https://dummyimage.com/120x40/222/fff&text=PayPal" alt="PayPal" />
+          <img src="https://dummyimage.com/120x40/ffe135/222&text=Dollar+General" alt="Dollar General" />
+          <img src="https://dummyimage.com/120x40/ff69b4/fff&text=Lyft" alt="Lyft" />
+          <img src="https://dummyimage.com/120x40/0077ff/fff&text=Chewy" alt="Chewy" />
+          <img src="https://dummyimage.com/120x40/ff0033/fff&text=MC+Sonae" alt="MC Sonae" />
+          <img src="https://dummyimage.com/120x40/008000/fff&text=El+Corte+Ingles" alt="El Corte Ingles" />
+          <img src="https://dummyimage.com/120x40/ff0000/fff&text=iFood" alt="iFood" />
+        </div>
+      </section>
 
       <section className="retail-media-cloud-section">
         <div className="retail-media-cloud-header">
@@ -79,24 +94,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="trusted-by">
-        <div className="container trusted-logos">
-          <img src="https://dummyimage.com/120x40/ff6600/fff&text=Orange+Apron" alt="Orange Apron Media" />
-          <img src="https://dummyimage.com/120x40/222/fff&text=PayPal" alt="PayPal" />
-          <img src="https://dummyimage.com/120x40/ffe135/222&text=Dollar+General" alt="Dollar General" />
-          <img src="https://dummyimage.com/120x40/ff69b4/fff&text=Lyft" alt="Lyft" />
-          <img src="https://dummyimage.com/120x40/0077ff/fff&text=Chewy" alt="Chewy" />
-          <img src="https://dummyimage.com/120x40/ff0033/fff&text=MC+Sonae" alt="MC Sonae" />
-          <img src="https://dummyimage.com/120x40/008000/fff&text=El+Corte+Ingles" alt="El Corte Ingles" />
-          <img src="https://dummyimage.com/120x40/ff0000/fff&text=iFood" alt="iFood" />
-        </div>
-      </section>
-
-      <footer className="footer">
-        <div className="container">
-          <p>&copy; 2024 Raneen One. All rights reserved.</p>
-        </div>
-      </footer>
+      <AIDrivenRetailMediaSection />
+      <BusinessSolutionsSection />
     </div>
   );
 };
