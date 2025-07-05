@@ -96,6 +96,145 @@ const Home = () => {
 
       <AIDrivenRetailMediaSection />
       <BusinessSolutionsSection />
+
+      <section className="retail-media-cloud-section">
+        <div className="retail-media-cloud-header">
+          <div className="retail-media-cloud-logo-title">
+            <img src="https://uploads-ssl.webflow.com/5e6b6b2f6e7a6e2b7c7e7e7e/5e6b6b2f6e7a6e2b7c7e7e7e_Raneen One-logo.svg" alt="Retail Media Cloud Logo" className="retail-media-cloud-logo" />
+            <span className="retail-media-cloud-title">retail media cloud<sup>®</sup></span>
+          </div>
+        </div>
+        <div className="retail-media-cloud-cards">
+          <Link className="retail-media-cloud-card" to="/ad-server">
+            <div className='retail-card-header'>
+              <div className="retail-media-cloud-card-icon"><FiServer size={36} /></div>
+              <div className='retail-card-subheader'>
+                <div className="retail-media-cloud-card-title">Raneen One Ad Server</div>
+                <div className="retail-media-cloud-card-subtitle">Flexible ad serving platform</div>
+              </div>
+            </div>
+            <div className="retail-media-cloud-card-desc">
+              Our suite of ad serving APIs powers ad decisioning, campaign management, reporting, and catalog ingestion with advanced ML and AI. Manage all of your owned inventory on-site, in-app, or in-store in one place.
+            </div>
+          </Link>
+          <Link className="retail-media-cloud-card" to="/audience">
+            <div className='retail-card-header'>
+              <div className="retail-media-cloud-card-icon"><FiUsers size={36} /></div>
+              <div className='retail-card-subheader'>
+                <div className="retail-media-cloud-card-title">Raneen One Audience</div>
+                <div className="retail-media-cloud-card-subtitle">AI audience segmentation tool</div>
+              </div>
+            </div>
+            <div className="retail-media-cloud-card-desc">
+              Our audience segmentation tool harnesses your first-party data into a single customer view for AI-powered segmentation, audience activation, and ad personalization. Push segments anywhere in your network, onsite or offsite.
+            </div>
+          </Link>
+          <Link className="retail-media-cloud-card" to="/console">
+            <div className='retail-card-header'>
+              <div className="retail-media-cloud-card-icon"><FiGrid size={36} /></div>
+              <div className='retail-card-subheader'>
+                <div className="retail-media-cloud-card-title">Raneen One Console</div>
+                <div className="retail-media-cloud-card-subtitle">Campaign management UI</div>
+              </div>
+            </div>
+            <div className="retail-media-cloud-card-desc">
+              Our out-of-the-box omnichannel campaign management user interface with AI automation features and self-service capabilities to help you scale your retail media network from day one.
+            </div>
+          </Link>
+        </div>
+      </section>
+      <section className="retail-media-cloud-section">
+        <div className="retail-media-cloud-header">
+          <div className="retail-media-cloud-logo-title">
+            <img src="https://uploads-ssl.webflow.com/5e6b6b2f6e7a6e2b7c7e7e7e/5e6b6b2f6e7a6e2b7c7e7e7e_Raneen One-logo.svg" alt="Retail Media Cloud Logo" className="retail-media-cloud-logo" />
+            <span className="retail-media-cloud-title">retail media cloud<sup>®</sup></span>
+          </div>
+        </div>
+        <div className="retail-media-cloud-cards">
+          <Link className="retail-media-cloud-card" to="/ad-server">
+            <div className='retail-card-header'>
+              <div className="retail-media-cloud-card-icon"><FiServer size={36} /></div>
+              <div className='retail-card-subheader'>
+                <div className="retail-media-cloud-card-title">Raneen One Ad Server</div>
+                <div className="retail-media-cloud-card-subtitle">Flexible ad serving platform</div>
+              </div>
+            </div>
+            <div className="retail-media-cloud-card-desc">
+              Our suite of ad serving APIs powers ad decisioning, campaign management, reporting, and catalog ingestion with advanced ML and AI. Manage all of your owned inventory on-site, in-app, or in-store in one place.
+            </div>
+          </Link>
+          <Link className="retail-media-cloud-card" to="/audience">
+            <div className='retail-card-header'>
+              <div className="retail-media-cloud-card-icon"><FiUsers size={36} /></div>
+              <div className='retail-card-subheader'>
+                <div className="retail-media-cloud-card-title">Raneen One Audience</div>
+                <div className="retail-media-cloud-card-subtitle">AI audience segmentation tool</div>
+              </div>
+            </div>
+            <div className="retail-media-cloud-card-desc">
+              Our audience segmentation tool harnesses your first-party data into a single customer view for AI-powered segmentation, audience activation, and ad personalization. Push segments anywhere in your network, onsite or offsite.
+            </div>
+          </Link>
+          <Link className="retail-media-cloud-card" to="/console">
+            <div className='retail-card-header'>
+              <div className="retail-media-cloud-card-icon"><FiGrid size={36} /></div>
+              <div className='retail-card-subheader'>
+                <div className="retail-media-cloud-card-title">Raneen One Console</div>
+                <div className="retail-media-cloud-card-subtitle">Campaign management UI</div>
+              </div>
+            </div>
+            <div className="retail-media-cloud-card-desc">
+              Our out-of-the-box omnichannel campaign management user interface with AI automation features and self-service capabilities to help you scale your retail media network from day one.
+            </div>
+          </Link>
+        </div>
+      </section>
+      <section className="retail-media-cloud-section">
+        <div className="retail-media-cloud-header">
+          <div className="retail-media-cloud-logo-title">
+            <img src="https://uploads-ssl.webflow.com/5e6b6b2f6e7a6e2b7c7e7e7e/5e6b6b2f6e7a6e2b7c7e7e7e_Raneen One-logo.svg" alt="Retail Media Cloud Logo" className="retail-media-cloud-logo" />
+            <span className="retail-media-cloud-title">retail media cloud<sup>®</sup></span>
+          </div>
+        </div>
+        <div className="retail-media-cloud-cards">
+          <Link className="retail-media-cloud-card" to="/ad-server">
+            <div className='retail-card-header'>
+              <div className="retail-media-cloud-card-icon"><FiServer size={36} /></div>
+              <div className='retail-card-subheader'>
+                <div className="retail-media-cloud-card-title">Raneen One Ad Server</div>
+                <div className="retail-media-cloud-card-subtitle">Flexible ad serving platform</div>
+              </div>
+            </div>
+            <div className="retail-media-cloud-card-desc">
+              Our suite of ad serving APIs powers ad decisioning, campaign management, reporting, and catalog ingestion with advanced ML and AI. Manage all of your owned inventory on-site, in-app, or in-store in one place.
+            </div>
+          </Link>
+          <Link className="retail-media-cloud-card" to="/audience">
+            <div className='retail-card-header'>
+              <div className="retail-media-cloud-card-icon"><FiUsers size={36} /></div>
+              <div className='retail-card-subheader'>
+                <div className="retail-media-cloud-card-title">Raneen One Audience</div>
+                <div className="retail-media-cloud-card-subtitle">AI audience segmentation tool</div>
+              </div>
+            </div>
+            <div className="retail-media-cloud-card-desc">
+              Our audience segmentation tool harnesses your first-party data into a single customer view for AI-powered segmentation, audience activation, and ad personalization. Push segments anywhere in your network, onsite or offsite.
+            </div>
+          </Link>
+          <Link className="retail-media-cloud-card" to="/console">
+            <div className='retail-card-header'>
+              <div className="retail-media-cloud-card-icon"><FiGrid size={36} /></div>
+              <div className='retail-card-subheader'>
+                <div className="retail-media-cloud-card-title">Raneen One Console</div>
+                <div className="retail-media-cloud-card-subtitle">Campaign management UI</div>
+              </div>
+            </div>
+            <div className="retail-media-cloud-card-desc">
+              Our out-of-the-box omnichannel campaign management user interface with AI automation features and self-service capabilities to help you scale your retail media network from day one.
+            </div>
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };

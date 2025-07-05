@@ -53,7 +53,8 @@ body {
 
 .header.scrolled .nav-link,
 .header.scrolled .nav,
-.header.scrolled .icon-btn {
+.header.scrolled .icon-btn,
+.header.scrolled .logo {
   color: var(--primary-color) !important;
 }
 

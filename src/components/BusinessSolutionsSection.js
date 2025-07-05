@@ -14,7 +14,7 @@ const businessTypes = [
     ],
     testimonial: 'By utilizing Raneen One’s flexible, API-based solution, we have enacted the basis for scalability and advancement of our Retail Media network while enhancing our ability to create custom ad experiences that resonate with our customers.',
     author: 'Natalie Ong, Director of DG Media Network Operations (Dollar General)',
-    image: 'https://images.unsplash.com/photo-1515168833906-d2a3b82b1e6c?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80',
   },
   {
     key: 'marketplaces',
@@ -77,41 +77,92 @@ const businessTypes = [
 const BusinessSolutionsSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
+  const [panelState, setPanelState] = useState('top'); // 'top', 'fixed', 'bottom'
   const imageRefs = useRef([]);
+  const sectionRef = useRef(null);
+  const panelRef = useRef(null);
   const prevIndex = useRef(0);
 
   useEffect(() => {
-    const handleIntersect = (entries) => {
-      let maxRatio = 0;
-      let visibleIdx = 0;
-      entries.forEach((entry) => {
-        if (entry.intersectionRatio > maxRatio) {
-          maxRatio = entry.intersectionRatio;
-          visibleIdx = Number(entry.target.dataset.idx);
-        }
+    const handleScroll = () => {
+      if (!sectionRef.current || !panelRef.current) return;
+      const sectionRect = sectionRef.current.getBoundingClientRect();
+      const panelHeight = panelRef.current.offsetHeight;
+      const viewportHeight = window.innerHeight;
+      const scrollY = window.scrollY;
+      const sectionTopAbs = sectionRef.current.offsetTop;
+      const sectionHeight = sectionRef.current.offsetHeight;
+      const sectionBottomAbs = sectionTopAbs + sectionHeight;
+      const buffer = 1; // 1px buffer to prevent flicker
+
+      // Calculate the scroll position where the panel should be fixed and centered
+      const fixedStart = sectionTopAbs - (viewportHeight / 2) + (panelHeight / 2);
+      const fixedEnd = sectionBottomAbs - (viewportHeight / 2) - (panelHeight / 2);
+
+      // Debug log
+      console.log({
+        scrollY,
+        fixedStart,
+        fixedEnd,
+        panelState,
+        sectionTopAbs,
+        sectionBottomAbs,
+        panelHeight,
+        viewportHeight
       });
-      if (visibleIdx !== prevIndex.current) {
-        setAnimating(true);
-        setTimeout(() => setAnimating(false), 400);
-        prevIndex.current = visibleIdx;
+
+      if (scrollY <= fixedStart) {
+        setPanelState('top');
+      } else if (scrollY >= fixedEnd) {
+        setPanelState('bottom');
+      } else {
+        setPanelState('fixed');
       }
-      setActiveIndex(visibleIdx);
+
+      // Only update active index if in section
+      if (scrollY + viewportHeight > sectionTopAbs && scrollY < sectionBottomAbs) {
+        let foundIdx = 0;
+        imageRefs.current.forEach((ref, i) => {
+          if (ref) {
+            const rect = ref.getBoundingClientRect();
+            const refTop = rect.top + scrollY;
+            const refCenter = refTop + rect.height / 2;
+            if (scrollY + viewportHeight / 2 >= refCenter) {
+              foundIdx = i;
+            }
+          }
+        });
+        if (foundIdx !== prevIndex.current) {
+          setAnimating(true);
+          setTimeout(() => setAnimating(false), 400);
+          prevIndex.current = foundIdx;
+        }
+        setActiveIndex(foundIdx);
+      }
     };
-    const observer = new window.IntersectionObserver(handleIntersect, {
-      root: null,
-      rootMargin: '0px',
-      threshold: Array.from({ length: 101 }, (_, i) => i / 100),
-    });
-    imageRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-    return () => observer.disconnect();
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Panel style logic
+  let panelStyle = {};
+  if (panelState === 'top') {
+    panelStyle = { position: 'absolute', top: 0, left: 0 };
+  } else if (panelState === 'fixed') {
+    panelStyle = { position: 'fixed', left: 0 };
+  } else if (panelState === 'bottom') {
+    panelStyle = { position: 'absolute', bottom: 0, left: 0 };
+  }
+
   return (
-    <section className="business-solutions-section">
-      <div className="business-solutions-inner">
-        <div className="business-solutions-sticky-panel">
+    <div className="business-solutions-section-magnetic-parent" ref={sectionRef}>
+      <section className="business-solutions-section magnetic">
+        <div
+          className={`business-solutions-fixed-panel active panel-${panelState}`}
+          ref={panelRef}
+          style={panelStyle}
+        >
           <div className="business-solutions-header-sticky">
             <h2>Solutions for every type of business</h2>
           </div>
@@ -128,15 +179,15 @@ const BusinessSolutionsSection = () => {
               ))}
             </div>
             <div className="business-solutions-testimonial">
-              <div className="business-solutions-quote">“{businessTypes[activeIndex].testimonial}”</div>
+              <div className="business-solutions-quote">"{businessTypes[activeIndex].testimonial}"</div>
               <div className="business-solutions-author">{businessTypes[activeIndex].author}</div>
             </div>
           </div>
         </div>
-        <div className="business-solutions-image-stack">
+        <div className="business-solutions-image-stack-scroll">
           {businessTypes.map((bt, i) => (
             <div
-              className="business-solutions-image-wrapper"
+              className={`business-solutions-image-snap${activeIndex === i ? ' active' : ''}`}
               key={bt.key}
               ref={el => (imageRefs.current[i] = el)}
               data-idx={i}
@@ -145,8 +196,8 @@ const BusinessSolutionsSection = () => {
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

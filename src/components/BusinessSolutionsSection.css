@@ -1,32 +1,92 @@
 .business-solutions-section {
-  width: 100%;
   background: #fff;
-  margin: 0;
   padding: 0;
 }
 
 .business-solutions-inner {
   display: flex;
   align-items: flex-start;
-  max-width: 1400px;
   margin: 0 auto;
   min-height: 120vh;
-  /* DO NOT set overflow here! */
 }
 
-.business-solutions-sticky-panel {
-  position: sticky;
-  top: 0;
+.business-solutions-section-magnetic-parent {
+  position: relative;
+  margin: 28px;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.business-solutions-fixed-panel {
+  width: 48vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   background: #fff;
   z-index: 2;
-  padding: 0 0 0 7vw;
-  min-width: 320px;
-  max-width: 600px;
-  flex: 0 0 48%;
+  padding-left: 32px;
+  box-sizing: border-box;
+  transition: none;
+}
+
+.business-solutions-fixed-panel[style*="fixed"],
+.business-solutions-fixed-panel[style*="absolute"][style*="bottom"],
+.business-solutions-fixed-panel[style*="absolute"][style*="top"] {
+  box-shadow: none;
+  transform: none;
+}
+
+.business-solutions-fixed-panel.panel-top {
+  justify-content: flex-start;
+  top: 0;
+  bottom: auto;
+  transform: none;
+}
+.business-solutions-fixed-panel.panel-fixed {
+  justify-content: center;
+  top: 50%;
+  bottom: auto;
+  left: 0;
+  position: fixed !important;
+  transform: translateY(-50%);
+}
+.business-solutions-fixed-panel.panel-bottom {
+  justify-content: flex-end;
+  top: auto;
+  bottom: 0;
+  transform: none;
+}
+
+.business-solutions-image-stack-scroll {
+  margin-left: 40vw;
+  width: 52vw;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  scroll-snap-type: y mandatory;
+  padding-top: 0;
+}
+
+.business-solutions-image-snap:first-child {
+  margin-top: 0;
+}
+
+.business-solutions-image-snap {
+  min-height: 60vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  scroll-snap-align: start;
+  opacity: 0.5;
+  transform: scale(0.97) translateY(30px);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+.business-solutions-image-snap.active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  z-index: 1;
 }
 
 .business-solutions-header-sticky {
@@ -47,11 +107,11 @@
 .business-solutions-animated-panel {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.4s cubic-bezier(.4,0,.2,1), transform 0.4s cubic-bezier(.4,0,.2,1);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
 }
 .business-solutions-animated-panel.animating {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(40px);
 }
 
 .business-solutions-type-title {
@@ -119,18 +179,6 @@
   font-weight: 400;
 }
 
-.business-solutions-image-stack {
-  flex: 1 1 52%;
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  padding: 80px 7vw 0 0;
-}
-.business-solutions-image-wrapper {
-  margin-bottom: 80px;
-  display: flex;
-  justify-content: flex-end;
-}
 .business-solutions-image {
   width: 540px;
   max-width: 100%;
@@ -141,12 +189,9 @@
 }
 
 @media (max-width: 1200px) {
-  .business-solutions-sticky-panel {
+  .business-solutions-fixed-panel {
     min-width: 220px;
     padding-left: 2vw;
-  }
-  .business-solutions-image-stack {
-    padding-right: 2vw;
   }
   .business-solutions-image {
     width: 400px;
@@ -157,17 +202,28 @@
     flex-direction: column;
     padding: 0 0 32px 0;
   }
-  .business-solutions-sticky-panel {
+  .business-solutions-section.magnetic {
+    flex-direction: column;
+  }
+  .business-solutions-fixed-panel {
+    position: static !important;
+    width: 100%;
     max-width: 100%;
     min-width: 0;
     padding: 48px 0 0 0;
-    position: static;
-    top: unset;
-    transform: none;
+    height: auto;
+    align-items: flex-start;
   }
-  .business-solutions-image-stack {
+  .business-solutions-image-stack-scroll {
+    margin-left: 0;
+    width: 100%;
     padding: 0;
     gap: 48px;
+  }
+  .business-solutions-image-snap {
+    height: auto;
+    min-height: 60vh;
+    align-items: flex-end;
   }
   .business-solutions-image {
     width: 100%;
