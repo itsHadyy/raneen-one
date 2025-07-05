@@ -1,5 +1,6 @@
-import React, { useRef, useEffect, useState } from 'react';
-import './BusinessSolutionsSection.css';
+import React, { useRef, useEffect, useState } from "react";
+import { motion, useAnimation, useInView, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import "./BusinessSolutionsSection.css";
 
 const businessTypes = [
   {
@@ -14,7 +15,7 @@ const businessTypes = [
     ],
     testimonial: 'By utilizing Raneen One’s flexible, API-based solution, we have enacted the basis for scalability and advancement of our Retail Media network while enhancing our ability to create custom ad experiences that resonate with our customers.',
     author: 'Natalie Ong, Director of DG Media Network Operations (Dollar General)',
-    image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1515168833906-d2a3b82b1e6c?auto=format&fit=crop&w=800&q=80',
   },
   {
     key: 'marketplaces',
@@ -74,131 +75,172 @@ const businessTypes = [
   },
 ];
 
-const BusinessSolutionsSection = () => {
+export default function BusinessSolutionsSection() {
+  const sectionRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
-  const [panelState, setPanelState] = useState('top'); // 'top', 'fixed', 'bottom'
   const imageRefs = useRef([]);
-  const sectionRef = useRef(null);
-  const panelRef = useRef(null);
   const prevIndex = useRef(0);
 
+  // Animate section entrance/exit
+  const inView = useInView(sectionRef, { margin: "-20% 0px" });
+  const sectionControls = useAnimation();
   useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current || !panelRef.current) return;
-      const sectionRect = sectionRef.current.getBoundingClientRect();
-      const panelHeight = panelRef.current.offsetHeight;
-      const viewportHeight = window.innerHeight;
-      const scrollY = window.scrollY;
-      const sectionTopAbs = sectionRef.current.offsetTop;
-      const sectionHeight = sectionRef.current.offsetHeight;
-      const sectionBottomAbs = sectionTopAbs + sectionHeight;
-      const buffer = 1; // 1px buffer to prevent flicker
+    if (inView) sectionControls.start({ opacity: 1, y: 0 });
+    else sectionControls.start({ opacity: 0, y: 80 });
+  }, [inView, sectionControls]);
 
-      // Calculate the scroll position where the panel should be fixed and centered
-      const fixedStart = sectionTopAbs - (viewportHeight / 2) + (panelHeight / 2);
-      const fixedEnd = sectionBottomAbs - (viewportHeight / 2) - (panelHeight / 2);
-
-      // Debug log
-      console.log({
-        scrollY,
-        fixedStart,
-        fixedEnd,
-        panelState,
-        sectionTopAbs,
-        sectionBottomAbs,
-        panelHeight,
-        viewportHeight
-      });
-
-      if (scrollY <= fixedStart) {
-        setPanelState('top');
-      } else if (scrollY >= fixedEnd) {
-        setPanelState('bottom');
-      } else {
-        setPanelState('fixed');
-      }
-
-      // Only update active index if in section
-      if (scrollY + viewportHeight > sectionTopAbs && scrollY < sectionBottomAbs) {
-        let foundIdx = 0;
-        imageRefs.current.forEach((ref, i) => {
-          if (ref) {
-            const rect = ref.getBoundingClientRect();
-            const refTop = rect.top + scrollY;
-            const refCenter = refTop + rect.height / 2;
-            if (scrollY + viewportHeight / 2 >= refCenter) {
-              foundIdx = i;
-            }
-          }
-        });
-        if (foundIdx !== prevIndex.current) {
-          setAnimating(true);
-          setTimeout(() => setAnimating(false), 400);
-          prevIndex.current = foundIdx;
+  // Animate left panel content on image change
+  useEffect(() => {
+    const handleIntersect = (entries) => {
+      let maxRatio = 0;
+      let visibleIdx = 0;
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > maxRatio) {
+          maxRatio = entry.intersectionRatio;
+          visibleIdx = Number(entry.target.dataset.idx);
         }
-        setActiveIndex(foundIdx);
+      });
+      if (visibleIdx !== prevIndex.current) {
+        setAnimating(true);
+        setTimeout(() => setAnimating(false), 400);
+        prevIndex.current = visibleIdx;
       }
+      setActiveIndex(visibleIdx);
     };
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
-    return () => window.removeEventListener('scroll', handleScroll);
+    const observer = new window.IntersectionObserver(handleIntersect, {
+      root: null,
+      rootMargin: "0px",
+      threshold: Array.from({ length: 101 }, (_, i) => i / 100),
+    });
+    imageRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+    return () => observer.disconnect();
   }, []);
 
-  // Panel style logic
-  let panelStyle = {};
-  if (panelState === 'top') {
-    panelStyle = { position: 'absolute', top: 0, left: 0 };
-  } else if (panelState === 'fixed') {
-    panelStyle = { position: 'fixed', left: 0 };
-  } else if (panelState === 'bottom') {
-    panelStyle = { position: 'absolute', bottom: 0, left: 0 };
-  }
+  // Scroll progress for progress bar
+  const { scrollYProgress } = useScroll({ container: sectionRef });
+  const progressBarWidth = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <div className="business-solutions-section-magnetic-parent" ref={sectionRef}>
-      <section className="business-solutions-section magnetic">
-        <div
-          className={`business-solutions-fixed-panel active panel-${panelState}`}
-          ref={panelRef}
-          style={panelStyle}
-        >
-          <div className="business-solutions-header-sticky">
-            <h2>Solutions for every type of business</h2>
-          </div>
-          <div
-            key={activeIndex}
-            className={`business-solutions-animated-panel${animating ? ' animating' : ''}`}
-          >
-            <div className="business-solutions-type-title">{businessTypes[activeIndex].title}</div>
-            <div className="business-solutions-type-desc">{businessTypes[activeIndex].desc}</div>
-            <button className="business-solutions-btn">{businessTypes[activeIndex].button}</button>
-            <div className="business-solutions-logos">
-              {businessTypes[activeIndex].logos.map((logo, i) => (
-                <img src={logo} alt="logo" key={i} />
-              ))}
-            </div>
-            <div className="business-solutions-testimonial">
-              <div className="business-solutions-quote">"{businessTypes[activeIndex].testimonial}"</div>
-              <div className="business-solutions-author">{businessTypes[activeIndex].author}</div>
-            </div>
-          </div>
-        </div>
-        <div className="business-solutions-image-stack-scroll">
+    <motion.section
+      className="business-solutions-section"
+      ref={sectionRef}
+      initial={{ opacity: 0, y: 80 }}
+      animate={sectionControls}
+      exit={{ opacity: 0, y: 80 }}
+      transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+    >
+      <div className="business-solutions-inner">
+        {/* AnimatePresence for panel pinning/reveal */}
+        <AnimatePresence>
+          {inView && (
+            <motion.div
+              className="business-solutions-fixed-animated-panel"
+              initial={{ opacity: 0, y: 80, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -80, scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 80, damping: 18 }}
+              style={{
+                position: "fixed",
+                top: "50%",
+                left: "7vw",
+                transform: "translateY(-50%)",
+                width: 480,
+                zIndex: 10,
+                background: "#fff",
+                borderRadius: 18,
+                boxShadow: "0 4px 32px 0 rgba(24,31,42,0.04)",
+                padding: "32px 40px",
+                minWidth: 320,
+                maxWidth: 600,
+              }}
+            >
+              <div className="business-solutions-header-sticky">
+                <h2>Solutions for every type of business</h2>
+              </div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeIndex}
+                  className={`business-solutions-animated-panel${animating ? " animating" : ""}`}
+                  initial={{ opacity: 0, y: 40, scale: 0.98 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -40, scale: 0.98 }}
+                  transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+                >
+                  <div className="business-solutions-type-title">{businessTypes[activeIndex].title}</div>
+                  <div className="business-solutions-type-desc">{businessTypes[activeIndex].desc}</div>
+                  <motion.button
+                    className="business-solutions-btn"
+                    whileHover={{ scale: 1.07, boxShadow: "0 6px 24px 0 rgba(255,77,45,0.18)" }}
+                    whileTap={{ scale: 0.97 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    {businessTypes[activeIndex].button}
+                  </motion.button>
+                  <div className="business-solutions-logos">
+                    {businessTypes[activeIndex].logos.map((logo, i) => (
+                      <motion.img
+                        src={logo}
+                        alt="logo"
+                        key={i}
+                        whileHover={{ scale: 1.12, filter: "brightness(1.1)" }}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 * i, duration: 0.4 }}
+                      />
+                    ))}
+                  </div>
+                  <div className="business-solutions-testimonial">
+                    <div className="business-solutions-quote">
+                      “{businessTypes[activeIndex].testimonial}”
+                    </div>
+                    <div className="business-solutions-author">
+                      {businessTypes[activeIndex].author}
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </motion.div>
+          )}
+        </AnimatePresence>
+        {/* Parallax image stack */}
+        <div className="business-solutions-image-stack" style={{ marginLeft: 520 }}>
           {businessTypes.map((bt, i) => (
-            <div
-              className={`business-solutions-image-snap${activeIndex === i ? ' active' : ''}`}
+            <motion.div
+              className={`business-solutions-image-wrapper${activeIndex === i ? " in-view" : ""}`}
               key={bt.key}
               ref={el => (imageRefs.current[i] = el)}
               data-idx={i}
+              initial={false}
+              animate={{
+                opacity: activeIndex === i ? 1 : 0.7,
+                scale: activeIndex === i ? 1.08 : 0.96,
+                y: activeIndex === i ? -20 : 40,
+                x: activeIndex === i ? 0 : 40,
+                filter: activeIndex === i ? "blur(0px)" : "blur(2px)",
+              }}
+              whileHover={{ scale: 1.12, boxShadow: "0 8px 32px 0 rgba(24,31,42,0.10)" }}
+              transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
+              style={{
+                marginBottom: 80,
+                display: "flex",
+                justifyContent: "flex-end",
+                cursor: "pointer",
+              }}
             >
               <img src={bt.image} alt={bt.title} className="business-solutions-image" />
-            </div>
+            </motion.div>
           ))}
         </div>
-      </section>
-    </div>
+        {/* Progress bar */}
+        <motion.div
+          className="business-solutions-progress-bar"
+          style={{ width: progressBarWidth }}
+          transition={{ duration: 0.3 }}
+        />
+      </div>
+    </motion.section>
   );
-};
-
-export default BusinessSolutionsSection; 
+} 
