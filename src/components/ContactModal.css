@@ -1,0 +1,212 @@
+.contact-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(24, 31, 42, 0.38);
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px) saturate(1.1);
+    -webkit-backdrop-filter: blur(6px) saturate(1.1);
+    transition: background 0.3s;
+}
+
+.contact-modal-content {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.889) 70%, rgba(255, 106, 61, 0.10) 100%);
+    border-radius: 22px;
+    box-shadow: 0 8px 40px 0 rgba(24, 31, 42, 0.18);
+    padding: 38px 36px 32px 36px;
+    width: 60vw;
+    position: relative;
+    border: 1.5px solid #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    animation: modalPopIn 0.32s cubic-bezier(.4, 0, .2, 1);
+}
+
+@keyframes modalPopIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96) translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.contact-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 1.7rem;
+    background: none;
+    border: none;
+    color: #a13a7c;
+    cursor: pointer;
+    transition: color 0.18s;
+    z-index: 2;
+}
+
+.contact-modal-close:hover {
+    color: #ff4d2d;
+}
+
+.contact-modal-title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #181f2a;
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+    text-align: left;
+}
+
+.contact-modal-desc {
+    font-size: 1.08rem;
+    color: #5a6c7d;
+    margin-bottom: 28px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.contact-modal-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.contact-modal-row-full {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.contact-modal-input {
+    flex: 1;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #ececec;
+    background: rgba(255, 255, 255, 0.92);
+    font-size: 1.08rem;
+    color: #181f2a;
+    font-family: inherit;
+    outline: none;
+    transition: border 0.18s, box-shadow 0.18s;
+    box-shadow: 0 2px 8px rgba(255, 106, 61, 0.04);
+}
+
+.contact-modal-input:focus {
+    border: 1.5px solid #ff6a3d;
+    box-shadow: 0 4px 16px rgba(255, 106, 61, 0.10);
+}
+
+.contact-modal-input::placeholder {
+    color: #b0b6c3;
+    opacity: 1;
+}
+
+.contact-modal-row-full textarea {
+    width: 100% !important;
+    resize: none;
+}
+
+.contact-modal-checkbox {
+    font-size: 1rem;
+    color: #5a6c7d;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+}
+
+.contact-modal-checkbox input[type="checkbox"] {
+    accent-color: #ff6a3d;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    margin-right: 6px;
+}
+
+.contact-modal-submit {
+    background: linear-gradient(90deg, #ff6a3d 0%, #ff4d2d 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 16px 0;
+    font-size: 1.18rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 12px rgba(255, 77, 45, 0.13);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.contact-modal-submit:hover {
+    background: linear-gradient(90deg, #e63b1c 0%, #ff4d2d 100%);
+    box-shadow: 0 4px 16px rgba(255, 77, 45, 0.18);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.contact-modal-input select,
+select.contact-modal-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1.5px solid #ececec;
+    border-radius: 10px;
+    padding: 12px 38px 12px 14px;
+    font-size: 1.08rem;
+    color: #181f2a;
+    font-family: inherit;
+    outline: none;
+    transition: border 0.18s, box-shadow 0.18s;
+    box-shadow: 0 2px 8px rgba(255, 106, 61, 0.04);
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ff6a3d" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 18px 18px;
+}
+
+.contact-modal-input select:focus,
+select.contact-modal-input:focus {
+    border: 1.5px solid #ff6a3d;
+    box-shadow: 0 4px 16px rgba(255, 106, 61, 0.10);
+}
+
+.contact-modal-input select option,
+select.contact-modal-input option {
+    color: #181f2a;
+}
+
+/* Remove default arrow for all browsers */
+.contact-modal-input select::-ms-expand,
+select.contact-modal-input::-ms-expand {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .contact-modal-content {
+        padding: 18px 6vw 18px 6vw;
+        max-width: 98vw;
+    }
+
+    .contact-modal-title {
+        font-size: 1.3rem;
+    }
+
+    .contact-modal-desc {
+        font-size: 0.98rem;
+    }
+
+    .contact-modal-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
