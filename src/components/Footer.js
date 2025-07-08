@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="footer-left-block">
           <div className="footer-inbox-title">All ad tech in your inbox</div>
           <div className="footer-inbox-desc">Stay up to date with the latest news.</div>
-          <a href="#" className="footer-blog-btn">Go to our blog <FaArrowRight style={{marginLeft:6, verticalAlign:'middle'}} /></a>
+          <Link to="/blog" className="footer-blog-btn">Go to our blog <FaArrowRight style={{marginLeft:6, verticalAlign:'middle'}} /></Link>
         </div>
         <div className="footer-main-cols">
           <div className="footer-col">
@@ -82,10 +82,10 @@ const Footer = () => {
       </div>
       <div className="footer-bottom-row">
         <div className="footer-socials">
-          <a href="#" className="footer-social-icon" aria-label="LinkedIn"><FaLinkedinIn /></a>
-          <a href="#" className="footer-social-icon" aria-label="X"><FaXTwitter /></a>
-          <a href="#" className="footer-social-icon" aria-label="Facebook"><FaFacebookF /></a>
-          <a href="#" className="footer-social-icon" aria-label="GitHub"><FaGithub /></a>
+          <Link to="/linkedin" className="footer-social-icon" aria-label="LinkedIn"><FaLinkedinIn /></Link>
+          <Link to="/x" className="footer-social-icon" aria-label="X"><FaXTwitter /></Link>
+          <Link to="/facebook" className="footer-social-icon" aria-label="Facebook"><FaFacebookF /></Link>
+          <Link to="/github" className="footer-social-icon" aria-label="GitHub"><FaGithub /></Link>
         </div>
         <div className="footer-copyright">
           Copyright © 2025 Raneen One 

@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import AIDrivenRetailMediaSection from '../components/AIDrivenRetailMediaSection';
 import BusinessSolutionsStaticSection from '../components/BusinessSolutionsStaticSection';
 
-const gradient = "radial-gradient(ellipse 90% 70% at 20% 20%, #181f2a 60%, #6e2ff4 80%, #e94f4f 100%, #ffb347 120%)";
-
 const Home = () => {
   return (
     <div>
