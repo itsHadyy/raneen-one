@@ -1093,18 +1093,17 @@ footer {
 }
 
 .footer-gradient-bg {
-  background: linear-gradient(135deg, #ff6a3d 0%, #a13a7c 40%, #4b2c6d 70%, #181f2a 100%);
+  background: linear-gradient(180deg, #171d2d 30%, #030406 100%);
   color: #fff;
   padding: 0;
   margin-top: 80px;
-  box-shadow: 0 -4px 32px rgba(0, 0, 0, 0.10);
   overflow: hidden;
 }
 
 .footer-cta-section {
   text-align: center;
   padding: 100px 24px 100px 24px;
-  background: linear-gradient(135deg, #ff6a3d 0%, #a13a7c 40%, #4b2c6d 70%, #181f2a 100%);
+  background: linear-gradient(125deg, #ff6a3d 0%, #a13a7c 30%, #4b2c6d 50%, #171d2d 100%);
 }
 
 .footer-cta-title {
@@ -1112,6 +1111,7 @@ footer {
   font-weight: 800;
   margin-bottom: 18px;
   letter-spacing: -1px;
+  color: var(--bg-color);
 }
 
 .footer-cta-desc {
@@ -1154,7 +1154,6 @@ footer {
   align-items: flex-start;
   gap: 64px;
   padding: 0;
-  background: linear-gradient(180deg, #0d1b2a 0%, #181f2a 100%);
   flex-wrap: nowrap;
   min-height: 320px;
   position: relative;
@@ -1257,7 +1256,6 @@ footer {
   justify-content: center;
   gap: 18px;
   padding: 36px 12px 24px 12px;
-  background: linear-gradient(180deg, #0d1b2a 0%, #181f2a 100%);
   margin-top: 0;
 }
 

@@ -5,7 +5,6 @@ import { FaArrowRight } from "react-icons/fa";
 
 function FooterCTA() {
     const [modalOpen, setModalOpen] = useState(false);
-
     return (
         <div>
             <div className="footer-cta-section">
@@ -20,7 +19,6 @@ function FooterCTA() {
             <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
         </div>
     )
-
 }
 
 export default FooterCTA;
