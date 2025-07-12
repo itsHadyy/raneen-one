@@ -1,28 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { FaLinkedinIn, FaXTwitter, FaFacebookF, FaGithub } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
 import "../Style.css";
-import ContactModal from "./ContactModal";
 
 const Footer = () => {
-  const [modalOpen, setModalOpen] = useState(false);
   return (
     <footer className="footer-gradient-bg">
-      <div className="footer-cta-section">
-        <h2 className="footer-cta-title">Ready to get started?</h2>
-        <p className="footer-cta-desc">
-          Talk to one of our experts today. Learn how The Retail Media Cloud® can supercharge your retail media network or review our documentation.
-        </p>
-        <button className="footer-cta-btn" onClick={() => setModalOpen(true)} style={{display:'inline-flex',alignItems:'center',gap:8}}>
-          Talk to an expert <FaArrowRight style={{marginLeft:8, verticalAlign:'middle'}} />
-        </button>
-      </div>
       <div className="footer-main-row">
         <div className="footer-left-block">
           <div className="footer-inbox-title">All ad tech in your inbox</div>
           <div className="footer-inbox-desc">Stay up to date with the latest news.</div>
-          <Link to="/blog" className="footer-blog-btn">Go to our blog <FaArrowRight style={{marginLeft:6, verticalAlign:'middle'}} /></Link>
+          <Link to="/blog" className="footer-blog-btn">Go to our blog <FaArrowRight style={{ marginLeft: 6, verticalAlign: 'middle' }} /></Link>
         </div>
         <div className="footer-main-cols">
           <div className="footer-col">
@@ -88,10 +77,9 @@ const Footer = () => {
           <Link to="/github" className="footer-social-icon" aria-label="GitHub"><FaGithub /></Link>
         </div>
         <div className="footer-copyright">
-          Copyright © 2025 Raneen One 
+          Copyright © 2025 Raneen One
         </div>
       </div>
-      <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </footer>
   );
 };

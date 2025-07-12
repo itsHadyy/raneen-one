@@ -974,11 +974,11 @@ body {
   .business-solutions-inner {
     padding: 0 32px;
   }
-  
+
   .business-solutions-header h2 {
     font-size: 2.4rem;
   }
-  
+
   .business-solutions-row {
     gap: 60px;
     margin-bottom: 80px;
@@ -990,19 +990,19 @@ body {
     padding: 60px 0;
     margin: 16px;
   }
-  
+
   .business-solutions-inner {
     padding: 0 24px;
   }
-  
+
   .business-solutions-header {
     margin-bottom: 60px;
   }
-  
+
   .business-solutions-header h2 {
     font-size: 2.2rem;
   }
-  
+
   .business-solutions-row {
     grid-template-columns: 1fr;
     grid-template-areas: "content" "image" !important;
@@ -1010,15 +1010,15 @@ body {
     margin-bottom: 60px;
     min-height: auto;
   }
-  
+
   .business-solutions-type-title {
     font-size: 1.8rem;
   }
-  
+
   .business-solutions-type-desc {
     font-size: 1.1rem;
   }
-  
+
   .business-solutions-image-wrapper {
     height: 300px;
     max-width: 500px;
@@ -1032,41 +1032,41 @@ body {
     padding: 40px 0;
     margin: 12px;
   }
-  
+
   .business-solutions-inner {
     padding: 0 16px;
   }
-  
+
   .business-solutions-header {
     margin-bottom: 40px;
   }
-  
+
   .business-solutions-header h2 {
     font-size: 1.8rem;
   }
-  
+
   .business-solutions-row {
     gap: 32px;
     margin-bottom: 40px;
   }
-  
+
   .business-solutions-type-title {
     font-size: 1.5rem;
   }
-  
+
   .business-solutions-type-desc {
     font-size: 1rem;
   }
-  
+
   .business-solutions-btn {
     padding: 14px 28px;
     font-size: 1rem;
   }
-  
+
   .business-solutions-logos {
     justify-content: center;
   }
-  
+
   .business-solutions-image-wrapper {
     height: 250px;
   }
@@ -1074,31 +1074,53 @@ body {
 
 /* --- Footer Styles --- */
 /* --- Updated Kevel-style Footer --- */
+
+.main-container {
+  z-index: 99;
+  margin-bottom: 46vh;
+  position: relative;
+  background-color: var(--bg-color);
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  z-index: -1;
+  will-change: scroll-position;
+  height: auto;
+  width: 100%;
+}
+
 .footer-gradient-bg {
   background: linear-gradient(135deg, #ff6a3d 0%, #a13a7c 40%, #4b2c6d 70%, #181f2a 100%);
   color: #fff;
   padding: 0;
   margin-top: 80px;
-  box-shadow: 0 -4px 32px rgba(0,0,0,0.10);
+  box-shadow: 0 -4px 32px rgba(0, 0, 0, 0.10);
   overflow: hidden;
 }
+
 .footer-cta-section {
   text-align: center;
   padding: 100px 24px 100px 24px;
   background: linear-gradient(135deg, #ff6a3d 0%, #a13a7c 40%, #4b2c6d 70%, #181f2a 100%);
 }
+
 .footer-cta-title {
   font-size: 2.8rem;
   font-weight: 800;
   margin-bottom: 18px;
   letter-spacing: -1px;
 }
+
 .footer-cta-desc {
   font-size: 1.18rem;
   color: #ffe0d2;
   margin-bottom: 36px;
   font-weight: 400;
 }
+
 .footer-cta-btn {
   background: linear-gradient(90deg, #ff6a3d 0%, #ff4d2d 100%);
   color: #fff;
@@ -1114,11 +1136,13 @@ body {
   display: inline-block;
   line-height: 1.2;
 }
+
 .footer-cta-btn svg {
   margin-left: 8px;
   font-size: 1.1em;
   vertical-align: middle;
 }
+
 .footer-cta-btn:hover {
   background: linear-gradient(90deg, #ff4d2d 0%, #ff6a3d 100%);
   box-shadow: 0 4px 18px rgba(255, 77, 45, 0.18);
@@ -1135,6 +1159,7 @@ body {
   min-height: 320px;
   position: relative;
 }
+
 .footer-left-block {
   flex: 1 1 320px;
   max-width: 320px;
@@ -1145,17 +1170,20 @@ body {
   justify-content: flex-start;
   background: none;
 }
+
 .footer-inbox-title {
   font-weight: 700;
   font-size: 1.15rem;
   color: #fff;
   margin-bottom: 8px;
 }
+
 .footer-inbox-desc {
   color: #e0e0e0;
   font-size: 1rem;
   margin-bottom: 18px;
 }
+
 .footer-blog-btn {
   background: linear-gradient(90deg, #ff6a3d 0%, #ff4d2d 100%);
   color: #fff;
@@ -1171,15 +1199,18 @@ body {
   align-items: center;
   gap: 6px;
 }
+
 .footer-blog-btn svg {
   margin-left: 6px;
   font-size: 1.1em;
   vertical-align: middle;
 }
+
 .footer-blog-btn:hover {
   background: linear-gradient(90deg, #ff4d2d 0%, #ff6a3d 100%);
   box-shadow: 0 4px 16px rgba(255, 77, 45, 0.18);
 }
+
 .footer-main-cols {
   display: flex;
   flex: 4 1 900px;
@@ -1188,28 +1219,33 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
 }
+
 .footer-col {
   min-width: 160px;
   flex: 1 1 160px;
   margin-bottom: 24px;
 }
+
 .footer-col h4 {
   font-size: 1.12rem;
   font-weight: 700;
   margin-bottom: 18px;
   color: #fff;
 }
+
 .footer-col ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .footer-col li {
   font-size: 1rem;
   color: #e0e0e0;
   margin-bottom: 10px;
   opacity: 0.92;
 }
+
 .footer-col li:last-child {
   margin-bottom: 0;
 }
@@ -1224,6 +1260,7 @@ body {
   background: linear-gradient(180deg, #0d1b2a 0%, #181f2a 100%);
   margin-top: 0;
 }
+
 .footer-socials {
   display: flex;
   gap: 18px;
@@ -1231,8 +1268,9 @@ body {
   justify-content: center;
   margin-bottom: 8px;
 }
+
 .footer-social-icon {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   color: #fff;
   border-radius: 50%;
   width: 40px;
@@ -1244,10 +1282,12 @@ body {
   text-decoration: none;
   transition: background 0.18s, color 0.18s;
 }
+
 .footer-social-icon:hover {
   background: #ff4d2d;
   color: #fff;
 }
+
 .footer-copyright {
   color: #e0e0e0;
   font-size: 0.98rem;
@@ -1255,12 +1295,14 @@ body {
   text-align: center;
   line-height: 1.6;
 }
+
 .footer-copyright a {
   color: #ff6a3d;
   text-decoration: underline;
   margin: 0 4px;
   transition: color 0.18s;
 }
+
 .footer-copyright a:hover {
   color: #fff;
 }
@@ -1269,14 +1311,17 @@ body {
   .footer-main-row {
     gap: 24px;
   }
+
   .footer-main-cols {
     gap: 18px;
     padding: 36px 8px 18px 0;
   }
+
   .footer-left-block {
     padding: 36px 8px 18px 18px;
   }
 }
+
 @media (max-width: 900px) {
   .footer-main-row {
     flex-direction: column;
@@ -1284,27 +1329,33 @@ body {
     gap: 0;
     min-height: unset;
   }
+
   .footer-main-cols {
     flex-direction: column;
     gap: 0;
     padding: 18px 8px 8px 8px;
   }
+
   .footer-left-block {
     max-width: 100%;
     padding: 24px 8px 8px 8px;
     align-items: flex-start;
   }
 }
+
 @media (max-width: 600px) {
   .footer-cta-title {
     font-size: 1.5rem;
   }
+
   .footer-main-row {
     padding: 0;
   }
+
   .footer-main-cols {
     padding: 8px 2px 2px 2px;
   }
+
   .footer-bottom-row {
     padding: 18px 2px 8px 2px;
   }
