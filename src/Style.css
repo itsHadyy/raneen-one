@@ -1361,18 +1361,37 @@ footer {
 
 .project-scroll-wrapper {
   display: flex;
-  gap: 40px;
+  gap: 80px;
   padding: 80px;
+  justify-content: center;
 }
 
 .sticky-left {
   width: 40%;
+  transform: translateY(20%);
+  height: fit-content !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .scroll-right {
-  width: 60%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: end;
+}
+
+.scroll-right img {
+  border-radius: 22px;
 }
 
 .image-section {
-  height: 100vh;
+  height: 50vh;
+}
+
+.section-title{
+  font-size: 54px;
 }

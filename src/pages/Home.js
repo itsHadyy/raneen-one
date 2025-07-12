@@ -91,8 +91,8 @@ const Home = () => {
         </div>
       </section>
 
-      <AIDrivenRetailMediaSection />
       <ProjectShowcase />
+      <AIDrivenRetailMediaSection />
 
     </div>
   );
