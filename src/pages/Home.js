@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import { FiServer, FiUsers, FiGrid } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import AIDrivenRetailMediaSection from '../components/AIDrivenRetailMediaSection';
-import BusinessSolutionsStaticSection from '../components/BusinessSolutionsStaticSection';
+import ProjectShowcase from '../components/ProjectShowcase';
 
 const Home = () => {
   return (
@@ -92,7 +92,7 @@ const Home = () => {
       </section>
 
       <AIDrivenRetailMediaSection />
-      <BusinessSolutionsStaticSection />
+      <ProjectShowcase />
 
     </div>
   );

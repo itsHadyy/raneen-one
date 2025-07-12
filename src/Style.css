@@ -1358,3 +1358,21 @@ footer {
     padding: 18px 2px 8px 2px;
   }
 }
+
+.project-scroll-wrapper {
+  display: flex;
+  gap: 40px;
+  padding: 80px;
+}
+
+.sticky-left {
+  width: 40%;
+}
+
+.scroll-right {
+  width: 60%;
+}
+
+.image-section {
+  height: 100vh;
+}
