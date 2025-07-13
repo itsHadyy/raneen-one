@@ -25,7 +25,7 @@ const Home = () => {
             <div className="dashboard-mockup">
               <div className="bubble top-left">Greater Operational Efficiency</div>
               <div className="bubble top-right">Smarter Personalization</div>
-              <img src="https://dummyimage.com/600x300/cccccc/ffffff&text=Dashboard+Mockup" alt="Dashboard Mockup" />
+              <img src="media/dashboard.webp" alt="Dashboard Mockup" />
               <div className="bubble bottom-right">Higher Advertiser Retention</div>
             </div>
           </div>

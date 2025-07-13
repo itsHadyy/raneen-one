@@ -18,9 +18,20 @@ const NavDropdown = ({ items = [], openFlyout, setOpenFlyout }) => {
               <div className="nav-dropdown-desc-kevel">{item.desc}</div>
             </div>
             {item.flyout && (
-              <div className="nav-dropdown-arrow-kevel">
-                <FiChevronRight size={22} />
-              </div>
+              <>
+                <div className="nav-dropdown-arrow-kevel">
+                  <FiChevronRight size={22} />
+                </div>
+                {openFlyout === idx && (
+                  <div className="nav-flyout">
+                    {item.flyout.map(fly => (
+                      <a key={fly.title} href={fly.link} className="nav-flyout-link">
+                        {fly.title}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </>
             )}
           </div>
           {idx < items.length - 1 && <div className="nav-dropdown-divider-kevel" />}

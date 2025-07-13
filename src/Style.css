@@ -2,6 +2,11 @@
   --primary-color: #0d1b2a;
   --secondary-color: #ff6a3d;
   --bg-color: #fff;
+  --accent01: #654EFC;
+  --accent02: #FA824D;
+  --accent03: #2680EB;
+  --accent04: #FDBA40;
+
 }
 
 * {
@@ -33,12 +38,12 @@ body {
   -webkit-backdrop-filter: blur(0px);
   transition: background 0.3s, box-shadow 0.3s, backdrop-filter 0.3s;
   box-shadow: none;
-  padding: 24px 0;
+  padding: 20px 0;
   position: fixed;
   top: 20px;
   z-index: 10;
-  width: 90%;
-  left: 5%;
+  width: 94%;
+  left: 3%;
   border-radius: 20px;
 }
 
@@ -70,6 +75,11 @@ body {
   justify-content: space-between;
 }
 
+.raneenLogo{
+  width: 50px;
+  margin-right: 20px;
+}
+
 .logo {
   font-size: 2.2rem;
   font-weight: 800;
@@ -92,7 +102,7 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.08rem;
+  font-size: 16px;
   letter-spacing: 0.01em;
   transition: color 0.2s;
   padding: 2px 0;
@@ -261,12 +271,14 @@ body {
 
 .dashboard-mockup {
   position: relative;
-  background: #f7f7fa;
+  background: #f7f7fa60;
+  backdrop-filter: blur(8px) saturate(1.2);
   border-radius: 24px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
-  padding: 32px 24px 24px 24px;
-  min-width: 420px;
-  min-height: 220px;
+  padding: 14px;
+  border: 1px solid #ffffff59;
+  min-width: 320px;
+  min-height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -456,7 +468,7 @@ body {
 
 .nav-dropdown-title {
   font-weight: 700;
-  font-size: 1.08rem;
+  font-size: 16px !important;
   margin-bottom: 2px;
 }
 
@@ -470,34 +482,73 @@ body {
   position: absolute;
   top: 0;
   left: 100%;
-  min-width: 220px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(16px);
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-  padding: 12px 0;
-  z-index: 110;
-  margin-left: 8px;
-  animation: fadeIn 0.18s;
+  min-width: 210px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(24,31,42,0.13);
+  padding: 8px 0;
+  z-index: 100;
+  margin-left: 0;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.18s;
+  border: none;
 }
 
 .nav-flyout-link {
   display: block;
-  padding: 10px 24px;
-  color: #181f2a;
+  padding: 12px 28px 12px 22px;
+  color: #181f2a !important;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 14px !important;
+  font-weight: 500;
   border-radius: 8px;
-  transition: background 0.15s;
+  transition: background 0.15s, color 0.15s;
+  margin: 0 4px;
+  letter-spacing: 0.01em;
+  background: none;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 .nav-flyout-link:hover,
 .nav-flyout-link:focus {
-  border-radius: 16px;
-  background: rgba(0, 0, 0, 0.06);
+  background: #f5f6fa;
+  color: #ff4d2d !important;
+}
+
+.nav-flyout-link + .nav-flyout-link {
+  border-top: none;
+}
+
+.nav-dropdown-arrow-kevel {
+  margin-right: 0;
+}
+
+.nav-dropdown-item-kevel.has-flyout:hover .nav-flyout,
+.nav-dropdown-item-kevel.has-flyout:focus-within .nav-flyout,
+.nav-flyout:hover,
+.nav-flyout:focus-within {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 900px) {
+  .nav-flyout {
+    position: static;
+    left: 0;
+    min-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-flyout-link {
+    padding: 14px 18px;
+    font-size: 1rem;
+    margin: 0;
+  }
 }
 
 .nav-item-open>.nav-link {
@@ -524,11 +575,11 @@ body {
 .nav-dropdown-kevel {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -100%;
   border-radius: 16px;
   right: auto;
   transform: none;
-  min-width: 380px;
+  min-width: 340px;
   background: #fff;
   border-radius: 24px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
@@ -546,7 +597,7 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 24px 32px 24px 28px;
+  padding: 12px;
   cursor: pointer;
   background: transparent;
   transition: background 0.15s;
@@ -578,13 +629,13 @@ body {
 
 .nav-dropdown-title-kevel {
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 16px;
   color: #1a2341;
   margin-bottom: 2px;
 }
 
 .nav-dropdown-desc-kevel {
-  font-size: 1.01rem;
+  font-size: 14px;
   color: #7a869a;
   opacity: 0.95;
   font-weight: 400;

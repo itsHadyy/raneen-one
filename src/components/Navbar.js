@@ -3,7 +3,39 @@ import NavDropdown from './NavDropdown';
 import { FiZap, FiBookOpen, FiTool, FiHeart, FiChevronDown } from 'react-icons/fi';
 
 const NAV_ITEMS = [
-  { label: 'Products', link: '#' },
+  {
+    label: 'Products',
+    dropdown: [
+      {
+        icon: <FiZap size={24} color="#654EFC" />,
+        title: 'Raneen Ad Server',
+        desc: 'Build your own ad server',
+        link: '/api-quickstart'
+      },
+      {
+        icon: <FiBookOpen size={24} color="#FA824D" />,
+        title: 'Raneen Audience',
+        desc: 'Unlock your first-party data',
+        link: '/knowledge-base'
+      },
+      {
+        icon: <FiTool size={24} color="#2680EB" />,
+        title: 'Raneen Console',
+        desc: 'Manage your campaigns with AI',
+        link: '/tools',
+        flyout: [
+          { title: 'SDKs', link: '/tools/sdks' },
+          { title: 'CLI', link: '/tools/cli' }
+        ]
+      },
+      {
+        icon: <FiHeart size={24} color="#FDBA40" />,
+        title: 'API Status',
+        desc: 'Real-time updates on API uptimes',
+        link: '/api-status'
+      }
+    ]
+  },
   { label: 'Solutions', link: '#' },
   {
     label: 'Developers',
@@ -69,11 +101,9 @@ const Navbar = () => {
     <header className={`header${scrolled ? ' scrolled' : ''}`}>
       <div className="container nav-container">
         <div className="logo">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style={{verticalAlign: 'middle', marginRight: 10}}>
-            <rect width="40" height="40" rx="8" fill="#FF4D2D"/>
-            <text x="50%" y="55%" textAnchor="middle" fill="#fff" fontSize="20" fontWeight="bold" dy=".3em">R</text>
-          </svg>
-          Raneen <span>One</span>
+          <img src='media/logo02.png' alt='Raneen One Icon' className='raneenLogo'/>
+          raneen 
+          {/* <span>One</span> */}
         </div>
         <nav className="nav">
           {NAV_ITEMS.map((item, idx) => {
