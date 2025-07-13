@@ -4,6 +4,7 @@ import { FiServer, FiUsers, FiGrid } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import AIDrivenRetailMediaSection from '../components/AIDrivenRetailMediaSection';
 import ProjectShowcase from '../components/ProjectShowcase';
+import KevelHeroSlider from '../components/KevelHeroSlider';
 
 const Home = () => {
   return (
@@ -91,8 +92,9 @@ const Home = () => {
         </div>
       </section>
 
-      <ProjectShowcase />
       <AIDrivenRetailMediaSection />
+      <ProjectShowcase />
+      <KevelHeroSlider />
 
     </div>
   );

@@ -1428,3 +1428,303 @@ cite {
   padding: 0 !important;
   height: 4100px !important;
 } */
+
+.kevel-hero {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kevel-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.kevel-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 24, 36, 0.55);
+  z-index: 2;
+}
+
+.kevel-hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.kevel-hero-logos {
+  display: flex;
+  gap: 48px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.kevel-hero-logos img {
+  height: 38px;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+}
+
+.kevel-hero-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  gap: 40px;
+}
+
+.kevel-hero-left {
+  max-width: 700px;
+}
+
+.kevel-hero-left blockquote {
+  color: #fff;
+  font-size: 2.1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 32px 0;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.kevel-hero-author {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  opacity: 0.85;
+}
+
+.kevel-hero-btn {
+  background: #fff;
+  color: #1a2341;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+  transition: background 0.2s, color 0.2s;
+}
+
+.kevel-hero-btn:hover {
+  background: #ff4d2d;
+  color: #fff;
+}
+
+.kevel-hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 180px;
+}
+
+.kevel-hero-stat {
+  color: #fff;
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.2em;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.kevel-hero-stat-label {
+  color: #fff;
+  font-size: 1.2rem;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+.kevel-hero-slider {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kevel-hero-slider .kevel-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  transition: background-image 0.6s cubic-bezier(.4,0,.2,1);
+}
+
+.kevel-hero-slider .kevel-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 24, 36, 0.55);
+  z-index: 2;
+}
+
+.kevel-hero-slider .kevel-hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.kevel-hero-slider .kevel-hero-logos {
+  display: flex;
+  gap: 48px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.kevel-hero-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+  position: relative;
+}
+
+.kevel-hero-logo-wrap img {
+  height: 38px;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+  transition: opacity 0.2s, filter 0.2s;
+}
+
+.kevel-hero-logo-wrap img.active {
+  opacity: 1;
+  filter: brightness(1) invert(0);
+}
+
+.kevel-hero-logo-bar {
+  width: 48px;
+  height: 4px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 2px;
+  margin-top: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.kevel-hero-logo-bar-progress {
+  height: 100%;
+  background: #fff;
+  border-radius: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.kevel-hero-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  gap: 40px;
+}
+
+.kevel-hero-left {
+  max-width: 700px;
+  min-width: 320px;
+}
+
+.kevel-hero-left blockquote {
+  color: #fff;
+  font-size: 2.1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 32px 0;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.kevel-hero-author {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  opacity: 0.85;
+}
+
+.kevel-hero-btn {
+  background: #fff;
+  color: #1a2341;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+  transition: background 0.2s, color 0.2s;
+}
+
+.kevel-hero-btn:hover {
+  background: #ff4d2d;
+  color: #fff;
+}
+
+.kevel-hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 180px;
+}
+
+.kevel-hero-stat {
+  color: #fff;
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.2em;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.kevel-hero-stat-label {
+  color: #fff;
+  font-size: 1.2rem;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .kevel-hero-slider .kevel-hero-content {
+    padding: 32px 12px 24px 12px;
+  }
+  .kevel-hero-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .kevel-hero-right {
+    align-items: flex-start;
+    min-width: 120px;
+  }
+  .kevel-hero-left {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
