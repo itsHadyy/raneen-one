@@ -48,9 +48,9 @@ body {
 }
 
 .header.scrolled {
-  background: #ffffff44;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: #ffffff32;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.10);
   border: 1px solid #ffffff44;
   color: var(--primary-color);
@@ -76,7 +76,7 @@ body {
   padding: 0 20px;
 }
 
-.raneenLogo{
+.raneenLogo {
   width: 50px;
   margin-right: 20px;
 }
@@ -138,7 +138,7 @@ body {
 }
 
 .cta-btn {
-  background: linear-gradient(90deg, #ff4d2d 0%, #FA824D 100%);
+  background: linear-gradient(90deg, #FA824D 0%, #ff4d2d 100%);
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -147,12 +147,12 @@ body {
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(255, 77, 45, 0.10);
-  transition: background 0.2s, box-shadow 0.2s;
+  transition: all 0.4s ease-in-out;
 }
 
 .cta-btn:hover {
-  background: linear-gradient(90deg, #e63b1c 0%, #ff4d2d 100%);
-  box-shadow: 0 4px 16px rgba(255, 77, 45, 0.18);
+  background: linear-gradient(90deg, #ff4d2d 0%, #FA824D 100%);
+  box-shadow: 0 4px 18px rgba(255, 77, 45, 0.18);
 }
 
 .secondary-btn {
@@ -486,7 +486,7 @@ body {
   min-width: 210px;
   background: #fff;
   border-radius: 14px;
-  box-shadow: 0 8px 32px rgba(24,31,42,0.13);
+  box-shadow: 0 8px 32px rgba(24, 31, 42, 0.13);
   padding: 8px 0;
   z-index: 100;
   margin-left: 0;
@@ -514,7 +514,7 @@ a.nav-flyout-link {
   border-bottom: 2px solid #f2f2f2;
 }
 
-a.nav-flyout-link:last-child{
+a.nav-flyout-link:last-child {
   border-bottom: none;
 }
 
@@ -524,7 +524,7 @@ a.nav-flyout-link:last-child{
   color: #ff4d2d !important;
 }
 
-.nav-flyout-link + .nav-flyout-link {
+.nav-flyout-link+.nav-flyout-link {
   border-top: none;
 }
 
@@ -550,6 +550,7 @@ a.nav-flyout-link:last-child{
     padding: 0;
     margin: 0;
   }
+
   .nav-flyout-link {
     padding: 14px 18px;
     font-size: 1rem;
@@ -598,7 +599,7 @@ a.nav-flyout-link:last-child{
   border: 1px solid #f2f2f2;
 }
 
-.nav-dropdown-kevel::before{
+.nav-dropdown-kevel::before {
   content: '';
   position: absolute;
   top: -3px;
