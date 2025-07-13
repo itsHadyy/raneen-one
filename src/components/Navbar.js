@@ -99,7 +99,7 @@ const Navbar = () => {
 
   return (
     <header className={`header${scrolled ? ' scrolled' : ''}`}>
-      <div className="container nav-container">
+      <div className="nav-container">
         <div className="logo">
           <img src='media/logo02.png' alt='Raneen One Icon' className='raneenLogo'/>
           raneen 

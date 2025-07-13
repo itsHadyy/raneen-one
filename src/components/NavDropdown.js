@@ -19,9 +19,9 @@ const NavDropdown = ({ items = [], openFlyout, setOpenFlyout }) => {
             </div>
             {item.flyout && (
               <>
-                <div className="nav-dropdown-arrow-kevel">
-                  <FiChevronRight size={22} />
-                </div>
+              <div className="nav-dropdown-arrow-kevel">
+                <FiChevronRight size={22} />
+              </div>
                 {openFlyout === idx && (
                   <div className="nav-flyout">
                     {item.flyout.map(fly => (
