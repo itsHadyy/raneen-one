@@ -18,10 +18,11 @@ function FeatureHighlight({
   onButtonClick,
   mainImage,
   imagePosition = "left",
+  background,
 }) {
   return (
     <div className={`feature-highlight-container ${imagePosition === "right" ? "reverse" : ""}`}>
-      <div className="feature-highlight-card">
+      <div className={`feature-highlight-card ${background === "yes" ? "feature-highlight-card02" : ""}`}>
         <img src={mainImage} alt="Main visual" className="feature-highlight-main-img" />
       </div>
       <div className="feature-highlight-content">

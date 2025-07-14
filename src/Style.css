@@ -1809,9 +1809,7 @@ cite {
 }
 
 .feature-highlight-card {
-  background: var(--hero-gradient-4);
   border-radius: 32px;
-  box-shadow: 0 8px 32px 0 rgba(255, 86, 48, 0.10);
   width: 520px;
   height: 520px;
   display: flex;
@@ -1822,8 +1820,12 @@ cite {
   /* Only transition box-shadow for smoothness */
   transition: box-shadow 0.7s cubic-bezier(0.4,0,0.2,1);
 }
+.feature-highlight-card02 {
+  background: var(--hero-gradient-4);
+  box-shadow: 0 8px 32px 0 rgba(255, 86, 48, 0.10);
+}
 
-.feature-highlight-card::after {
+.feature-highlight-card02::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1835,12 +1837,12 @@ cite {
   border-radius: 32px;
 }
 
-.feature-highlight-card:hover {
+.feature-highlight-card02:hover {
   background: var(--hero-gradient-4);
   box-shadow: 0 16px 48px 0 rgba(24, 31, 42, 0.18);
 }
 
-.feature-highlight-card:hover::after {
+.feature-highlight-card02:hover::after {
   opacity: 1;
 }
 

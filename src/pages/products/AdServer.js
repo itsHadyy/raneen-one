@@ -45,6 +45,7 @@ function AdServer() {
                 onButtonClick={() => window.open('https://kevel.com/contact', '_blank')}
                 mainImage="/media/assets/smarterPersonalization.webp"
                 imagePosition="left"
+                background='yes'
             />
             <FeatureHighlight
                 label="HIGHER ADVERTISER RETENTION"
@@ -54,6 +55,7 @@ function AdServer() {
                 onButtonClick={() => window.open('https://kevel.com/contact', '_blank')}
                 mainImage="/media/assets/advertiserRetention.avif"
                 imagePosition="right"
+                background='yes'
             />
             <FeatureHighlight
                 label="GREATER OPERATIONAL EFFICIENCY"
@@ -63,6 +65,7 @@ function AdServer() {
                 onButtonClick={() => window.open('https://kevel.com/contact', '_blank')}
                 mainImage="/media/assets/operationalEfficiency.webp"
                 imagePosition="left"
+                background='yes'
             />
         </div>
     );
