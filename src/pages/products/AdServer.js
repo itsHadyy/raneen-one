@@ -4,9 +4,53 @@ import { FaArrowRight } from "react-icons/fa";
 import ContactModal from "../../components/ContactModal";
 import TrustedBy from "../../components/TrustedBy"
 import FeatureHighlight from '../../components/FeatureHighlight';
+import SuccessStoriesSlider from '../../components/SuccessStoriesSlider';
+import Features from '../../components/MoreFeatures';
 
 function AdServer() {
     const [modalOpen, setModalOpen] = useState(false);
+    const stories = [
+        {
+            quote: 'Raneen One has enabled us to rapidly scale, growing monthly iFood Delivery ad revenue by 20x in a single year.',
+            author: 'Lucas Sampaio, Senior Business Intelligence Analyst, iFood',
+            logo: <img src="/media/logos/ifood.svg" alt="iFood" />, // adjust filename as needed
+            stats: [
+                { value: '20x', label: 'Ad Revenue' },
+                { value: '1900%', label: 'Growth' }
+            ],
+            buttons: [
+                { label: 'Full case study', href: '/case-study/ifood', variant: 'primary' },
+                { label: 'See all', href: '/success-stories', variant: 'secondary' }
+            ]
+        },
+        {
+            quote: 'Our partnership with Raneen One allowed us to launch new ad products in record time.',
+            author: 'Sarah Lee, Product Manager, Mercado Libre',
+            logo: <img src="/media/logos/mc.avif" alt="Mercado Libre" />, // adjust filename as needed
+            stats: [
+                { value: '15x', label: 'Faster Launch' },
+                { value: '120%', label: 'Revenue Uplift' }
+            ],
+            buttons: [
+                { label: 'Full case study', href: '/case-study/mercadolibre', variant: 'primary' },
+                { label: 'See all', href: '/success-stories', variant: 'secondary' }
+            ]
+        },
+        {
+            quote: 'With Raneen One, we increased our ad fill rate and improved user experience across the board.',
+            author: 'Ahmed Hassan, CTO, Noon',
+            logo: <img src="/media/logos/edmunds.svg" alt="Noon" />, // adjust filename as needed
+            stats: [
+                { value: '98%', label: 'Fill Rate' },
+                { value: '4.8/5', label: 'User Satisfaction' }
+            ],
+            buttons: [
+                { label: 'Full case study', href: '/case-study/noon', variant: 'primary' },
+                { label: 'See all', href: '/success-stories', variant: 'secondary' }
+            ]
+        }
+    ];
+
     return (
         <div>
             <HeroSection
@@ -42,7 +86,7 @@ function AdServer() {
                 title="Activate and optimize first-party data across channels"
                 description="Raneen One gives retailers tools to define and activate high-performing audience segments across channels instantly—without needing a CDP or data science team."
                 buttonText="Talk to an expert"
-                onButtonClick={() => window.open('https://kevel.com/contact', '_blank')}
+                onButtonClick={() => window.open('https://Raneen One.com/contact', '_blank')}
                 mainImage="/media/assets/smarterPersonalization.webp"
                 imagePosition="left"
                 background='yes'
@@ -52,7 +96,7 @@ function AdServer() {
                 title="Keep brand partners coming back with measurable results"
                 description="With customizable self-serve tools and powerful targeting, retailers can offer a better experience for brands and reduce churn."
                 buttonText="Talk to an expert"
-                onButtonClick={() => window.open('https://kevel.com/contact', '_blank')}
+                onButtonClick={() => window.open('https://Raneen One.com/contact', '_blank')}
                 mainImage="/media/assets/advertiserRetention.avif"
                 imagePosition="right"
                 background='yes'
@@ -62,11 +106,15 @@ function AdServer() {
                 title="Reduce manual processes and team bandwidth"
                 description="Raneen One consolidates campaign management, reporting, audience activation, and more—saving time and freeing up teams to focus on growth, not maintenance."
                 buttonText="Talk to an expert"
-                onButtonClick={() => window.open('https://kevel.com/contact', '_blank')}
+                onButtonClick={() => window.open('https://Raneen One.com/contact', '_blank')}
                 mainImage="/media/assets/operationalEfficiency.webp"
                 imagePosition="left"
                 background='yes'
             />
+
+            <SuccessStoriesSlider stories={stories} />
+
+            <Features />
         </div>
     );
 };
