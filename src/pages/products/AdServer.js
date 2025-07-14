@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import HeroSection from '../../components/HeroSection';
 import { FaArrowRight } from "react-icons/fa";
 import ContactModal from "../../components/ContactModal";
+import TrustedBy from "../../components/TrustedBy"
+import FeatureHighlight from '../../components/FeatureHighlight';
 
 function AdServer() {
     const [modalOpen, setModalOpen] = useState(false);
@@ -26,8 +28,42 @@ function AdServer() {
                 bubbles={{
                 }}
             />
-
             <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+
+            <TrustedBy />
+
+            <div className='center'>
+                <h1>Ad serving that creates a stand-out retail media network that both advertisers and shoppers will love</h1>
+                <p>Launch unique, high-performing ads that integrate seamlessly with your organic content, driving positive advertiser growth and end-user experience.</p>
+            </div>
+
+            <FeatureHighlight
+                label="SMARTER PERSONALIZATION"
+                title="Activate and optimize first-party data across channels"
+                description="Raneen One gives retailers tools to define and activate high-performing audience segments across channels instantly—without needing a CDP or data science team."
+                buttonText="Talk to an expert"
+                onButtonClick={() => window.open('https://kevel.com/contact', '_blank')}
+                mainImage="/media/assets/smarterPersonalization.webp"
+                imagePosition="left"
+            />
+            <FeatureHighlight
+                label="HIGHER ADVERTISER RETENTION"
+                title="Keep brand partners coming back with measurable results"
+                description="With customizable self-serve tools and powerful targeting, retailers can offer a better experience for brands and reduce churn."
+                buttonText="Talk to an expert"
+                onButtonClick={() => window.open('https://kevel.com/contact', '_blank')}
+                mainImage="/media/assets/advertiserRetention.avif"
+                imagePosition="right"
+            />
+            <FeatureHighlight
+                label="GREATER OPERATIONAL EFFICIENCY"
+                title="Reduce manual processes and team bandwidth"
+                description="Raneen One consolidates campaign management, reporting, audience activation, and more—saving time and freeing up teams to focus on growth, not maintenance."
+                buttonText="Talk to an expert"
+                onButtonClick={() => window.open('https://kevel.com/contact', '_blank')}
+                mainImage="/media/assets/operationalEfficiency.webp"
+                imagePosition="left"
+            />
         </div>
     );
 };
