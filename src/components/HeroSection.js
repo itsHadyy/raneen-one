@@ -1,42 +1,34 @@
 import React from 'react';
-import '../Style.css';
 
 const HeroSection = ({
-  gradient,
-  title,
-  subtitle,
-  buttons = [],
-  image,
-  bubbles = []
-}) => (
-  <div className="hero-section" style={{ '--hero-gradient': gradient }}>
-    <div className="hero-bg" />
-    <div className="container hero-content">
-      <div className="hero-text">
-        <h1>{title}</h1>
-        <p>{subtitle}</p>
-        <div className="hero-buttons">
-          {buttons.map((btn, i) => (
-            <button
-              key={i}
-              className={btn.type === 'primary' ? 'cta-btn' : 'secondary-btn'}
-              onClick={btn.onClick}
-            >
-              {btn.label}
-            </button>
-          ))}
+  backgroundGradient,
+  leftContent,
+  imageSrc,
+  imageAlt,
+  bubbles = {},
+}) => {
+  const style = {
+    '--hero-gradient': backgroundGradient,
+  };
+
+  return (
+    <div className="hero-section" style={style}>
+      <div className="hero-bg"></div>
+      <div className="container hero-content">
+        <div className="hero-text">
+          {leftContent}
         </div>
-      </div>
-      <div className="hero-image">
-        <div className="dashboard-mockup">
-          {bubbles.map((bubble, i) => (
-            <div key={i} className={`bubble ${bubble.position}`}>{bubble.text}</div>
-          ))}
-          {image}
+        <div className="hero-image">
+          <div className="dashboard-mockup">
+            {bubbles.topLeft && <div className="bubble top-left">{bubbles.topLeft}</div>}
+            {bubbles.topRight && <div className="bubble top-right">{bubbles.topRight}</div>}
+            <img src={imageSrc} alt={imageAlt} />
+            {bubbles.bottomRight && <div className="bubble bottom-right">{bubbles.bottomRight}</div>}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
-export default HeroSection; 
+export default HeroSection;

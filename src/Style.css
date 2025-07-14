@@ -6,7 +6,12 @@
   --accent02: #FA824D;
   --accent03: #2680EB;
   --accent04: #FDBA40;
-
+  --hero-gradient-1: radial-gradient(ellipse 90% 70% at 20% 20%, var(--primary-color) 60%, var(--accent01) 80%, var(--secondary-color) 100%, var(--accent04) 120%);
+  --hero-gradient-2: radial-gradient(circle at 20% 30%, var(--accent02), var(--accent04), var(--secondary-color));
+  --hero-gradient-3: linear-gradient(135deg, var(--primary-color), var(--accent01), var(--accent04));
+  --hero-gradient-4: radial-gradient(circle at 70% 40%, var(--accent03), var(--bg-color), var(--secondary-color));
+  --hero-gradient-5: linear-gradient(to right, var(--accent02), var(--accent04), var(--accent03));
+  --hero-gradient-6: radial-gradient(ellipse 90% 70% at 20% 20%, var(--primary-color) 40%, var(--accent01) 60%, var(--accent03) 80%, var(--accent04) 100%);
 }
 
 * {
@@ -48,7 +53,7 @@ body {
 }
 
 .header.scrolled {
-  background: #ffffff32;
+  background: #ffffff67;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.10);
@@ -88,6 +93,11 @@ body {
   color: #fff;
   display: flex;
   align-items: center;
+}
+
+.logo-link {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .logo span {
@@ -185,7 +195,7 @@ body {
   box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.18);
   background: linear-gradient(120deg, rgba(13, 27, 42, 0.98) 60%, rgba(110, 47, 244, 0.7) 100%);
   border-radius: 24px;
-  margin: 28px;
+  margin: 24px;
 
 }
 
@@ -200,7 +210,7 @@ body {
   height: 100%;
   background: var(--hero-gradient, radial-gradient(ellipse 90% 70% at 20% 20%, #181f2a 60%, #6e2ff4 80%, #e94f4f 100%, #ffb347 120%));
   background-size: 200% 200%;
-  animation: moveGradientBody 18s ease-in-out infinite alternate;
+  animation: moveGradientBody 12s ease-in-out infinite alternate;
   opacity: 0.78;
   filter: blur(2.5px) saturate(1.02);
   transition: background 0.8s cubic-bezier(.4, 0, .2, 1);

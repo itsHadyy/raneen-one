@@ -1,36 +1,34 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
 import { FiServer, FiUsers, FiGrid } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import AIDrivenRetailMediaSection from '../components/AIDrivenRetailMediaSection';
 import ProjectShowcase from '../components/ProjectShowcase';
 import KevelHeroSlider from '../components/KevelHeroSlider';
+import HeroSection from '../components/HeroSection';
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
-      <div className="hero-section">
-        <div className="hero-bg"></div>
-        <div className="container hero-content">
-          <div className="hero-text">
+      <HeroSection
+        backgroundGradient="var(--hero-gradient-1)"
+        leftContent={
+          <>
             <h1>The End to End Retail Media Suite That Gets Results</h1>
-            <p>Join the leading companies that use Raneen One to power their retail media network and earn more revenue than their competition with custom ad formats, unique data targeting, and AI campaign management.</p>
+            <p>Join the leading companies that use Raneen One to power their retail media network...</p>
             <div className="hero-buttons">
               <button className="cta-btn">Start with Raneen One</button>
               <button className="secondary-btn">Read the docs</button>
             </div>
-          </div>
-          <div className="hero-image">
-            <div className="dashboard-mockup">
-              <div className="bubble top-left">Greater Operational Efficiency</div>
-              <div className="bubble top-right">Smarter Personalization</div>
-              <img src="media/dashboard.webp" alt="Dashboard Mockup" />
-              <div className="bubble bottom-right">Higher Advertiser Retention</div>
-            </div>
-          </div>
-        </div>
-      </div>
+          </>
+        }
+        imageSrc="media/dashboard.webp"
+        imageAlt="Dashboard Mockup"
+        bubbles={{
+          topLeft: 'Greater Operational Efficiency',
+          topRight: 'Smarter Personalization',
+          bottomRight: 'Higher Advertiser Retention'
+        }}
+      />
 
       <section className="trusted-by">
         <div className="container trusted-logos">
@@ -53,7 +51,7 @@ const Home = () => {
           </div>
         </div>
         <div className="retail-media-cloud-cards">
-          <Link className="retail-media-cloud-card" to="/ad-server">
+          <Link className="retail-media-cloud-card" to="/adServer">
             <div className='retail-card-header'>
               <div className="retail-media-cloud-card-icon"><FiServer size={36} /></div>
               <div className='retail-card-subheader'>

@@ -8,6 +8,7 @@ import {
 } from 'react-icons/lu';
 import ContactModal from "./ContactModal";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const NAV_ITEMS = [
   {
@@ -17,7 +18,7 @@ const NAV_ITEMS = [
         icon: <LuServerCog size={24} color="#654EFC" />,
         title: 'Raneen Ad Server',
         desc: 'Build your own ad server',
-        link: '/api-quickstart'
+        link: '/adServer'
       },
       {
         icon: <LuUsers2 size={24} color="#FA824D" />,
@@ -219,11 +220,13 @@ const Navbar = () => {
     <div>
       <header className={`header${scrolled ? ' scrolled' : ''}`}>
         <div className="nav-container">
-          <div className="logo">
-            <img src='media/logo02.png' alt='Raneen One Icon' className='raneenLogo' />
-            raneen
-            {/* <span>One</span> */}
-          </div>
+          <Link to={'/'} className='logo-link'>
+            <div className="logo">
+              <img src='media/logo02.png' alt='Raneen One Icon' className='raneenLogo' />
+              raneen
+              {/* <span>One</span> */}
+            </div>
+          </Link>
           <nav className="nav">
             {NAV_ITEMS.map((item, idx) => {
               const hasDropdown = !!item.dropdown;
@@ -240,10 +243,10 @@ const Navbar = () => {
                   ref={el => navRefs.current[idx] = el}
                   style={{ position: 'relative', display: 'inline-block' }}
                 >
-                  <a href={item.link || '#'} className="nav-link">
+                  <Link to={item.link || '#'} className="nav-link">
                     {item.label}
                     {hasDropdown && <FiChevronDown style={{ marginLeft: 6, verticalAlign: 'middle' }} size={18} />}
-                  </a>
+                  </Link>
                   {hasDropdown && isOpen && (
                     <NavDropdown
                       items={item.dropdown}
