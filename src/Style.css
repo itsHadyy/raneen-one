@@ -7,7 +7,7 @@
   --accent03: #2680EB;
   --accent04: #FDBA40;
   --hero-gradient-1: radial-gradient(ellipse 90% 70% at 20% 20%, var(--primary-color) 60%, var(--accent01) 80%, var(--secondary-color) 100%, var(--accent04) 120%);
-  --hero-gradient-2: radial-gradient(circle at 20% 30%, var(--accent02), var(--accent04), var(--secondary-color));
+  --hero-gradient-2: radial-gradient(circle at 20% 30%, var(--accent01), var(--primary-color), var(--accent03));
   --hero-gradient-3: linear-gradient(135deg, var(--primary-color), var(--accent01), var(--accent04));
   --hero-gradient-4: radial-gradient(circle at 70% 40%, var(--accent03), var(--bg-color), var(--secondary-color));
   --hero-gradient-5: linear-gradient(to right, var(--accent02), var(--accent04), var(--accent03));
@@ -39,8 +39,8 @@ body {
 
 .header {
   background: transparent;
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
+  /* backdrop-filter: blur(0px); */
+  /* -webkit-backdrop-filter: blur(0px); */
   transition: background 0.3s, box-shadow 0.3s, backdrop-filter 0.3s;
   box-shadow: none;
   padding: 20px 0;
@@ -192,7 +192,6 @@ body {
   align-items: center;
   justify-content: center;
   background: none;
-  box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.18);
   background: linear-gradient(120deg, rgba(13, 27, 42, 0.98) 60%, rgba(110, 47, 244, 0.7) 100%);
   border-radius: 24px;
   margin: 24px;
@@ -282,6 +281,22 @@ body {
 
 .dashboard-mockup {
   position: relative;
+  border-radius: 24px;
+  padding: 14px;
+  min-width: 320px;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-mockup img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.dashboard-mockup02 {
+  position: relative;
   background: #f7f7fa60;
   backdrop-filter: blur(8px) saturate(1.2);
   border-radius: 24px;
@@ -295,7 +310,7 @@ body {
   justify-content: center;
 }
 
-.dashboard-mockup img {
+.dashboard-mockup02 img {
   width: 100%;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);

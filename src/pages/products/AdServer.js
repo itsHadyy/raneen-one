@@ -1,29 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HeroSection from '../../components/HeroSection';
+import { FaArrowRight } from "react-icons/fa";
+import ContactModal from "../../components/ContactModal";
 
 function AdServer() {
+    const [modalOpen, setModalOpen] = useState(false);
     return (
         <div>
             <HeroSection
-                backgroundGradient="var(--hero-gradient-1)"
+                backgroundGradient="var(--hero-gradient-2)"
                 leftContent={
                     <>
-                        <h1>The End to End Retail Media Suite That Gets Results</h1>
-                        <p>Join the leading companies that use Raneen One to power their retail media network...</p>
+                        <h1>Flexible API Ad Serving powered by Advanced ML and AI</h1>
+                        <p>The Raneen One Ad Server is the cornerstone of the Retail Media Cloud, giving you total control over your ad forecasting, management, decisioning, and reporting, for an ad performance experience like never before.</p>
                         <div className="hero-buttons">
-                            <button className="cta-btn">Start with Raneen One</button>
+                            <button className="footer-cta-btn" onClick={() => setModalOpen(true)} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                                Talk to an expert <FaArrowRight style={{ marginLeft: 8, verticalAlign: 'middle' }} />
+                            </button>
                             <button className="secondary-btn">Read the docs</button>
                         </div>
                     </>
                 }
-                imageSrc="media/dashboard.webp"
+                imageSrc="media/assets/adServer.webp"
                 imageAlt="Dashboard Mockup"
                 bubbles={{
-                    topLeft: 'Greater Operational Efficiency',
-                    topRight: 'Smarter Personalization',
-                    bottomRight: 'Higher Advertiser Retention'
                 }}
             />
+
+            <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
         </div>
     );
 };

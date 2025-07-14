@@ -9,26 +9,27 @@ import HeroSection from '../components/HeroSection';
 const Home = () => {
   return (
     <div>
-      <HeroSection
-        backgroundGradient="var(--hero-gradient-1)"
-        leftContent={
-          <>
+      <div className="hero-section">
+        <div className="hero-bg"></div>
+        <div className="container hero-content">
+          <div className="hero-text">
             <h1>The End to End Retail Media Suite That Gets Results</h1>
-            <p>Join the leading companies that use Raneen One to power their retail media network...</p>
+            <p>Join the leading companies that use Raneen One to power their retail media network and earn more revenue than their competition with custom ad formats, unique data targeting, and AI campaign management.</p>
             <div className="hero-buttons">
               <button className="cta-btn">Start with Raneen One</button>
               <button className="secondary-btn">Read the docs</button>
             </div>
-          </>
-        }
-        imageSrc="media/dashboard.webp"
-        imageAlt="Dashboard Mockup"
-        bubbles={{
-          topLeft: 'Greater Operational Efficiency',
-          topRight: 'Smarter Personalization',
-          bottomRight: 'Higher Advertiser Retention'
-        }}
-      />
+          </div>
+          <div className="hero-image">
+            <div className="dashboard-mockup02">
+              <div className="bubble top-left">Greater Operational Efficiency</div>
+              <div className="bubble top-right">Smarter Personalization</div>
+              <img src="media/dashboard.webp" alt="Dashboard Mockup" />
+              <div className="bubble bottom-right">Higher Advertiser Retention</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section className="trusted-by">
         <div className="container trusted-logos">
