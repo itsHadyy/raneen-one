@@ -11,12 +11,12 @@ function Audience() {
     const [modalOpen, setModalOpen] = useState(false);
     const stories = [
         {
-            quote: 'Raneen One has enabled us to rapidly scale, growing monthly iFood Delivery ad revenue by 20x in a single year.',
-            author: 'Lucas Sampaio, Senior Business Intelligence Analyst, iFood',
-            logo: <img src="/media/logos/ifood.svg" alt="iFood" />, // adjust filename as needed
+            quote: 'LEROY MERLIN Portugal quickly launched personalization campaigns targeted with Kevel Audience segments to increase conversion rate by 16%.',
+            author: '— Marketing Director, LEROY MERLIN Portugal',
+            logo: <img src="/media/logos/leroy.svg" alt="Leroy" />,
             stats: [
-                { value: '20x', label: 'Ad Revenue' },
-                { value: '1900%', label: 'Growth' }
+                { value: '10x', label: 'Increase in conversion rate' },
+                { value: '$1MM+', label: 'Revenue per Session (RPS)' }
             ],
             buttons: [
                 { label: 'Full case study', href: '/case-study/ifood', variant: 'primary' },
@@ -26,7 +26,7 @@ function Audience() {
         {
             quote: 'Our partnership with Raneen One allowed us to launch new ad products in record time.',
             author: 'Sarah Lee, Product Manager, Mercado Libre',
-            logo: <img src="/media/logos/mc.avif" alt="Mercado Libre" />, // adjust filename as needed
+            logo: <img src="/media/logos/mc.avif" alt="Mercado Libre" />,
             stats: [
                 { value: '15x', label: 'Faster Launch' },
                 { value: '120%', label: 'Revenue Uplift' }
@@ -39,7 +39,7 @@ function Audience() {
         {
             quote: 'With Raneen One, we increased our ad fill rate and improved user experience across the board.',
             author: 'Ahmed Hassan, CTO, Noon',
-            logo: <img src="/media/logos/edmunds.svg" alt="Noon" />, // adjust filename as needed
+            logo: <img src="/media/logos/edmunds.svg" alt="Noon" />,
             stats: [
                 { value: '98%', label: 'Fill Rate' },
                 { value: '4.8/5', label: 'User Satisfaction' }
@@ -58,7 +58,7 @@ function Audience() {
                 leftContent={
                     <>
                         <h1>Precision that scales, AI that outperforms</h1>
-                        <p>The Raneen One Ad Server is the cornerstone of the Retail Media Cloud, giving you total control over your ad forecasting, management, decisioning, and reporting, for an ad performance experience like never before.</p>
+                        <p>Activate and optimize your first-party data across channels with the flexibility, control, efficiency and value of precise decisioning.</p>
                         <div className="hero-buttons">
                             <button className="footer-cta-btn" onClick={() => setModalOpen(true)} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
                                 Talk to an expert <FaArrowRight style={{ marginLeft: 8, verticalAlign: 'middle' }} />
@@ -67,7 +67,7 @@ function Audience() {
                         </div>
                     </>
                 }
-                imageSrc="media/assets/adServer.webp"
+                imageSrc="media/assets/audience.avif"
                 imageAlt="Dashboard Mockup"
                 bubbles={{
                 }}
@@ -76,43 +76,27 @@ function Audience() {
 
             <TrustedBy />
 
-            <div className='center'>
-                <h1>Ad serving that creates a stand-out retail media network that both advertisers and shoppers will love</h1>
-                <p>Launch unique, high-performing ads that integrate seamlessly with your organic content, driving positive advertiser growth and end-user experience.</p>
-            </div>
-
+            <FeatureHighlight
+                label="TAILORED TO YOUR BUSINESS LOGIC"
+                title="Unlock the Power Of First-Party Data"
+                description="Activate your loyalty, purchase and behavioral data through stronger targeting, better monetization and full control in a post-cookie world. Build segments based on your rules - no someone else’s templates to enable more relevant targeting, better control and personalization that fits your strategy."
+                buttonText="Talk to an expert"
+                onButtonClick={() => window.open('https://Raneen One.com/contact', '_blank')}
+                mainImage="/media/assets/audience01.svg"
+                imagePosition="left"
+                background='yes'
+                backgroundGradientVar="--hero-gradient-4"
+            />
             <FeatureHighlight
                 label="SMARTER PERSONALIZATION"
-                title="Activate and optimize first-party data across channels"
-                description="Raneen One gives retailers tools to define and activate high-performing audience segments across channels instantly—without needing a CDP or data science team."
+                title="Smarter, Faster Audience Activation and Optimization"
+                description="First party data is a strategic advantage but it’s only powerful if its actionable. Kevel gives retailers tools to define and activate high-performing audience segments across channels instantly, without needing a CDP or Data science team. Quickly test and refine segments in real time targeting the right users at the right time to ensure higher ROAS and fewer wasted impressions on disengaged or already-converted shoppers."
                 buttonText="Talk to an expert"
                 onButtonClick={() => window.open('https://Raneen One.com/contact', '_blank')}
-                mainImage="/media/assets/smarterPersonalization.webp"
-                imagePosition="left"
-                background='yes'
-                backgroundGradientVar="--hero-gradient-2"
-            />
-            <FeatureHighlight
-                label="HIGHER ADVERTISER RETENTION"
-                title="Keep brand partners coming back with measurable results"
-                description="With customizable self-serve tools and powerful targeting, retailers can offer a better experience for brands and reduce churn."
-                buttonText="Talk to an expert"
-                onButtonClick={() => window.open('https://Raneen One.com/contact', '_blank')}
-                mainImage="/media/assets/advertiserRetention.avif"
+                mainImage="/media/assets/audience02.svg"
                 imagePosition="right"
                 background='yes'
-                backgroundGradientVar="--hero-gradient-2"
-            />
-            <FeatureHighlight
-                label="GREATER OPERATIONAL EFFICIENCY"
-                title="Reduce manual processes and team bandwidth"
-                description="Raneen One consolidates campaign management, reporting, audience activation, and more—saving time and freeing up teams to focus on growth, not maintenance."
-                buttonText="Talk to an expert"
-                onButtonClick={() => window.open('https://Raneen One.com/contact', '_blank')}
-                mainImage="/media/assets/operationalEfficiency.webp"
-                imagePosition="left"
-                background='yes'
-                backgroundGradientVar="--hero-gradient-2"
+                backgroundGradientVar="--hero-gradient-4"
             />
 
             <SuccessStoriesSlider stories={stories} />
