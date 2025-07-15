@@ -10,6 +10,7 @@ import { useRef } from 'react';
 import Home from './pages/Home';
 import AdServer from './pages/products/AdServer';
 import Audience from './pages/products/Audience';
+import Console from './pages/products/Console';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -22,6 +23,7 @@ function AnimatedRoutes() {
             <Route path="/" element={<Home />} />
             <Route path="/adServer" element={<AdServer />} />
             <Route path="/audience" element={<Audience />} />
+            <Route path="/console" element={<Console />} />
           </Routes>
         </div>
       </CSSTransition>

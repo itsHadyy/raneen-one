@@ -30,13 +30,7 @@ const NAV_ITEMS = [
         icon: <LuSettings2 size={24} color="#2680EB" />,
         title: 'Raneen Console',
         desc: 'Manage your campaigns with AI',
-        link: '/tools'
-      },
-      {
-        icon: <LuActivitySquare size={24} color="#FDBA40" />,
-        title: 'API Status',
-        desc: 'Real-time updates on API uptimes',
-        link: '/api-status'
+        link: '/console'
       }
     ]
   },
