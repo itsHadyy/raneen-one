@@ -24,7 +24,7 @@ const NAV_ITEMS = [
         icon: <LuUsers2 size={24} color="#FA824D" />,
         title: 'Raneen Audience',
         desc: 'Unlock your first-party data',
-        link: '/knowledge-base'
+        link: '/audience'
       },
       {
         icon: <LuSettings2 size={24} color="#2680EB" />,

@@ -9,6 +9,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { useRef } from 'react';
 import Home from './pages/Home';
 import AdServer from './pages/products/AdServer';
+import Audience from './pages/products/Audience';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -20,6 +21,7 @@ function AnimatedRoutes() {
           <Routes location={location}>
             <Route path="/" element={<Home />} />
             <Route path="/adServer" element={<AdServer />} />
+            <Route path="/audience" element={<Audience />} />
           </Routes>
         </div>
       </CSSTransition>

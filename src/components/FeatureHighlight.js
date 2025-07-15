@@ -19,10 +19,18 @@ function FeatureHighlight({
   mainImage,
   imagePosition = "left",
   background,
+  backgroundGradientVar, // <-- new prop
 }) {
+  const style = backgroundGradientVar
+    ? { background: `var(${backgroundGradientVar})` }
+    : {};
+
   return (
     <div className={`feature-highlight-container ${imagePosition === "right" ? "reverse" : ""}`}>
-      <div className={`feature-highlight-card ${background === "yes" ? "feature-highlight-card02" : ""}`}>
+      <div
+        style={style}
+        className={`feature-highlight-card ${background === "yes" ? "feature-highlight-card02" : ""}`}
+      >
         <img src={mainImage} alt="Main visual" className="feature-highlight-main-img" />
       </div>
       <div className="feature-highlight-content">

@@ -7,7 +7,7 @@ import FeatureHighlight from '../../components/FeatureHighlight';
 import SuccessStoriesSlider from '../../components/SuccessStoriesSlider';
 import Features from '../../components/MoreFeatures';
 
-function AdServer() {
+function Audience() {
     const [modalOpen, setModalOpen] = useState(false);
     const stories = [
         {
@@ -54,10 +54,10 @@ function AdServer() {
     return (
         <div>
             <HeroSection
-                backgroundGradient="var(--hero-gradient-2)"
+                backgroundGradient="var(--hero-gradient-4)"
                 leftContent={
                     <>
-                        <h1>Flexible API Ad Serving powered by Advanced ML and AI</h1>
+                        <h1>Precision that scales, AI that outperforms</h1>
                         <p>The Raneen One Ad Server is the cornerstone of the Retail Media Cloud, giving you total control over your ad forecasting, management, decisioning, and reporting, for an ad performance experience like never before.</p>
                         <div className="hero-buttons">
                             <button className="footer-cta-btn" onClick={() => setModalOpen(true)} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
@@ -89,8 +89,8 @@ function AdServer() {
                 onButtonClick={() => window.open('https://Raneen One.com/contact', '_blank')}
                 mainImage="/media/assets/smarterPersonalization.webp"
                 imagePosition="left"
-                backgroundGradientVar="--hero-gradient-2"
                 background='yes'
+                backgroundGradientVar="--hero-gradient-2"
             />
             <FeatureHighlight
                 label="HIGHER ADVERTISER RETENTION"
@@ -100,8 +100,8 @@ function AdServer() {
                 onButtonClick={() => window.open('https://Raneen One.com/contact', '_blank')}
                 mainImage="/media/assets/advertiserRetention.avif"
                 imagePosition="right"
-                backgroundGradientVar="--hero-gradient-2"
                 background='yes'
+                backgroundGradientVar="--hero-gradient-2"
             />
             <FeatureHighlight
                 label="GREATER OPERATIONAL EFFICIENCY"
@@ -111,8 +111,8 @@ function AdServer() {
                 onButtonClick={() => window.open('https://Raneen One.com/contact', '_blank')}
                 mainImage="/media/assets/operationalEfficiency.webp"
                 imagePosition="left"
-                backgroundGradientVar="--hero-gradient-2"
                 background='yes'
+                backgroundGradientVar="--hero-gradient-2"
             />
 
             <SuccessStoriesSlider stories={stories} />
@@ -122,4 +122,4 @@ function AdServer() {
     );
 };
 
-export default AdServer;
+export default Audience;
