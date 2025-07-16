@@ -1778,19 +1778,19 @@ cite {
   }
 }
 
-.center{
+.center {
   text-align: center;
   width: 40%;
   margin: 40px auto;
 }
 
-.center h1{
+.center h1 {
   font-weight: 300;
   color: #333;
   font-size: 46px;
 }
 
-.center p{
+.center p {
   color: #444;
   font-size: 18px;
 }
@@ -1820,6 +1820,7 @@ cite {
   /* Only transition box-shadow for smoothness */
   animation: moveGradientBody 12s ease-in-out infinite alternate;
 }
+
 .feature-highlight-card02 {
   background: var(--hero-gradient-4);
   box-shadow: 0 8px 32px 0 rgba(255, 86, 48, 0.10);
@@ -1829,9 +1830,10 @@ cite {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.18); /* semi-transparent black */
+  background: rgba(0, 0, 0, 0.18);
+  /* semi-transparent black */
   opacity: 0;
-  transition: opacity 0.4s cubic-bezier(0.4,0,0.2,1);
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2;
   pointer-events: none;
   border-radius: 32px;
@@ -1913,11 +1915,13 @@ cite {
     gap: 32px;
     margin: 32px 0;
   }
+
   .feature-highlight-card {
     min-width: 0;
     width: 100%;
     padding: 32px 12px;
   }
+
   .feature-highlight-content {
     min-width: 0;
     width: 100%;
@@ -1931,17 +1935,20 @@ cite {
   padding: 0 24px 64px 24px;
   text-align: center;
 }
+
 .success-stories-title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 8px;
   letter-spacing: -0.02em;
 }
+
 .success-stories-subtitle {
   color: #6B7280;
   font-size: 1.15rem;
   margin-bottom: 40px;
 }
+
 .success-stories-cards {
   display: flex;
   justify-content: center;
@@ -1952,6 +1959,7 @@ cite {
   flex-wrap: wrap;
   width: 70%;
 }
+
 .success-story-quote-card {
   background: linear-gradient(135deg, #003366 0%, #0052D4 100%);
   color: #fff;
@@ -1966,32 +1974,38 @@ cite {
   justify-content: space-between;
   position: relative;
   opacity: 1;
-  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   min-height: 420px;
 }
+
 .success-story-quote-card.fade-in {
   opacity: 1;
   pointer-events: auto;
 }
+
 .success-story-quote-card.fade-out {
   opacity: 0;
   pointer-events: none;
 }
+
 .success-story-quote {
   font-size: 1.25rem;
   font-weight: 500;
   margin-bottom: 24px;
   line-height: 1.5;
 }
+
 .success-story-author {
   font-size: 1rem;
   color: #B6C3D1;
   margin-bottom: 32px;
 }
+
 .success-story-buttons {
   display: flex;
   gap: 12px;
 }
+
 .success-story-btn {
   padding: 8px 20px;
   border-radius: 24px;
@@ -2001,20 +2015,23 @@ cite {
   outline: none;
   cursor: pointer;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
   text-decoration: none;
   display: inline-block;
 }
+
 .success-story-btn.primary {
   background: linear-gradient(90deg, #FF5630 0%, #FF8B00 100%);
   color: #fff;
   border: none;
 }
+
 .success-story-btn.secondary {
   background: #fff;
   color: #003366;
   border: 1.5px solid #E5EAF2;
 }
+
 .success-story-logo-and-stats {
   display: flex;
   flex-direction: column;
@@ -2023,16 +2040,19 @@ cite {
   align-items: stretch;
   justify-content: stretch;
   opacity: 1;
-  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .success-story-logo-and-stats.fade-in {
   opacity: 1;
   pointer-events: auto;
 }
+
 .success-story-logo-and-stats.fade-out {
   opacity: 0;
   pointer-events: none;
 }
+
 .success-story-logo-card {
   border-radius: 18px;
   display: flex;
@@ -2042,17 +2062,20 @@ cite {
   min-height: 200px;
   width: 100%;
 }
+
 .success-story-logo-card img {
   width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 24px;
 }
+
 .success-story-stats {
   display: flex;
   gap: 16px;
   justify-content: stretch;
 }
+
 .success-story-stat-card {
   background: #F6F8FA;
   border-radius: 16px;
@@ -2064,22 +2087,26 @@ cite {
   justify-content: center;
   min-height: 200px;
 }
+
 .success-story-stat-value {
   font-size: 2rem;
   font-weight: 700;
   color: #003366;
   margin-bottom: 8px;
 }
+
 .success-story-stat-label {
   font-size: 1.1rem;
   color: #6B7280;
 }
+
 .success-stories-arrows {
   display: flex;
   justify-content: center;
   gap: 16px;
   margin-top: 16px;
 }
+
 .success-stories-arrow {
   background: #fff;
   border: 1.5px solid #E5EAF2;
@@ -2090,27 +2117,31 @@ cite {
   color: #003366;
   cursor: pointer;
   transition: background 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .success-stories-arrow:hover {
   background: #F6F8FA;
 }
+
 @media (max-width: 900px) {
   .success-stories-cards {
     flex-direction: column;
     gap: 24px;
     align-items: center;
   }
-  .success-story-logo-and-stats, .success-story-quote-card {
+
+  .success-story-logo-and-stats,
+  .success-story-quote-card {
     max-width: 100%;
     min-width: 0;
   }
 }
 
-.more-feaatures-container{
+.more-feaatures-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2125,10 +2156,11 @@ cite {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .more-feature-card {
   background: #fff;
   border-radius: 24px;
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
   overflow: hidden;
   width: 240px;
   min-width: 200px;
@@ -2139,9 +2171,11 @@ cite {
   align-items: stretch;
   transition: box-shadow 0.2s;
 }
+
 .more-feature-card:hover {
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.12);
 }
+
 .more-feature-image-wrapper {
   width: 100%;
   aspect-ratio: 4/3;
@@ -2151,26 +2185,159 @@ cite {
   align-items: center;
   justify-content: center;
 }
+
 .more-feature-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
 .more-feature-title {
   font-size: 1.1rem;
   font-weight: 600;
   padding: 18px 16px 20px 16px;
   text-align: left;
 }
+
 @media (max-width: 900px) {
   .more-features-list {
     gap: 16px;
     justify-content: center;
   }
+
   .more-feature-card {
     width: 100%;
     min-width: 0;
     max-width: 340px;
+  }
+}
+
+.donut-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.donut-title {
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  color: #12213A;
+  line-height: 1.15;
+}
+
+.donut-title sup {
+  font-size: 0.7em;
+  vertical-align: super;
+}
+
+.donut-desc {
+  color: #6B7A90;
+  font-size: 1.08rem;
+  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.donut-svg-wrapper {
+  position: relative;
+  width: 640px;
+  height: 640px;
+  margin: 0 auto;
+}
+
+.donut-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.donut-segment {
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.donut-segment.active {
+  box-shadow: 0 2px 12px rgba(255, 90, 54, 0.12);
+}
+
+.donut-label {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.95;
+  pointer-events: none;
+  user-select: none;
+  transition: fill 0.3s, text-shadow 0.3s;
+  text-align: center;
+}
+
+.donut-label.active {
+  fill: #fff;
+  text-shadow: 0 2px 8px #FF5A36;
+  opacity: 1;
+}
+
+.donut-center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 340px;
+  height: 220px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  z-index: 4;
+}
+
+.donut-center-title {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 2.3rem;
+  color: #12213A;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.donut-center-desc {
+  color: #12213A;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+  max-width: 320px;
+}
+
+@media (max-width: 900px) {
+  .donut-svg-wrapper {
+    width: 98vw;
+    height: 98vw;
+    min-width: 220px;
+    min-height: 220px;
+    max-width: 98vw;
+    max-height: 98vw;
+  }
+  .donut-center-content {
+    width: 80vw;
+    height: 40vw;
+    min-width: 120px;
+    min-height: 80px;
+    padding: 0;
+  }
+  .donut-title {
+    font-size: 1.2rem;
+  }
+  .donut-label {
+    font-size: 1.1rem;
   }
 }

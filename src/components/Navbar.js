@@ -41,7 +41,7 @@ const NAV_ITEMS = [
         icon: <LuShoppingBag size={24} color="#654EFC" />,
         title: 'Retail Media',
         desc: 'Build your own ad server',
-        link: '/api-quickstart'
+        link: '/retail'
       },
       {
         icon: <LuStore size={24} color="#FA824D" />,
