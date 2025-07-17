@@ -3,7 +3,6 @@ import HeroSection from '../../components/HeroSection';
 import { FaArrowRight } from "react-icons/fa";
 import ContactModal from "../../components/ContactModal";
 import FeatureHighlight from '../../components/FeatureHighlight';
-import AdLifecycleDonut from '../../components/AdLifecycleDonut';
 import FeatureHighlight02 from '../../components/FeatureHighlight02';
 import SuccessStoriesSlider from '../../components/SuccessStoriesSlider';
 
