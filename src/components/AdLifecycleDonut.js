@@ -88,7 +88,6 @@ export default function AdLifecycleDonut() {
               />
             );
           })}
-          {/* Labels */}
           {SEGMENTS.map((seg, i) => {
             const startAngle = i * segmentAngle + 4; // +4 for a little spacing
             const endAngle = (i + 1) * segmentAngle - 4; // -4 for a little spacing
