@@ -47,19 +47,19 @@ const NAV_ITEMS = [
         icon: <LuStore size={24} color="#FA824D" />,
         title: 'Marketplaces',
         desc: 'Unlock your first-party data',
-        link: '/knowledge-base'
+        link: '/marketplaces'
       },
       {
         icon: <LuTruck size={24} color="#2680EB" />,
         title: 'Delivery Apps',
         desc: 'Manage your campaigns with AI',
-        link: '/tools'
+        link: '/delivery'
       },
       {
         icon: <LuCreditCard size={24} color="#FDBA40" />,
         title: 'Financial Media',
         desc: 'Real-time updates on API uptimes',
-        link: '/api-status'
+        link: '/financial'
       }
     ]
   },

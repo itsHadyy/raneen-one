@@ -9,7 +9,7 @@ import SuccessStoriesSlider from '../../components/SuccessStoriesSlider';
 
 
 
-function Retail() {
+function Marketplaces() {
     const [modalOpen, setModalOpen] = useState(false);
 
     const stories = [
@@ -57,11 +57,11 @@ function Retail() {
     return (
         <div>
             <HeroSection
-                backgroundGradient="var(--hero-gradient-2)"
+                backgroundGradient="var(--hero-gradient-4)"
                 leftContent={
                     <>
-                        <h1>Upgrade your retail media network</h1>
-                        <p>The Retail Media Cloud powers leading retail media networks, delivering high performance with relevant ad formats targeted using your own AI and machine learning segments.</p>
+                        <h1>Build Your Marketplace Ad Business</h1>
+                        <p><b>Retail media is booming — especially for marketplaces.</b><br/>Raneen One gives you a way to run ads that match your brand and maintain full control without impacting your site’s performance – underpinned by highly scalable infrastructure.</p>
                         <div className="hero-buttons">
                             <button className="footer-cta-btn" onClick={() => setModalOpen(true)} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
                                 Talk to an expert <FaArrowRight style={{ marginLeft: 8, verticalAlign: 'middle' }} />
@@ -69,7 +69,7 @@ function Retail() {
                         </div>
                     </>
                 }
-                imageSrc="media/assets/industries/retail.avif"
+                imageSrc="media/assets/industries/marketplaces.avif"
                 imageAlt="Dashboard Mockup"
                 bubbles={{
                 }}
@@ -77,39 +77,37 @@ function Retail() {
             <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
 
             <div className='center'>
-                <h1>High-performing ads optimize GMV growth and relevancy</h1>
-                <p>Drive incrementality, ROAS, and new-to-brand metrics with sponsored listings, native ads, and other unique ad formats that boost advertiser ROI and increase sales.</p>
+                <h1>What Marketplaces Need To Win</h1>
+                <p>Marketplaces like yours require an ad platform that offers flexibility, transparency, and speed. Our API-first Retail Media Cloud® provides this and more.</p>
             </div>
 
             <FeatureHighlight
                 label="SMARTER PERSONALIZATION"
-                title="Take control of your sponsored listing auctions, driving the high CPCs and value to advertisers."
-                description="Set up auctions that work for your ad program, including different rate types and first or second-price auctions. Optimize the auctions for your desired performance, whether that’s clicks, impressions, or revenue."
-                mainImage="/media/assets/industries/retail01.webp"
+                title="Sponsored Listings That Match Your User Experience"
+                description="Unlike templated placements, Kevel lets you build ad units that blend seamlessly with your native search and browse experiences. These listings can be keyword-targeted, ML-ranked, and ROAS-optimized, giving you a performance engine sellers will invest in."
+                mainImage="/media/assets/industries/marketplaces03.avif"
                 imagePosition="left"
-                backgroundGradientVar="--hero-gradient-2"
+                backgroundGradientVar="--hero-gradient-4"
                 background='yes'
             />
             <FeatureHighlight
                 label="SMARTER PERSONALIZATION"
-                title="Bring your own AI/ML targeting and relevancy models to drive ad and conversion performance."
-                description="You know your customers best. Using your own first-party data, the Kevel Ad Server carefully selects which ad to serve that will lead to more product off your shelves."
-                mainImage="/media/assets/industries/retail02.webp"
+                title="Responsibly Activate Your 1P Data"
+                description="Kevel Audience makes it easy to build privacy-safe, high-conversion audience segments using your own data—no cookies or third-party dependencies. These segments can be used onsite & offsite, with connections to platforms like Meta or Google, providing audience extension to maximize reach and campaign performance."
+                mainImage="/media/assets/industries/marketplaces02.avif"
                 imagePosition="right"
-                backgroundGradientVar="--hero-gradient-2"
+                backgroundGradientVar="--hero-gradient-4"
                 background='yes'
             />
             <FeatureHighlight
                 label="SMARTER PERSONALIZATION"
-                title="Integrate ad serving seamlessly within your existing tech stack. "
-                description="From campaign management with your own self-serve, to decisioning with your own ML modeling, to reporting with your own BI tools, we integrate with you, not the other way around."
-                mainImage="/media/assets/industries/retail03.webp"
+                title="Self-Serve, via API or white labeled UI"
+                description="Empower your sellers with a clean, intuitive, fully branded UI to launch and manage campaigns. Backed by smart automation and Kevel's AI-driven optimization, it reduces operational lift while maximizing seller adoption."
+                mainImage="/media/assets/industries/marketplaces03.avif"
                 imagePosition="left"
-                backgroundGradientVar="--hero-gradient-2"
+                backgroundGradientVar="--hero-gradient-4"
                 background='yes'
             />
-
-            <AdLifecycleDonut />
 
             <FeatureHighlight02 />
 
@@ -118,4 +116,4 @@ function Retail() {
     );
 };
 
-export default Retail;
+export default Marketplaces;

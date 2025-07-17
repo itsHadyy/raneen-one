@@ -12,6 +12,7 @@ import AdServer from './pages/products/AdServer';
 import Audience from './pages/products/Audience';
 import Console from './pages/products/Console';
 import Retail from './pages/industries/Retail';
+import Marketplaces from './pages/industries/Marketplaces';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -26,6 +27,7 @@ function AnimatedRoutes() {
             <Route path="/audience" element={<Audience />} />
             <Route path="/console" element={<Console />} />
             <Route path="/retail" element={<Retail />} />
+            <Route path="/marketplaces" element={<Marketplaces />} />
           </Routes>
         </div>
       </CSSTransition>
