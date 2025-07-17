@@ -15,7 +15,7 @@ function Marketplaces() {
         {
             quote: 'Raneen One has enabled us to rapidly scale, growing monthly iFood Delivery ad revenue by 20x in a single year.',
             author: 'Lucas Sampaio, Senior Business Intelligence Analyst, iFood',
-            logo: <img src="/media/logos/ifood.svg" alt="iFood" />, // adjust filename as needed
+            logo: <img src="/media/logos/ifood.svg" alt="iFood" />,  
             stats: [
                 { value: '20x', label: 'Ad Revenue' },
                 { value: '1900%', label: 'Growth' }
@@ -28,7 +28,7 @@ function Marketplaces() {
         {
             quote: 'Our partnership with Raneen One allowed us to launch new ad products in record time.',
             author: 'Sarah Lee, Product Manager, Mercado Libre',
-            logo: <img src="/media/logos/mc.avif" alt="Mercado Libre" />, // adjust filename as needed
+            logo: <img src="/media/logos/mc.avif" alt="Mercado Libre" />,  
             stats: [
                 { value: '15x', label: 'Faster Launch' },
                 { value: '120%', label: 'Revenue Uplift' }
@@ -41,7 +41,7 @@ function Marketplaces() {
         {
             quote: 'With Raneen One, we increased our ad fill rate and improved user experience across the board.',
             author: 'Ahmed Hassan, CTO, Noon',
-            logo: <img src="/media/logos/edmunds.svg" alt="Noon" />, // adjust filename as needed
+            logo: <img src="/media/logos/edmunds.svg" alt="Noon" />,  
             stats: [
                 { value: '98%', label: 'Fill Rate' },
                 { value: '4.8/5', label: 'User Satisfaction' }
