@@ -11,7 +11,7 @@
   --hero-gradient-3: linear-gradient(135deg, var(--primary-color), var(--accent01), var(--accent04));
   --hero-gradient-4: radial-gradient(circle at 70% 40%, var(--secondary-color), var(--accent02), var(--secondary-color));
   --hero-gradient-5: linear-gradient(to right, var(--accent03), var(--primary-color), var(--accent03));
-  --hero-gradient-6: radial-gradient(ellipse 90% 70% at 20% 20%, var(--primary-color) 40%, var(--accent01) 60%, var(--accent03) 80%, var(--accent04) 100%);
+  --hero-gradient-6: radial-gradient(ellipse 90% 70% at 20% 20%, var(--accent04) 40%, var(--accent02) 60%, var(--accent04) 80%, var(--accent04) 100%);
 }
 
 * {

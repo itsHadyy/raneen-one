@@ -14,6 +14,7 @@ import Console from './pages/products/Console';
 import Retail from './pages/industries/Retail';
 import Marketplaces from './pages/industries/Marketplaces';
 import Delivery from './pages/industries/Delivery';
+import Financial from './pages/industries/Financial';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -30,6 +31,7 @@ function AnimatedRoutes() {
             <Route path="/retail" element={<Retail />} />
             <Route path="/marketplaces" element={<Marketplaces />} />
             <Route path="/delivery" element={<Delivery />} />
+            <Route path="/financial" element={<Financial />} />
           </Routes>
         </div>
       </CSSTransition>
