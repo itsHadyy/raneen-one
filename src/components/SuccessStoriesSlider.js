@@ -1,7 +1,9 @@
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 const SuccessStoriesSlider = ({ stories }) => {
+    const { t } = useTranslation();
     const [current, setCurrent] = useState(0);
     const [fade, setFade] = useState(true);
     const timeoutRef = useRef(null);
@@ -23,8 +25,8 @@ const SuccessStoriesSlider = ({ stories }) => {
 
     return (
         <section className="success-stories-slider">
-            <h2 className="success-stories-title">Success stories</h2>
-            <p className="success-stories-subtitle">See how companies harness the power of ad serving APIs.</p>
+            <h2 className="success-stories-title">{t('successStories.title')}</h2>
+            <p className="success-stories-subtitle">{t('successStories.subtitle')}</p>
             <div className="success-stories-cards">
                 <div className={`success-story-quote-card fade-${fade ? 'in' : 'out'}`}>
                     <div>
@@ -56,8 +58,8 @@ const SuccessStoriesSlider = ({ stories }) => {
                 </div>
             </div>
             <div className="success-stories-arrows">
-                <button className="success-stories-arrow" onClick={() => handleChange('prev')} aria-label="Previous story">&#8592;</button>
-                <button className="success-stories-arrow" onClick={() => handleChange('next')} aria-label="Next story">&#8594;</button>
+                <button className="success-stories-arrow" onClick={() => handleChange('prev')} aria-label={t('successStories.prev')}>&#8592;</button>
+                <button className="success-stories-arrow" onClick={() => handleChange('next')} aria-label={t('successStories.next')}>&#8594;</button>
             </div>
         </section>
     );

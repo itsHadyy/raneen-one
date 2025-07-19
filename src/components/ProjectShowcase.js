@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,6 +90,7 @@ const BusinessCases = [
 ];
 
 export default function ProjectShowcase() {
+    const { t } = useTranslation();
     const containerRef = useRef();
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -123,7 +124,7 @@ export default function ProjectShowcase() {
     return (
         <div ref={containerRef} className="project-scroll-wrapper">
             <div className="sticky-left">
-                <h2 className="section-title">Solutions for every type of business</h2>
+                <h2 className="section-title">{t('projectShowcase.sectionTitle')}</h2>
                 <AnimatePresence mode="wait">
                                          <motion.div
                          key={activeIndex}
@@ -133,17 +134,17 @@ export default function ProjectShowcase() {
                          exit={{ opacity: 0, y: -40, rotateX: -10 }}
                          transition={{ duration: 0.5 }}
                      >
-                        <h3>{active.title}</h3>
-                        <p className="desc">{active.desc}</p>
-                        <button className="cta-btn">{active.button}</button>
+                        <h3>{t(`projectShowcase.${active.key}.title`)}</h3>
+                        <p className="desc">{t(`projectShowcase.${active.key}.desc`)}</p>
+                        <button className="cta-btn">{t(`projectShowcase.${active.key}.button`)}</button>
                         <div className="logos">
                             {active.logos.map((logo, i) => (
                                 <img src={logo} alt={`logo-${i}`} key={i} />
                             ))}
                         </div>
                         <blockquote>
-                            “{active.testimonial}” <br />
-                            <cite>{active.author}</cite>
+                            “{t(`projectShowcase.${active.key}.testimonial`)}” <br />
+                            <cite>{t(`projectShowcase.${active.key}.author`)}</cite>
                         </blockquote>
                     </motion.div>
                 </AnimatePresence>

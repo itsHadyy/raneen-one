@@ -214,7 +214,10 @@ const Navbar = () => {
   };
 
   const handleLangToggle = () => {
-    i18n.changeLanguage(i18n.language === 'ar' ? 'en' : 'ar');
+    const newLang = i18n.language === 'ar' ? 'en' : 'ar';
+    i18n.changeLanguage(newLang).then(() => {
+      window.location.reload();
+    });
   };
 
   return (

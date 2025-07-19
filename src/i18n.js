@@ -25,8 +25,8 @@ i18n
     },
   });
 
-// Handle RTL for Arabic
-i18n.on('languageChanged', (lng) => {
+// Set direction on initial load
+const setDir = lng => {
   if (lng === 'ar') {
     document.documentElement.dir = 'rtl';
     document.documentElement.lang = 'ar';
@@ -34,6 +34,9 @@ i18n.on('languageChanged', (lng) => {
     document.documentElement.dir = 'ltr';
     document.documentElement.lang = 'en';
   }
-});
+};
+setDir(i18n.language);
+
+i18n.on('languageChanged', setDir);
 
 export default i18n; 

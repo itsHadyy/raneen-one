@@ -1,56 +1,58 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const slides = [
-    {
-        logo: '/media/logoipsum.png',
-        logoAlt: 'MC Sonae',
-        bg: '/media/solutions/retail.avif',
-        quote: 'Predictive segments powered by machine-learning models have become very important for us as client’s display different behaviors depending on the category with varying frequency of purchase and consideration periods.',
-        author: 'Judit Takács Miranda, Head of Digital Marketing',
-        button: 'Read Case Study',
-        stat: '3x',
-        statLabel: 'Conversion Rate',
-    },
-    {
-        logo: '/media/logoipsum.png',
-        logoAlt: 'El Corte Inglés',
-        bg: '/media/solutions/marketplaces.avif',
-        quote: 'Raneen One enabled us to scale our ad platform and deliver more relevant ads to our marketplace users.',
-        author: 'Jane Doe, Head of Monetization',
-        button: 'Read Case Study',
-        stat: '2.5x',
-        statLabel: 'Marketplace ROI',
-    },
-    {
-        logo: '/media/logoipsum.png',
-        logoAlt: 'iFood',
-        bg: '/media/solutions/finance.avif',
-        quote: 'With Raneen One, we can deliver compliant, relevant offers to our users and drive engagement.',
-        author: 'John Smith, Digital Marketing Lead',
-        button: 'Read Case Study',
-        stat: '4x',
-        statLabel: 'Engagement',
-    },
-    {
-        logo: '/media/logoipsum.png',
-        logoAlt: 'Edmunds',
-        bg: '/media/solutions/travel.avif',
-        quote: 'Raneen One’s platform lets us deliver the right message to the right traveler at the right time.',
-        author: 'Emily Chen, VP of Marketing',
-        button: 'Read Case Study',
-        stat: '2x',
-        statLabel: 'Travel Conversions',
-    },
-];
+import { useTranslation } from 'react-i18next';
 
 const SLIDE_DURATION = 10000;
 
 export default function KevelHeroSlider() {
+    const { t } = useTranslation();
     const [active, setActive] = useState(0);
     const [progress, setProgress] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
     const timerRef = useRef();
+
+    const slides = [
+        {
+            logo: '/media/logoipsum.png',
+            logoAlt: 'MC Sonae',
+            bg: '/media/solutions/retail.avif',
+            quote: t('kevelHeroSlider.slides.0.quote'),
+            author: t('kevelHeroSlider.slides.0.author'),
+            button: t('kevelHeroSlider.slides.0.button'),
+            stat: t('kevelHeroSlider.slides.0.stat'),
+            statLabel: t('kevelHeroSlider.slides.0.statLabel'),
+        },
+        {
+            logo: '/media/logoipsum.png',
+            logoAlt: 'El Corte Inglés',
+            bg: '/media/solutions/marketplaces.avif',
+            quote: t('kevelHeroSlider.slides.1.quote'),
+            author: t('kevelHeroSlider.slides.1.author'),
+            button: t('kevelHeroSlider.slides.1.button'),
+            stat: t('kevelHeroSlider.slides.1.stat'),
+            statLabel: t('kevelHeroSlider.slides.1.statLabel'),
+        },
+        {
+            logo: '/media/logoipsum.png',
+            logoAlt: 'iFood',
+            bg: '/media/solutions/finance.avif',
+            quote: t('kevelHeroSlider.slides.2.quote'),
+            author: t('kevelHeroSlider.slides.2.author'),
+            button: t('kevelHeroSlider.slides.2.button'),
+            stat: t('kevelHeroSlider.slides.2.stat'),
+            statLabel: t('kevelHeroSlider.slides.2.statLabel'),
+        },
+        {
+            logo: '/media/logoipsum.png',
+            logoAlt: 'Edmunds',
+            bg: '/media/solutions/travel.avif',
+            quote: t('kevelHeroSlider.slides.3.quote'),
+            author: t('kevelHeroSlider.slides.3.author'),
+            button: t('kevelHeroSlider.slides.3.button'),
+            stat: t('kevelHeroSlider.slides.3.stat'),
+            statLabel: t('kevelHeroSlider.slides.3.statLabel'),
+        },
+    ];
 
     // Helper to clear and restart timer
     const restartTimer = (newIndex) => {

@@ -1,75 +1,77 @@
 import React, { useState } from "react";
 import "../Style.css";
-
-const SEGMENTS = [
-  {
-    label: "Create",
-    title: "ManagementAPI",
-    description: "Create unique, scalable, and performance-driven ads and campaigns via the Management API and Catalog."
-  },
-  {
-    label: "Segment",
-    title: "Audience",
-    description: "Create custom first-party data segments to captivate the right audiences using Audience or your own machine learning models."
-  },
-  {
-    label: "Forecast",
-    title: "ForecastAPI",
-    description: "Accurately predict performance to drive efficient ad sales, maximizing your inventory yield management."
-  },
-  {
-    label: "Launch",
-    title: "DecisionAPI",
-    description: "Power ad selection based on creative data, auctions, and targeting."
-  },
-  {
-    label: "Report",
-    title: "ReportingAPI",
-    description: "Analyze and report on campaign results."
-  }
-];
-
-const size = 640;
-const center = size / 2;
-const outerRadius = 300;
-const innerRadius = 180;
-const segmentCount = SEGMENTS.length;
-const segmentAngle = 360 / segmentCount;
-
-function polarToCartesian(cx, cy, r, angle) {
-  const a = ((angle - 90) * Math.PI) / 180.0;
-  return {
-    x: cx + r * Math.cos(a),
-    y: cy + r * Math.sin(a)
-  };
-}
-
-function describeArc(cx, cy, r1, r2, startAngle, endAngle) {
-  // r1: outer radius, r2: inner radius
-  const startOuter = polarToCartesian(cx, cy, r1, startAngle);
-  const endOuter = polarToCartesian(cx, cy, r1, endAngle);
-  const startInner = polarToCartesian(cx, cy, r2, endAngle);
-  const endInner = polarToCartesian(cx, cy, r2, startAngle);
-  const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
-  return [
-    "M", startOuter.x, startOuter.y,
-    "A", r1, r1, 0, largeArcFlag, 1, endOuter.x, endOuter.y,
-    "L", startInner.x, startInner.y,
-    "A", r2, r2, 0, largeArcFlag, 0, endInner.x, endInner.y,
-    "Z"
-  ].join(" ");
-}
+import { useTranslation } from 'react-i18next';
 
 export default function AdLifecycleDonut() {
+  const { t } = useTranslation();
   const [active, setActive] = useState(0);
+
+  const SEGMENTS = [
+    {
+      label: t('adDonut.create.label'),
+      title: t('adDonut.create.title'),
+      description: t('adDonut.create.desc')
+    },
+    {
+      label: t('adDonut.segment.label'),
+      title: t('adDonut.segment.title'),
+      description: t('adDonut.segment.desc')
+    },
+    {
+      label: t('adDonut.forecast.label'),
+      title: t('adDonut.forecast.title'),
+      description: t('adDonut.forecast.desc')
+    },
+    {
+      label: t('adDonut.launch.label'),
+      title: t('adDonut.launch.title'),
+      description: t('adDonut.launch.desc')
+    },
+    {
+      label: t('adDonut.report.label'),
+      title: t('adDonut.report.title'),
+      description: t('adDonut.report.desc')
+    }
+  ];
+
+  const size = 640;
+  const center = size / 2;
+  const outerRadius = 300;
+  const innerRadius = 180;
+  const segmentCount = SEGMENTS.length;
+  const segmentAngle = 360 / segmentCount;
+
+  function polarToCartesian(cx, cy, r, angle) {
+    const a = ((angle - 90) * Math.PI) / 180.0;
+    return {
+      x: cx + r * Math.cos(a),
+      y: cy + r * Math.sin(a)
+    };
+  }
+
+  function describeArc(cx, cy, r1, r2, startAngle, endAngle) {
+    // r1: outer radius, r2: inner radius
+    const startOuter = polarToCartesian(cx, cy, r1, startAngle);
+    const endOuter = polarToCartesian(cx, cy, r1, endAngle);
+    const startInner = polarToCartesian(cx, cy, r2, endAngle);
+    const endInner = polarToCartesian(cx, cy, r2, startAngle);
+    const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+    return [
+      "M", startOuter.x, startOuter.y,
+      "A", r1, r1, 0, largeArcFlag, 1, endOuter.x, endOuter.y,
+      "L", startInner.x, startInner.y,
+      "A", r2, r2, 0, largeArcFlag, 0, endInner.x, endInner.y,
+      "Z"
+    ].join(" ");
+  }
 
   return (
     <div className="donut-section">
       <h1 className="donut-title">
-        The lifecycle of an ad through<br />the Retail Media Cloud<sup>TM</sup>
+        {t('adDonut.sectionTitle')}
       </h1>
       <p className="donut-desc">
-        The Retail Media Cloud brings together the power of ad serving and machine-learning powered audience targeting to launch unique onsite ad formats. Retailers can easily:
+        {t('adDonut.sectionDesc')}
       </p>
       <div className="donut-svg-wrapper" style={{ position: "relative", width: size, height: size, margin: "0 auto" }}>
         <svg width={size} height={size} className="donut-svg">

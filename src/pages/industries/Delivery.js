@@ -4,50 +4,50 @@ import { FaArrowRight } from "react-icons/fa";
 import ContactModal from "../../components/ContactModal";
 import FeatureHighlight02 from '../../components/FeatureHighlight02';
 import SuccessStoriesSlider from '../../components/SuccessStoriesSlider';
-
-
+import { useTranslation } from 'react-i18next';
 
 function Delivery() {
+    const { t } = useTranslation();
     const [modalOpen, setModalOpen] = useState(false);
 
     const stories = [
         {
-            quote: 'Raneen One has enabled us to rapidly scale, growing monthly iFood Delivery ad revenue by 20x in a single year.',
-            author: 'Lucas Sampaio, Senior Business Intelligence Analyst, iFood',
+            quote: t('delivery.stories.0.quote'),
+            author: t('delivery.stories.0.author'),
             logo: <img src="/media/logos/ifood.svg" alt="iFood" />,
             stats: [
-                { value: '20x', label: 'Ad Revenue' },
-                { value: '1900%', label: 'Growth' }
+                { value: '20x', label: t('delivery.stories.0.stat1') },
+                { value: '1900%', label: t('delivery.stories.0.stat2') }
             ],
             buttons: [
-                { label: 'Full case study', href: '/case-study/ifood', variant: 'primary' },
-                { label: 'See all', href: '/success-stories', variant: 'secondary' }
+                { label: t('delivery.stories.0.button1'), href: '/case-study/ifood', variant: 'primary' },
+                { label: t('delivery.stories.0.button2'), href: '/success-stories', variant: 'secondary' }
             ]
         },
         {
-            quote: 'Our partnership with Raneen One allowed us to launch new ad products in record time.',
-            author: 'Sarah Lee, Product Manager, Mercado Libre',
+            quote: t('delivery.stories.1.quote'),
+            author: t('delivery.stories.1.author'),
             logo: <img src="/media/logos/mc.avif" alt="Mercado Libre" />,
             stats: [
-                { value: '15x', label: 'Faster Launch' },
-                { value: '120%', label: 'Revenue Uplift' }
+                { value: '15x', label: t('delivery.stories.1.stat1') },
+                { value: '120%', label: t('delivery.stories.1.stat2') }
             ],
             buttons: [
-                { label: 'Full case study', href: '/case-study/mercadolibre', variant: 'primary' },
-                { label: 'See all', href: '/success-stories', variant: 'secondary' }
+                { label: t('delivery.stories.1.button1'), href: '/case-study/mercadolibre', variant: 'primary' },
+                { label: t('delivery.stories.1.button2'), href: '/success-stories', variant: 'secondary' }
             ]
         },
         {
-            quote: 'With Raneen One, we increased our ad fill rate and improved user experience across the board.',
-            author: 'Ahmed Hassan, CTO, Noon',
+            quote: t('delivery.stories.2.quote'),
+            author: t('delivery.stories.2.author'),
             logo: <img src="/media/logos/edmunds.svg" alt="Noon" />,
             stats: [
-                { value: '98%', label: 'Fill Rate' },
-                { value: '4.8/5', label: 'User Satisfaction' }
+                { value: '98%', label: t('delivery.stories.2.stat1') },
+                { value: '4.8/5', label: t('delivery.stories.2.stat2') }
             ],
             buttons: [
-                { label: 'Full case study', href: '/case-study/noon', variant: 'primary' },
-                { label: 'See all', href: '/success-stories', variant: 'secondary' }
+                { label: t('delivery.stories.2.button1'), href: '/case-study/noon', variant: 'primary' },
+                { label: t('delivery.stories.2.button2'), href: '/success-stories', variant: 'secondary' }
             ]
         }
     ];
@@ -58,26 +58,26 @@ function Delivery() {
                 backgroundGradient="var(--hero-gradient-5)"
                 leftContent={
                     <>
-                        <h1>Report your ad campaigns your way</h1>
-                        <p>Raneen One makes sure you get the information you (and your advertisers) need.</p>
+                        <h1>{t('delivery.heroTitle')}</h1>
+                        <p>{t('delivery.heroDesc')}</p>
                         <div className="hero-buttons">
                             <button className="footer-cta-btn" onClick={() => setModalOpen(true)} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-                                Talk to an expert <FaArrowRight style={{ marginLeft: 8, verticalAlign: 'middle' }} />
+                                {t('delivery.talkToExpert')} <FaArrowRight style={{ marginLeft: 8, verticalAlign: 'middle' }} />
                             </button>
                         </div>
                     </>
                 }
                 imageSrc="media/assets/industries/delivery.webp"
                 imageAlt="Dashboard Mockup"
-                bubbles={{
-                }}
+                bubbles={{}}
             />
             <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
             <div className='center'>
-                <h1>What Marketplaces Need To Win</h1>
-                <p>Marketplaces like yours require an ad platform that offers flexibility, transparency, and speed. Our API-first Retail Media Cloud® provides this and more.</p>
+                <h1>{t('delivery.centerTitle')}</h1>
+                <p>{t('delivery.centerDesc')}</p>
             </div>
 
+            {/* Feature Cards Section */}
             <div className="feature-cards-section" style={{
                 display: 'flex',
                 gap: '32px',
@@ -103,8 +103,8 @@ function Delivery() {
                         {/* Shield Icon */}
                         <svg width="32" height="32" fill="none" stroke="#1a2a3a" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 5.25-3.5 9.74-7 11-3.5-1.26-7-5.75-7-11V7l7-4z" /><path d="M12 3v18" /></svg>
                     </span>
-                    <h3 style={{ fontWeight: 700, fontSize: '1.2rem', margin: 0, marginBottom: 12 }}>Security</h3>
-                    <p style={{ color: '#5a6a7a', fontSize: '1rem', margin: 0 }}>Eliminate on-site JavaScript ad tags that slow load times.</p>
+                    <h3 style={{ fontWeight: 700, fontSize: '1.2rem', margin: 0, marginBottom: 12 }}>{t('delivery.card1.title')}</h3>
+                    <p style={{ color: '#5a6a7a', fontSize: '1rem', margin: 0 }}>{t('delivery.card1.desc')}</p>
                 </div>
                 {/* Card 2 */}
                 <div className="feature-card" style={{
@@ -124,8 +124,8 @@ function Delivery() {
                         {/* Smile Icon */}
                         <svg width="32" height="32" fill="none" stroke="#1a2a3a" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M8 15s1.5 2 4 2 4-2 4-2" /><path d="M9 9h.01" /><path d="M15 9h.01" /></svg>
                     </span>
-                    <h3 style={{ fontWeight: 700, fontSize: '1.2rem', margin: 0, marginBottom: 12 }}>Enhanced user experience</h3>
-                    <p style={{ color: '#5a6a7a', fontSize: '1rem', margin: 0 }}>Inserted ads use the same CSS and layout as your organic content, creating a seamless user experience.</p>
+                    <h3 style={{ fontWeight: 700, fontSize: '1.2rem', margin: 0, marginBottom: 12 }}>{t('delivery.card2.title')}</h3>
+                    <p style={{ color: '#5a6a7a', fontSize: '1rem', margin: 0 }}>{t('delivery.card2.desc')}</p>
                 </div>
                 {/* Card 3 */}
                 <div className="feature-card" style={{
@@ -145,8 +145,8 @@ function Delivery() {
                         {/* Globe Icon */}
                         <svg width="32" height="32" fill="none" stroke="#1a2a3a" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 0 1 0 20" /><path d="M12 2a15.3 15.3 0 0 0 0 20" /></svg>
                     </span>
-                    <h3 style={{ fontWeight: 700, fontSize: '1.2rem', margin: 0, marginBottom: 12 }}>Improved site performance</h3>
-                    <p style={{ color: '#5a6a7a', fontSize: '1rem', margin: 0 }}>Tougher for ad blockers to identify and block your ads, enabling you to monetize 30%-40% more users.</p>
+                    <h3 style={{ fontWeight: 700, fontSize: '1.2rem', margin: 0, marginBottom: 12 }}>{t('delivery.card3.title')}</h3>
+                    <p style={{ color: '#5a6a7a', fontSize: '1rem', margin: 0 }}>{t('delivery.card3.desc')}</p>
                 </div>
             </div>
 
@@ -183,10 +183,10 @@ function Delivery() {
                         }}
                     >
                         <h2 style={{ fontSize: '2.6rem', fontWeight: 400, marginBottom: 24, lineHeight: 1.1 }}>
-                            Offset low margins with a<br />high-margin ad platform
+                            {t('delivery.gradientTitle')}
                         </h2>
                         <p style={{ fontSize: '1.18rem', color: '#e0e6ef', fontWeight: 400, lineHeight: 1.6 }}>
-                            Delivery apps can have low margins, so the delivery giants like DoorDash and Instacart monetize with custom ad platforms. Raneen One can help you build what they built in a fraction of the time and cost without sacrificing security or user experience.
+                            {t('delivery.gradientDesc')}
                         </p>
                     </div>
                     {/* Right: Image Card */}
@@ -207,7 +207,7 @@ function Delivery() {
                     >
                         <img
                             src="/media/assets/industries/delivery02.webp"
-                            alt="Monthly cost by impression volume graph"
+                            alt={t('delivery.gradientImgAlt')}
                             style={{
                                 width: '100%',
                                 height: 'auto',
@@ -224,6 +224,6 @@ function Delivery() {
             <SuccessStoriesSlider stories={stories} />
         </div>
     );
-};
+}
 
 export default Delivery;

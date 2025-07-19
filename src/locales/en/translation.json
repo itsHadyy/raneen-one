@@ -115,5 +115,183 @@
     "title": "Ready to get started?",
     "desc": "Talk to one of our experts today. Learn how The Retail Media Cloud® can supercharge your retail media network or review our documentation.",
     "talkToExpert": "Talk to an expert"
+  },
+  "contactModal": {
+    "title": "Talk to an expert",
+    "desc": "Learn more about how Raneen One can support your ad business with a 30 minute introductory call.",
+    "firstName": "First name*",
+    "lastName": "Last name*",
+    "email": "Business Email*",
+    "phone": "Phone number*",
+    "company": "Company name*",
+    "selectIndustry": "Select Your Industry*",
+    "industryRetail": "Retail",
+    "industryMarketplace": "Marketplace",
+    "industryDelivery": "Delivery",
+    "industryFinance": "Finance",
+    "industryOther": "Other",
+    "countryUnitedStates": "United States",
+    "countryUnitedKingdom": "United Kingdom",
+    "countryCanada": "Canada",
+    "countryOther": "Other",
+    "hasAdPlatform": "Do you already have an existing ad platform?",
+    "yes": "Yes",
+    "no": "No",
+    "describeYou": "Which one of these best describes you?*",
+    "brand": "Brand",
+    "agency": "Agency",
+    "retailer": "Retailer",
+    "other": "Other",
+    "anythingElse": "Anything else you would like to share?",
+    "consent": "I consent to marketing communications from Raneen One.",
+    "getStarted": "Get Started"
+  },
+  "projectShowcase": {
+    "sectionTitle": "Solutions for every type of business",
+    "retail": {
+      "title": "Retail",
+      "desc": "Make the most of your unique first-party data and omnichannel experience to give your advertisers and results they can't get anywhere else.",
+      "button": "Learn more",
+      "testimonial": "By utilizing Raneen One's flexible, API-based solution, we have enacted the basis for scalability and advancement of our Retail Media network while enhancing our ability to create custom ad experiences that resonate with our customers.",
+      "author": "Natalie Ong, Director of DG Media Network Operations (Dollar General)"
+    },
+    "marketplaces": {
+      "title": "Marketplaces",
+      "desc": "Empower your marketplace with advanced targeting and monetization tools to maximize value for both sellers and buyers.",
+      "button": "Learn more",
+      "testimonial": "Raneen One enabled us to scale our ad platform and deliver more relevant ads to our marketplace users.",
+      "author": "Jane Doe, Head of Monetization (Etsy)"
+    },
+    "finance": {
+      "title": "Finance",
+      "desc": "Leverage secure, privacy-first ad solutions to reach your customers with the right financial products at the right time.",
+      "button": "Learn more",
+      "testimonial": "With Raneen One, we can deliver compliant, relevant offers to our users and drive engagement.",
+      "author": "John Smith, Digital Marketing Lead (PayPal)"
+    },
+    "travel": {
+      "title": "Travel",
+      "desc": "Connect travelers with personalized offers and experiences across every touchpoint in their journey.",
+      "button": "Learn more",
+      "testimonial": "Raneen One's platform lets us deliver the right message to the right traveler at the right time.",
+      "author": "Emily Chen, VP of Marketing (Expedia)"
+    },
+    "delivery": {
+      "title": "Delivery Apps",
+      "desc": "Boost engagement and revenue with targeted promotions and seamless ad experiences for your delivery app users.",
+      "button": "Learn more",
+      "testimonial": "We've seen a significant lift in campaign performance and user retention since using Raneen One.",
+      "author": "Carlos Rivera, Growth Manager (iFood)"
+    }
+  },
+  "adDonut": {
+    "sectionTitle": "The lifecycle of an ad through\nthe Retail Media Cloud<sup>TM</sup>",
+    "sectionDesc": "The Retail Media Cloud brings together the power of ad serving and machine-learning powered audience targeting to launch unique onsite ad formats. Retailers can easily:",
+    "create": {
+      "label": "Create",
+      "title": "ManagementAPI",
+      "desc": "Create unique, scalable, and performance-driven ads and campaigns via the Management API and Catalog."
+    },
+    "segment": {
+      "label": "Segment",
+      "title": "Audience",
+      "desc": "Create custom first-party data segments to captivate the right audiences using Audience or your own machine learning models."
+    },
+    "forecast": {
+      "label": "Forecast",
+      "title": "ForecastAPI",
+      "desc": "Accurately predict performance to drive efficient ad sales, maximizing your inventory yield management."
+    },
+    "launch": {
+      "label": "Launch",
+      "title": "DecisionAPI",
+      "desc": "Power ad selection based on creative data, auctions, and targeting."
+    },
+    "report": {
+      "label": "Report",
+      "title": "ReportingAPI",
+      "desc": "Analyze and report on campaign results."
+    }
+  },
+  "moreFeatures": {
+    "explore": "EXPLORE MORE FEATURES",
+    "decisioning": "Decisioning",
+    "reporting": "Reporting",
+    "targeting": "Targeting",
+    "campaignManagement": "Campaign Management",
+    "adminUI": "Admin UI",
+    "catalog": "Catalog"
+  },
+  "successStories": {
+    "title": "Success stories",
+    "subtitle": "See how companies harness the power of ad serving APIs.",
+    "prev": "Previous story",
+    "next": "Next story"
+  },
+  "kevelHeroSlider": {
+    "slides": [
+      {
+        "quote": "Predictive segments powered by machine-learning models have become very important for us as client’s display different behaviors depending on the category with varying frequency of purchase and consideration periods.",
+        "author": "Judit Takács Miranda, Head of Digital Marketing",
+        "button": "Read Case Study",
+        "stat": "3x",
+        "statLabel": "Conversion Rate"
+      },
+      {
+        "quote": "Raneen One enabled us to scale our ad platform and deliver more relevant ads to our marketplace users.",
+        "author": "Jane Doe, Head of Monetization",
+        "button": "Read Case Study",
+        "stat": "2.5x",
+        "statLabel": "Marketplace ROI"
+      },
+      {
+        "quote": "With Raneen One, we can deliver compliant, relevant offers to our users and drive engagement.",
+        "author": "John Smith, Digital Marketing Lead",
+        "button": "Read Case Study",
+        "stat": "4x",
+        "statLabel": "Engagement"
+      },
+      {
+        "quote": "Raneen One’s platform lets us deliver the right message to the right traveler at the right time.",
+        "author": "Emily Chen, VP of Marketing",
+        "button": "Read Case Study",
+        "stat": "2x",
+        "statLabel": "Travel Conversions"
+      }
+    ]
+  },
+  "delivery": {
+    "heroTitle": "Report your ad campaigns your way",
+    "heroDesc": "Raneen One makes sure you get the information you (and your advertisers) need.",
+    "talkToExpert": "Talk to an expert",
+    "centerTitle": "What Marketplaces Need To Win",
+    "centerDesc": "Marketplaces like yours require an ad platform that offers flexibility, transparency, and speed. Our API-first Retail Media Cloud® provides this and more.",
+    "card1": { "title": "Security", "desc": "Eliminate on-site JavaScript ad tags that slow load times." },
+    "card2": { "title": "Enhanced user experience", "desc": "Inserted ads use the same CSS and layout as your organic content, creating a seamless user experience." },
+    "card3": { "title": "Improved site performance", "desc": "Tougher for ad blockers to identify and block your ads, enabling you to monetize 30%-40% more users." },
+    "gradientTitle": "Offset low margins with a\nhigh-margin ad platform",
+    "gradientDesc": "Delivery apps can have low margins, so the delivery giants like DoorDash and Instacart monetize with custom ad platforms. Raneen One can help you build what they built in a fraction of the time and cost without sacrificing security or user experience.",
+    "gradientImgAlt": "Monthly cost by impression volume graph",
+    "stories": [
+      { "quote": "Raneen One has enabled us to rapidly scale, growing monthly iFood Delivery ad revenue by 20x in a single year.", "author": "Lucas Sampaio, Senior Business Intelligence Analyst, iFood", "stat1": "Ad Revenue", "stat2": "Growth", "button1": "Full case study", "button2": "See all" },
+      { "quote": "Our partnership with Raneen One allowed us to launch new ad products in record time.", "author": "Sarah Lee, Product Manager, Mercado Libre", "stat1": "Faster Launch", "stat2": "Revenue Uplift", "button1": "Full case study", "button2": "See all" },
+      { "quote": "With Raneen One, we increased our ad fill rate and improved user experience across the board.", "author": "Ahmed Hassan, CTO, Noon", "stat1": "Fill Rate", "stat2": "User Satisfaction", "button1": "Full case study", "button2": "See all" }
+    ]
+  },
+  "financial": {
+    "heroTitle": "Launch your privacy-first financial media network",
+    "heroDesc": "With world-class security and privacy features built-in by default, you can focus your efforts on scaling your ad business.",
+    "talkToExpert": "Talk to an expert",
+    "centerTitle": "What Marketplaces Need To Win",
+    "centerDesc": "Marketplaces like yours require an ad platform that offers flexibility, transparency, and speed. Our API-first Retail Media Cloud® provides this and more.",
+    "feature1": { "label": "SMARTER PERSONALIZATION", "title": "Server-side ad serving for security, user experience, and improved site performance", "desc": "Eliminate on-site JavaScript ad tags that slow load times. Ads are inserted directly into your content management system, with ads using the same CSS and layout as your organic content, creating a seamless user experience. Tougher for ad blockers to identify and block your ads, enabling you to monetize 30%-40% more users." },
+    "gradientTitle": "Don't leave a high-margin, multi-million dollar business on the table.",
+    "gradientDesc": "Supplement your core business and bear the competition with a high-margin ad platform. Do it with a partner that lets you keep your margin so you can grow even fasters, unshackled from revenue shares.",
+    "gradientImgAlt": "Monthly cost by impression volume graph",
+    "stories": [
+      { "quote": "Raneen One has enabled us to rapidly scale, growing monthly iFood Delivery ad revenue by 20x in a single year.", "author": "Lucas Sampaio, Senior Business Intelligence Analyst, iFood", "stat1": "Ad Revenue", "stat2": "Growth", "button1": "Full case study", "button2": "See all" },
+      { "quote": "Our partnership with Raneen One allowed us to launch new ad products in record time.", "author": "Sarah Lee, Product Manager, Mercado Libre", "stat1": "Faster Launch", "stat2": "Revenue Uplift", "button1": "Full case study", "button2": "See all" },
+      { "quote": "With Raneen One, we increased our ad fill rate and improved user experience across the board.", "author": "Ahmed Hassan, CTO, Noon", "stat1": "Fill Rate", "stat2": "User Satisfaction", "button1": "Full case study", "button2": "See all" }
+    ]
   }
 } 
