@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { FiServer, FiUsers, FiGrid } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import AIDrivenRetailMediaSection from '../components/AIDrivenRetailMediaSection';
@@ -7,25 +8,26 @@ import KevelHeroSlider from '../components/KevelHeroSlider';
 import TrustedBy from '../components/TrustedBy';
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <div>
       <div className="hero-section">
         <div className="hero-bg"></div>
         <div className="container hero-content">
           <div className="hero-text">
-            <h1>The End to End Retail Media Suite That Gets Results</h1>
-            <p>Join the leading companies that use Raneen One to power their retail media network and earn more revenue than their competition with custom ad formats, unique data targeting, and AI campaign management.</p>
+            <h1>{t('home.heroTitle')}</h1>
+            <p>{t('home.heroDesc')}</p>
             <div className="hero-buttons">
-              <button className="cta-btn">Start with Raneen One</button>
-              <button className="secondary-btn">Read the docs</button>
+              <button className="cta-btn">{t('home.startBtn')}</button>
+              <button className="secondary-btn">{t('home.readDocsBtn')}</button>
             </div>
           </div>
           <div className="hero-image">
             <div className="dashboard-mockup02">
-              <div className="bubble top-left">Greater Operational Efficiency</div>
-              <div className="bubble top-right">Smarter Personalization</div>
+              <div className="bubble top-left">{t('home.bubble1')}</div>
+              <div className="bubble top-right">{t('home.bubble2')}</div>
               <img src="media/dashboard.webp" alt="Dashboard Mockup" />
-              <div className="bubble bottom-right">Higher Advertiser Retention</div>
+              <div className="bubble bottom-right">{t('home.bubble3')}</div>
             </div>
           </div>
         </div>
@@ -57,24 +59,24 @@ const Home = () => {
             <div className='retail-card-header'>
               <div className="retail-media-cloud-card-icon"><FiUsers size={36} /></div>
               <div className='retail-card-subheader'>
-                <div className="retail-media-cloud-card-title">Raneen One Audience</div>
-                <div className="retail-media-cloud-card-subtitle">AI audience segmentation tool</div>
+                <div className="retail-media-cloud-card-title">{t('home.audienceTitle')}</div>
+                <div className="retail-media-cloud-card-subtitle">{t('home.audienceSubtitle')}</div>
               </div>
             </div>
             <div className="retail-media-cloud-card-desc">
-              Our audience segmentation tool harnesses your first-party data into a single customer view for AI-powered segmentation, audience activation, and ad personalization. Push segments anywhere in your network, onsite or offsite.
+              {t('home.audienceDesc')}
             </div>
           </Link>
           <Link className="retail-media-cloud-card" to="/console">
             <div className='retail-card-header'>
               <div className="retail-media-cloud-card-icon"><FiGrid size={36} /></div>
               <div className='retail-card-subheader'>
-                <div className="retail-media-cloud-card-title">Raneen One Console</div>
-                <div className="retail-media-cloud-card-subtitle">Campaign management UI</div>
+                <div className="retail-media-cloud-card-title">{t('home.consoleTitle')}</div>
+                <div className="retail-media-cloud-card-subtitle">{t('home.consoleSubtitle')}</div>
               </div>
             </div>
             <div className="retail-media-cloud-card-desc">
-              Our out-of-the-box omnichannel campaign management user interface with AI automation features and self-service capabilities to help you scale your retail media network from day one.
+              {t('home.consoleDesc')}
             </div>
           </Link>
         </div>

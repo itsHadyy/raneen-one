@@ -1,5 +1,6 @@
 import './App.css';
 import './Style.css';
+import './i18n';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
