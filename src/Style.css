@@ -2397,3 +2397,6 @@ cite {
   color: #0a2540;
 }
 
+.profile-icon{
+  transform: translateY(2px);
+}

@@ -367,5 +367,27 @@
       { "quote": "Our partnership with Raneen One allowed us to launch new ad products in record time.", "author": "Sarah Lee, Product Manager, Mercado Libre", "stat1": "15x", "stat2": "120%", "stat1Label": "Faster Launch", "stat2Label": "Revenue Uplift", "button1": "Full case study", "button2": "See all" },
       { "quote": "With Raneen One, we increased our ad fill rate and improved user experience across the board.", "author": "Ahmed Hassan, CTO, Noon", "stat1": "98%", "stat2": "4.8/5", "stat1Label": "Fill Rate", "stat2Label": "User Satisfaction", "button1": "Full case study", "button2": "See all" }
     ]
+  },
+  "aiRetailMedia": {
+    "sectionTitle": "AI Driven Retail Media",
+    "sectionDesc": "The Retail Media Cloud® includes advanced AI and ML features that help drive results for you and your advertisers. Here are just some examples of those AI powered features found in Ad Server, Audience and Console.",
+    "features": [
+      {
+        "title": "Yield Forecast",
+        "desc": "Raneen One forecast uses advanced machine learning simulations to predict future delivery and performance. Sell, plan and optimize while boosting sell-through rates, fill-rates and ad operations efficiency."
+      },
+      {
+        "title": "Custom Relevancy",
+        "desc": "With Custom Relevancy retailers can BYOM: bring your own model. Now, retailers can supply their own models and use them to help choose the most relevant ad based on their data."
+      },
+      {
+        "title": "AI Segment Builder",
+        "desc": "Raneen One Audience allows retailers to leverage AI in building segments by focusing on the desired outcome and constructing targetable segments based on that goal."
+      },
+      {
+        "title": "AI Campaign Management",
+        "desc": "Improve your ad operations with an intuitive, AI driven interface that optimizes workflows helping retailers manage inventory, data assets and campaign performance while delivering best-in-class ROAS."
+      }
+    ]
   }
 } 
