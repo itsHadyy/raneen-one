@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import HeroSection from '../../components/HeroSection';
 import { FaArrowRight } from "react-icons/fa";
 import ContactModal from "../../components/ContactModal";
@@ -6,49 +7,48 @@ import FeatureHighlight from '../../components/FeatureHighlight';
 import FeatureHighlight02 from '../../components/FeatureHighlight02';
 import SuccessStoriesSlider from '../../components/SuccessStoriesSlider';
 
-
-
 function Marketplaces() {
+    const { t } = useTranslation();
     const [modalOpen, setModalOpen] = useState(false);
 
     const stories = [
         {
-            quote: 'Raneen One has enabled us to rapidly scale, growing monthly iFood Delivery ad revenue by 20x in a single year.',
-            author: 'Lucas Sampaio, Senior Business Intelligence Analyst, iFood',
+            quote: t('marketplaces.stories.0.quote'),
+            author: t('marketplaces.stories.0.author'),
             logo: <img src="/media/logos/ifood.svg" alt="iFood" />,  
             stats: [
-                { value: '20x', label: 'Ad Revenue' },
-                { value: '1900%', label: 'Growth' }
+                { value: t('marketplaces.stories.0.stat1'), label: t('marketplaces.stories.0.stat1Label') },
+                { value: t('marketplaces.stories.0.stat2'), label: t('marketplaces.stories.0.stat2Label') }
             ],
             buttons: [
-                { label: 'Full case study', href: '/case-study/ifood', variant: 'primary' },
-                { label: 'See all', href: '/success-stories', variant: 'secondary' }
+                { label: t('marketplaces.stories.0.button1'), href: '/case-study/ifood', variant: 'primary' },
+                { label: t('marketplaces.stories.0.button2'), href: '/success-stories', variant: 'secondary' }
             ]
         },
         {
-            quote: 'Our partnership with Raneen One allowed us to launch new ad products in record time.',
-            author: 'Sarah Lee, Product Manager, Mercado Libre',
+            quote: t('marketplaces.stories.1.quote'),
+            author: t('marketplaces.stories.1.author'),
             logo: <img src="/media/logos/mc.avif" alt="Mercado Libre" />,  
             stats: [
-                { value: '15x', label: 'Faster Launch' },
-                { value: '120%', label: 'Revenue Uplift' }
+                { value: t('marketplaces.stories.1.stat1'), label: t('marketplaces.stories.1.stat1Label') },
+                { value: t('marketplaces.stories.1.stat2'), label: t('marketplaces.stories.1.stat2Label') }
             ],
             buttons: [
-                { label: 'Full case study', href: '/case-study/mercadolibre', variant: 'primary' },
-                { label: 'See all', href: '/success-stories', variant: 'secondary' }
+                { label: t('marketplaces.stories.1.button1'), href: '/case-study/mercadolibre', variant: 'primary' },
+                { label: t('marketplaces.stories.1.button2'), href: '/success-stories', variant: 'secondary' }
             ]
         },
         {
-            quote: 'With Raneen One, we increased our ad fill rate and improved user experience across the board.',
-            author: 'Ahmed Hassan, CTO, Noon',
+            quote: t('marketplaces.stories.2.quote'),
+            author: t('marketplaces.stories.2.author'),
             logo: <img src="/media/logos/edmunds.svg" alt="Noon" />,  
             stats: [
-                { value: '98%', label: 'Fill Rate' },
-                { value: '4.8/5', label: 'User Satisfaction' }
+                { value: t('marketplaces.stories.2.stat1'), label: t('marketplaces.stories.2.stat1Label') },
+                { value: t('marketplaces.stories.2.stat2'), label: t('marketplaces.stories.2.stat2Label') }
             ],
             buttons: [
-                { label: 'Full case study', href: '/case-study/noon', variant: 'primary' },
-                { label: 'See all', href: '/success-stories', variant: 'secondary' }
+                { label: t('marketplaces.stories.2.button1'), href: '/case-study/noon', variant: 'primary' },
+                { label: t('marketplaces.stories.2.button2'), href: '/success-stories', variant: 'secondary' }
             ]
         }
     ];
@@ -59,49 +59,48 @@ function Marketplaces() {
                 backgroundGradient="var(--hero-gradient-4)"
                 leftContent={
                     <>
-                        <h1>Build Your Marketplace Ad Business</h1>
-                        <p><b>Retail media is booming — especially for marketplaces.</b><br/>Raneen One gives you a way to run ads that match your brand and maintain full control without impacting your site’s performance – underpinned by highly scalable infrastructure.</p>
+                        <h1>{t('marketplaces.heroTitle')}</h1>
+                        <p dangerouslySetInnerHTML={{ __html: t('marketplaces.heroDesc') }} />
                         <div className="hero-buttons">
                             <button className="footer-cta-btn" onClick={() => setModalOpen(true)} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-                                Talk to an expert <FaArrowRight style={{ marginLeft: 8, verticalAlign: 'middle' }} />
+                                {t('marketplaces.talkToExpert')} <FaArrowRight style={{ marginLeft: 8, verticalAlign: 'middle' }} />
                             </button>
                         </div>
                     </>
                 }
                 imageSrc="media/assets/industries/marketplaces.avif"
                 imageAlt="Dashboard Mockup"
-                bubbles={{
-                }}
+                bubbles={{}}
             />
             <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
 
             <div className='center'>
-                <h1>What Marketplaces Need To Win</h1>
-                <p>Marketplaces like yours require an ad platform that offers flexibility, transparency, and speed. Our API-first Retail Media Cloud® provides this and more.</p>
+                <h1>{t('marketplaces.centerTitle')}</h1>
+                <p>{t('marketplaces.centerDesc')}</p>
             </div>
 
             <FeatureHighlight
-                label="SMARTER PERSONALIZATION"
-                title="Sponsored Listings That Match Your User Experience"
-                description="Unlike templated placements, Kevel lets you build ad units that blend seamlessly with your native search and browse experiences. These listings can be keyword-targeted, ML-ranked, and ROAS-optimized, giving you a performance engine sellers will invest in."
+                label={t('marketplaces.feature1.label')}
+                title={t('marketplaces.feature1.title')}
+                description={t('marketplaces.feature1.desc')}
                 mainImage="/media/assets/industries/marketplaces03.avif"
                 imagePosition="left"
                 backgroundGradientVar="--hero-gradient-4"
                 background='yes'
             />
             <FeatureHighlight
-                label="SMARTER PERSONALIZATION"
-                title="Responsibly Activate Your 1P Data"
-                description="Kevel Audience makes it easy to build privacy-safe, high-conversion audience segments using your own data—no cookies or third-party dependencies. These segments can be used onsite & offsite, with connections to platforms like Meta or Google, providing audience extension to maximize reach and campaign performance."
+                label={t('marketplaces.feature2.label')}
+                title={t('marketplaces.feature2.title')}
+                description={t('marketplaces.feature2.desc')}
                 mainImage="/media/assets/industries/marketplaces02.avif"
                 imagePosition="right"
                 backgroundGradientVar="--hero-gradient-4"
                 background='yes'
             />
             <FeatureHighlight
-                label="SMARTER PERSONALIZATION"
-                title="Self-Serve, via API or white labeled UI"
-                description="Empower your sellers with a clean, intuitive, fully branded UI to launch and manage campaigns. Backed by smart automation and Kevel's AI-driven optimization, it reduces operational lift while maximizing seller adoption."
+                label={t('marketplaces.feature3.label')}
+                title={t('marketplaces.feature3.title')}
+                description={t('marketplaces.feature3.desc')}
                 mainImage="/media/assets/industries/marketplaces03.avif"
                 imagePosition="left"
                 backgroundGradientVar="--hero-gradient-4"

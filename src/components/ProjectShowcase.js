@@ -137,15 +137,15 @@ export default function ProjectShowcase() {
                         <h3>{t(`projectShowcase.${active.key}.title`)}</h3>
                         <p className="desc">{t(`projectShowcase.${active.key}.desc`)}</p>
                         <button className="cta-btn">{t(`projectShowcase.${active.key}.button`)}</button>
-                        <div className="logos">
+                    <div className="logos">
                             {active.logos.map((logo, i) => (
                                 <img src={logo} alt={`logo-${i}`} key={i} />
-                            ))}
-                        </div>
-                        <blockquote>
+                        ))}
+                    </div>
+                    <blockquote>
                             “{t(`projectShowcase.${active.key}.testimonial`)}” <br />
                             <cite>{t(`projectShowcase.${active.key}.author`)}</cite>
-                        </blockquote>
+                    </blockquote>
                     </motion.div>
                 </AnimatePresence>
             </div>

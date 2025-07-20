@@ -36,7 +36,7 @@ function Features() {
     },
   ];
 
-  return (
+    return (
     <div className='more-feaatures-container'>
       <div className="feature-highlight-label">{t('moreFeatures.explore')}</div>
       <div className="more-features-list">
@@ -49,7 +49,7 @@ function Features() {
           </Link>
         ))}
       </div>
-    </div>
+        </div>
   );
 }
 

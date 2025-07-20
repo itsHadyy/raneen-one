@@ -293,5 +293,79 @@
       { "quote": "Our partnership with Raneen One allowed us to launch new ad products in record time.", "author": "Sarah Lee, Product Manager, Mercado Libre", "stat1": "Faster Launch", "stat2": "Revenue Uplift", "button1": "Full case study", "button2": "See all" },
       { "quote": "With Raneen One, we increased our ad fill rate and improved user experience across the board.", "author": "Ahmed Hassan, CTO, Noon", "stat1": "Fill Rate", "stat2": "User Satisfaction", "button1": "Full case study", "button2": "See all" }
     ]
+  },
+  "console": {
+    "heroTitle": "Build Smarter Campaigns with AI Powered Self-Serve",
+    "heroDesc": "Unify on-site and off-site campaigns while leveraging advanced tools designed to maximize ad performance and ROI.",
+    "talkToExpert": "Talk to an expert",
+    "readDocs": "Read the docs",
+    "feature1": { "label": "SMARTER PERSONALIZATION", "title": "Expand with Offsite", "desc": "Take your retail media network beyond your owned properties, seamlessly managing campaigns across your shopper’s favorite platforms." },
+    "feature2": { "label": "HIGHER ADVERTISER RETENTION", "title": "AI Driven Campaign Management", "desc": "Supercharge your ad operations with an intuitive, AI-driven interface that optimizes workflows helping retailers manage inventory, data assets and campaign performance while delivering best-in-class ROAS." },
+    "feature3": { "label": "GREATER OPERATIONAL EFFICIENCY", "title": "Customized white-label branding", "desc": "Make Raneen One Console your own with comprehensive branding options that elevate your retail media network’s professional appeal. Incorporate your logo, theme and brand identity – ensuring a seamless advertiser experience." },
+    "stories": [
+      { "quote": "We are excited to offer this solution in partnership with our brands and agencies and already have our first learnings from running campaigns with major brands.", "author": "Kristian Krohn Djurhuus, Head of Retail Media at Dagrofa", "stat1": "+14%", "stat2": "+58%", "stat1Label": "Sales Uplift", "stat2Label": "New to Brand Shoppers", "button1": "Full case study", "button2": "See all" },
+      { "quote": "Raneen One has enabled us to rapidly scale, growing monthly iFood Delivery ad revenue by 20x in a single year.", "author": "Lucas Sampaio, Senior Business Intelligence Analyst, iFood", "stat1": "20x", "stat2": "1900%", "stat1Label": "Ad Revenue", "stat2Label": "Growth", "button1": "Full case study", "button2": "See all" },
+      { "quote": "Our partnership with Raneen One allowed us to launch new ad products in record time.", "author": "Sarah Lee, Product Manager, Mercado Libre", "stat1": "15x", "stat2": "120%", "stat1Label": "Faster Launch", "stat2Label": "Revenue Uplift", "button1": "Full case study", "button2": "See all" },
+      { "quote": "With Raneen One, we increased our ad fill rate and improved user experience across the board.", "author": "Ahmed Hassan, CTO, Noon", "stat1": "98%", "stat2": "4.8/5", "stat1Label": "Fill Rate", "stat2Label": "User Satisfaction", "button1": "Full case study", "button2": "See all" }
+    ]
+  },
+  "adServer": {
+    "heroTitle": "Flexible API Ad Serving powered by Advanced ML and AI",
+    "heroDesc": "The Raneen One Ad Server is the cornerstone of the Retail Media Cloud, giving you total control over your ad forecasting, management, decisioning, and reporting, for an ad performance experience like never before.",
+    "talkToExpert": "Talk to an expert",
+    "readDocs": "Read the docs",
+    "centerTitle": "Ad serving that creates a stand-out retail media network that both advertisers and shoppers will love",
+    "centerDesc": "Launch unique, high-performing ads that integrate seamlessly with your organic content, driving positive advertiser growth and end-user experience.",
+    "feature1": { "label": "SMARTER PERSONALIZATION", "title": "Activate and optimize first-party data across channels", "desc": "Raneen One gives retailers tools to define and activate high-performing audience segments across channels instantly—without needing a CDP or data science team." },
+    "feature2": { "label": "HIGHER ADVERTISER RETENTION", "title": "Keep brand partners coming back with measurable results", "desc": "With customizable self-serve tools and powerful targeting, retailers can offer a better experience for brands and reduce churn." },
+    "feature3": { "label": "GREATER OPERATIONAL EFFICIENCY", "title": "Reduce manual processes and team bandwidth", "desc": "Raneen One consolidates campaign management, reporting, audience activation, and more—saving time and freeing up teams to focus on growth, not maintenance." },
+    "stories": [
+      { "quote": "Raneen One has enabled us to rapidly scale, growing monthly iFood Delivery ad revenue by 20x in a single year.", "author": "Lucas Sampaio, Senior Business Intelligence Analyst, iFood", "stat1": "20x", "stat2": "1900%", "stat1Label": "Ad Revenue", "stat2Label": "Growth", "button1": "Full case study", "button2": "See all" },
+      { "quote": "Our partnership with Raneen One allowed us to launch new ad products in record time.", "author": "Sarah Lee, Product Manager, Mercado Libre", "stat1": "15x", "stat2": "120%", "stat1Label": "Faster Launch", "stat2Label": "Revenue Uplift", "button1": "Full case study", "button2": "See all" },
+      { "quote": "With Raneen One, we increased our ad fill rate and improved user experience across the board.", "author": "Ahmed Hassan, CTO, Noon", "stat1": "98%", "stat2": "4.8/5", "stat1Label": "Fill Rate", "stat2Label": "User Satisfaction", "button1": "Full case study", "button2": "See all" }
+    ]
+  },
+  "audience": {
+    "heroTitle": "Precision that scales, AI that outperforms",
+    "heroDesc": "Activate and optimize your first-party data across channels with the flexibility, control, efficiency and value of precise decisioning.",
+    "talkToExpert": "Talk to an expert",
+    "readDocs": "Read the docs",
+    "feature1": { "label": "TAILORED TO YOUR BUSINESS LOGIC", "title": "Unlock the Power Of First-Party Data", "desc": "Activate your loyalty, purchase and behavioral data through stronger targeting, better monetization and full control in a post-cookie world. Build segments based on your rules - not someone else’s templates to enable more relevant targeting, better control and personalization that fits your strategy." },
+    "feature2": { "label": "SMARTER PERSONALIZATION", "title": "Smarter, Faster Audience Activation and Optimization", "desc": "First party data is a strategic advantage but it’s only powerful if its actionable. Kevel gives retailers tools to define and activate high-performing audience segments across channels instantly, without needing a CDP or Data science team. Quickly test and refine segments in real time targeting the right users at the right time to ensure higher ROAS and fewer wasted impressions on disengaged or already-converted shoppers." },
+    "stories": [
+      { "quote": "LEROY MERLIN Portugal quickly launched personalization campaigns targeted with Kevel Audience segments to increase conversion rate by 16%.", "author": "— Marketing Director, LEROY MERLIN Portugal", "stat1": "10x", "stat2": "$1MM+", "stat1Label": "Increase in conversion rate", "stat2Label": "Revenue per Session (RPS)", "button1": "Full case study", "button2": "See all" },
+      { "quote": "Our partnership with Raneen One allowed us to launch new ad products in record time.", "author": "Sarah Lee, Product Manager, Mercado Libre", "stat1": "15x", "stat2": "120%", "stat1Label": "Faster Launch", "stat2Label": "Revenue Uplift", "button1": "Full case study", "button2": "See all" },
+      { "quote": "With Raneen One, we increased our ad fill rate and improved user experience across the board.", "author": "Ahmed Hassan, CTO, Noon", "stat1": "98%", "stat2": "4.8/5", "stat1Label": "Fill Rate", "stat2Label": "User Satisfaction", "button1": "Full case study", "button2": "See all" }
+    ]
+  },
+  "marketplaces": {
+    "heroTitle": "Build Your Marketplace Ad Business",
+    "heroDesc": "<b>Retail media is booming — especially for marketplaces.</b><br/>Raneen One gives you a way to run ads that match your brand and maintain full control without impacting your site’s performance – underpinned by highly scalable infrastructure.",
+    "talkToExpert": "Talk to an expert",
+    "centerTitle": "What Marketplaces Need To Win",
+    "centerDesc": "Marketplaces like yours require an ad platform that offers flexibility, transparency, and speed. Our API-first Retail Media Cloud® provides this and more.",
+    "feature1": { "label": "SMARTER PERSONALIZATION", "title": "Sponsored Listings That Match Your User Experience", "desc": "Unlike templated placements, Kevel lets you build ad units that blend seamlessly with your native search and browse experiences. These listings can be keyword-targeted, ML-ranked, and ROAS-optimized, giving you a performance engine sellers will invest in." },
+    "feature2": { "label": "SMARTER PERSONALIZATION", "title": "Responsibly Activate Your 1P Data", "desc": "Kevel Audience makes it easy to build privacy-safe, high-conversion audience segments using your own data—no cookies or third-party dependencies. These segments can be used onsite & offsite, with connections to platforms like Meta or Google, providing audience extension to maximize reach and campaign performance." },
+    "feature3": { "label": "SMARTER PERSONALIZATION", "title": "Self-Serve, via API or white labeled UI", "desc": "Empower your sellers with a clean, intuitive, fully branded UI to launch and manage campaigns. Backed by smart automation and Kevel's AI-driven optimization, it reduces operational lift while maximizing seller adoption." },
+    "stories": [
+      { "quote": "Raneen One has enabled us to rapidly scale, growing monthly iFood Delivery ad revenue by 20x in a single year.", "author": "Lucas Sampaio, Senior Business Intelligence Analyst, iFood", "stat1": "20x", "stat2": "1900%", "stat1Label": "Ad Revenue", "stat2Label": "Growth", "button1": "Full case study", "button2": "See all" },
+      { "quote": "Our partnership with Raneen One allowed us to launch new ad products in record time.", "author": "Sarah Lee, Product Manager, Mercado Libre", "stat1": "15x", "stat2": "120%", "stat1Label": "Faster Launch", "stat2Label": "Revenue Uplift", "button1": "Full case study", "button2": "See all" },
+      { "quote": "With Raneen One, we increased our ad fill rate and improved user experience across the board.", "author": "Ahmed Hassan, CTO, Noon", "stat1": "98%", "stat2": "4.8/5", "stat1Label": "Fill Rate", "stat2Label": "User Satisfaction", "button1": "Full case study", "button2": "See all" }
+    ]
+  },
+  "retail": {
+    "heroTitle": "Upgrade your retail media network",
+    "heroDesc": "The Retail Media Cloud powers leading retail media networks, delivering high performance with relevant ad formats targeted using your own AI and machine learning segments.",
+    "talkToExpert": "Talk to an expert",
+    "centerTitle": "High-performing ads optimize GMV growth and relevancy",
+    "centerDesc": "Drive incrementality, ROAS, and new-to-brand metrics with sponsored listings, native ads, and other unique ad formats that boost advertiser ROI and increase sales.",
+    "feature1": { "label": "SMARTER PERSONALIZATION", "title": "Take control of your sponsored listing auctions, driving the high CPCs and value to advertisers.", "desc": "Set up auctions that work for your ad program, including different rate types and first or second-price auctions. Optimize the auctions for your desired performance, whether that’s clicks, impressions, or revenue." },
+    "feature2": { "label": "SMARTER PERSONALIZATION", "title": "Bring your own AI/ML targeting and relevancy models to drive ad and conversion performance.", "desc": "You know your customers best. Using your own first-party data, the Kevel Ad Server carefully selects which ad to serve that will lead to more product off your shelves." },
+    "feature3": { "label": "SMARTER PERSONALIZATION", "title": "Integrate ad serving seamlessly within your existing tech stack. ", "desc": "From campaign management with your own self-serve, to decisioning with your own ML modeling, to reporting with your own BI tools, we integrate with you, not the other way around." },
+    "stories": [
+      { "quote": "Raneen One has enabled us to rapidly scale, growing monthly iFood Delivery ad revenue by 20x in a single year.", "author": "Lucas Sampaio, Senior Business Intelligence Analyst, iFood", "stat1": "20x", "stat2": "1900%", "stat1Label": "Ad Revenue", "stat2Label": "Growth", "button1": "Full case study", "button2": "See all" },
+      { "quote": "Our partnership with Raneen One allowed us to launch new ad products in record time.", "author": "Sarah Lee, Product Manager, Mercado Libre", "stat1": "15x", "stat2": "120%", "stat1Label": "Faster Launch", "stat2Label": "Revenue Uplift", "button1": "Full case study", "button2": "See all" },
+      { "quote": "With Raneen One, we increased our ad fill rate and improved user experience across the board.", "author": "Ahmed Hassan, CTO, Noon", "stat1": "98%", "stat2": "4.8/5", "stat1Label": "Fill Rate", "stat2Label": "User Satisfaction", "button1": "Full case study", "button2": "See all" }
+    ]
   }
 } 

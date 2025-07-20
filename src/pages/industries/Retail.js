@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import HeroSection from '../../components/HeroSection';
 import { FaArrowRight } from "react-icons/fa";
 import ContactModal from "../../components/ContactModal";
@@ -7,49 +8,48 @@ import AdLifecycleDonut from '../../components/AdLifecycleDonut';
 import FeatureHighlight02 from '../../components/FeatureHighlight02';
 import SuccessStoriesSlider from '../../components/SuccessStoriesSlider';
 
-
-
 function Retail() {
+    const { t } = useTranslation();
     const [modalOpen, setModalOpen] = useState(false);
 
     const stories = [
         {
-            quote: 'Raneen One has enabled us to rapidly scale, growing monthly iFood Delivery ad revenue by 20x in a single year.',
-            author: 'Lucas Sampaio, Senior Business Intelligence Analyst, iFood',
-            logo: <img src="/media/logos/ifood.svg" alt="iFood" />, // adjust filename as needed
+            quote: t('retail.stories.0.quote'),
+            author: t('retail.stories.0.author'),
+            logo: <img src="/media/logos/ifood.svg" alt="iFood" />, // keep logo
             stats: [
-                { value: '20x', label: 'Ad Revenue' },
-                { value: '1900%', label: 'Growth' }
+                { value: t('retail.stories.0.stat1'), label: t('retail.stories.0.stat1Label') },
+                { value: t('retail.stories.0.stat2'), label: t('retail.stories.0.stat2Label') }
             ],
             buttons: [
-                { label: 'Full case study', href: '/case-study/ifood', variant: 'primary' },
-                { label: 'See all', href: '/success-stories', variant: 'secondary' }
+                { label: t('retail.stories.0.button1'), href: '/case-study/ifood', variant: 'primary' },
+                { label: t('retail.stories.0.button2'), href: '/success-stories', variant: 'secondary' }
             ]
         },
         {
-            quote: 'Our partnership with Raneen One allowed us to launch new ad products in record time.',
-            author: 'Sarah Lee, Product Manager, Mercado Libre',
-            logo: <img src="/media/logos/mc.avif" alt="Mercado Libre" />, // adjust filename as needed
+            quote: t('retail.stories.1.quote'),
+            author: t('retail.stories.1.author'),
+            logo: <img src="/media/logos/mc.avif" alt="Mercado Libre" />, // keep logo
             stats: [
-                { value: '15x', label: 'Faster Launch' },
-                { value: '120%', label: 'Revenue Uplift' }
+                { value: t('retail.stories.1.stat1'), label: t('retail.stories.1.stat1Label') },
+                { value: t('retail.stories.1.stat2'), label: t('retail.stories.1.stat2Label') }
             ],
             buttons: [
-                { label: 'Full case study', href: '/case-study/mercadolibre', variant: 'primary' },
-                { label: 'See all', href: '/success-stories', variant: 'secondary' }
+                { label: t('retail.stories.1.button1'), href: '/case-study/mercadolibre', variant: 'primary' },
+                { label: t('retail.stories.1.button2'), href: '/success-stories', variant: 'secondary' }
             ]
         },
         {
-            quote: 'With Raneen One, we increased our ad fill rate and improved user experience across the board.',
-            author: 'Ahmed Hassan, CTO, Noon',
-            logo: <img src="/media/logos/edmunds.svg" alt="Noon" />, // adjust filename as needed
+            quote: t('retail.stories.2.quote'),
+            author: t('retail.stories.2.author'),
+            logo: <img src="/media/logos/edmunds.svg" alt="Noon" />, // keep logo
             stats: [
-                { value: '98%', label: 'Fill Rate' },
-                { value: '4.8/5', label: 'User Satisfaction' }
+                { value: t('retail.stories.2.stat1'), label: t('retail.stories.2.stat1Label') },
+                { value: t('retail.stories.2.stat2'), label: t('retail.stories.2.stat2Label') }
             ],
             buttons: [
-                { label: 'Full case study', href: '/case-study/noon', variant: 'primary' },
-                { label: 'See all', href: '/success-stories', variant: 'secondary' }
+                { label: t('retail.stories.2.button1'), href: '/case-study/noon', variant: 'primary' },
+                { label: t('retail.stories.2.button2'), href: '/success-stories', variant: 'secondary' }
             ]
         }
     ];
@@ -60,49 +60,48 @@ function Retail() {
                 backgroundGradient="var(--hero-gradient-2)"
                 leftContent={
                     <>
-                        <h1>Upgrade your retail media network</h1>
-                        <p>The Retail Media Cloud powers leading retail media networks, delivering high performance with relevant ad formats targeted using your own AI and machine learning segments.</p>
+                        <h1>{t('retail.heroTitle')}</h1>
+                        <p>{t('retail.heroDesc')}</p>
                         <div className="hero-buttons">
                             <button className="footer-cta-btn" onClick={() => setModalOpen(true)} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-                                Talk to an expert <FaArrowRight style={{ marginLeft: 8, verticalAlign: 'middle' }} />
+                                {t('retail.talkToExpert')} <FaArrowRight style={{ marginLeft: 8, verticalAlign: 'middle' }} />
                             </button>
                         </div>
                     </>
                 }
                 imageSrc="media/assets/industries/retail.avif"
                 imageAlt="Dashboard Mockup"
-                bubbles={{
-                }}
+                bubbles={{}}
             />
             <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
 
             <div className='center'>
-                <h1>High-performing ads optimize GMV growth and relevancy</h1>
-                <p>Drive incrementality, ROAS, and new-to-brand metrics with sponsored listings, native ads, and other unique ad formats that boost advertiser ROI and increase sales.</p>
+                <h1>{t('retail.centerTitle')}</h1>
+                <p>{t('retail.centerDesc')}</p>
             </div>
 
             <FeatureHighlight
-                label="SMARTER PERSONALIZATION"
-                title="Take control of your sponsored listing auctions, driving the high CPCs and value to advertisers."
-                description="Set up auctions that work for your ad program, including different rate types and first or second-price auctions. Optimize the auctions for your desired performance, whether that’s clicks, impressions, or revenue."
+                label={t('retail.feature1.label')}
+                title={t('retail.feature1.title')}
+                description={t('retail.feature1.desc')}
                 mainImage="/media/assets/industries/retail01.webp"
                 imagePosition="left"
                 backgroundGradientVar="--hero-gradient-2"
                 background='yes'
             />
             <FeatureHighlight
-                label="SMARTER PERSONALIZATION"
-                title="Bring your own AI/ML targeting and relevancy models to drive ad and conversion performance."
-                description="You know your customers best. Using your own first-party data, the Kevel Ad Server carefully selects which ad to serve that will lead to more product off your shelves."
+                label={t('retail.feature2.label')}
+                title={t('retail.feature2.title')}
+                description={t('retail.feature2.desc')}
                 mainImage="/media/assets/industries/retail02.webp"
                 imagePosition="right"
                 backgroundGradientVar="--hero-gradient-2"
                 background='yes'
             />
             <FeatureHighlight
-                label="SMARTER PERSONALIZATION"
-                title="Integrate ad serving seamlessly within your existing tech stack. "
-                description="From campaign management with your own self-serve, to decisioning with your own ML modeling, to reporting with your own BI tools, we integrate with you, not the other way around."
+                label={t('retail.feature3.label')}
+                title={t('retail.feature3.title')}
+                description={t('retail.feature3.desc')}
                 mainImage="/media/assets/industries/retail03.webp"
                 imagePosition="left"
                 backgroundGradientVar="--hero-gradient-2"

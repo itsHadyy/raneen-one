@@ -14,7 +14,7 @@ function Delivery() {
         {
             quote: t('delivery.stories.0.quote'),
             author: t('delivery.stories.0.author'),
-            logo: <img src="/media/logos/ifood.svg" alt="iFood" />,
+            logo: <img src="/media/logos/ifood.svg" alt="iFood" />,  
             stats: [
                 { value: '20x', label: t('delivery.stories.0.stat1') },
                 { value: '1900%', label: t('delivery.stories.0.stat2') }
@@ -27,7 +27,7 @@ function Delivery() {
         {
             quote: t('delivery.stories.1.quote'),
             author: t('delivery.stories.1.author'),
-            logo: <img src="/media/logos/mc.avif" alt="Mercado Libre" />,
+            logo: <img src="/media/logos/mc.avif" alt="Mercado Libre" />,  
             stats: [
                 { value: '15x', label: t('delivery.stories.1.stat1') },
                 { value: '120%', label: t('delivery.stories.1.stat2') }
@@ -40,7 +40,7 @@ function Delivery() {
         {
             quote: t('delivery.stories.2.quote'),
             author: t('delivery.stories.2.author'),
-            logo: <img src="/media/logos/edmunds.svg" alt="Noon" />,
+            logo: <img src="/media/logos/edmunds.svg" alt="Noon" />,  
             stats: [
                 { value: '98%', label: t('delivery.stories.2.stat1') },
                 { value: '4.8/5', label: t('delivery.stories.2.stat2') }
@@ -149,7 +149,7 @@ function Delivery() {
                     <p style={{ color: '#5a6a7a', fontSize: '1rem', margin: 0 }}>{t('delivery.card3.desc')}</p>
                 </div>
             </div>
-
+                
             {/* Gradient Two-Column Section */}
             <section
                 className="delivery-gradient-section"
