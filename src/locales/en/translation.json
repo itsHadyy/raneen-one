@@ -331,9 +331,9 @@
     "talkToExpert": "Talk to an expert",
     "readDocs": "Read the docs",
     "feature1": { "label": "TAILORED TO YOUR BUSINESS LOGIC", "title": "Unlock the Power Of First-Party Data", "desc": "Activate your loyalty, purchase and behavioral data through stronger targeting, better monetization and full control in a post-cookie world. Build segments based on your rules - not someone else’s templates to enable more relevant targeting, better control and personalization that fits your strategy." },
-    "feature2": { "label": "SMARTER PERSONALIZATION", "title": "Smarter, Faster Audience Activation and Optimization", "desc": "First party data is a strategic advantage but it’s only powerful if its actionable. Kevel gives retailers tools to define and activate high-performing audience segments across channels instantly, without needing a CDP or Data science team. Quickly test and refine segments in real time targeting the right users at the right time to ensure higher ROAS and fewer wasted impressions on disengaged or already-converted shoppers." },
+    "feature2": { "label": "SMARTER PERSONALIZATION", "title": "Smarter, Faster Audience Activation and Optimization", "desc": "First party data is a strategic advantage but it’s only powerful if its actionable. Raneen One gives retailers tools to define and activate high-performing audience segments across channels instantly, without needing a CDP or Data science team. Quickly test and refine segments in real time targeting the right users at the right time to ensure higher ROAS and fewer wasted impressions on disengaged or already-converted shoppers." },
     "stories": [
-      { "quote": "LEROY MERLIN Portugal quickly launched personalization campaigns targeted with Kevel Audience segments to increase conversion rate by 16%.", "author": "— Marketing Director, LEROY MERLIN Portugal", "stat1": "10x", "stat2": "$1MM+", "stat1Label": "Increase in conversion rate", "stat2Label": "Revenue per Session (RPS)", "button1": "Full case study", "button2": "See all" },
+      { "quote": "LEROY MERLIN Portugal quickly launched personalization campaigns targeted with Raneen One Audience segments to increase conversion rate by 16%.", "author": "— Marketing Director, LEROY MERLIN Portugal", "stat1": "10x", "stat2": "$1MM+", "stat1Label": "Increase in conversion rate", "stat2Label": "Revenue per Session (RPS)", "button1": "Full case study", "button2": "See all" },
       { "quote": "Our partnership with Raneen One allowed us to launch new ad products in record time.", "author": "Sarah Lee, Product Manager, Mercado Libre", "stat1": "15x", "stat2": "120%", "stat1Label": "Faster Launch", "stat2Label": "Revenue Uplift", "button1": "Full case study", "button2": "See all" },
       { "quote": "With Raneen One, we increased our ad fill rate and improved user experience across the board.", "author": "Ahmed Hassan, CTO, Noon", "stat1": "98%", "stat2": "4.8/5", "stat1Label": "Fill Rate", "stat2Label": "User Satisfaction", "button1": "Full case study", "button2": "See all" }
     ]
@@ -344,9 +344,9 @@
     "talkToExpert": "Talk to an expert",
     "centerTitle": "What Marketplaces Need To Win",
     "centerDesc": "Marketplaces like yours require an ad platform that offers flexibility, transparency, and speed. Our API-first Retail Media Cloud® provides this and more.",
-    "feature1": { "label": "SMARTER PERSONALIZATION", "title": "Sponsored Listings That Match Your User Experience", "desc": "Unlike templated placements, Kevel lets you build ad units that blend seamlessly with your native search and browse experiences. These listings can be keyword-targeted, ML-ranked, and ROAS-optimized, giving you a performance engine sellers will invest in." },
-    "feature2": { "label": "SMARTER PERSONALIZATION", "title": "Responsibly Activate Your 1P Data", "desc": "Kevel Audience makes it easy to build privacy-safe, high-conversion audience segments using your own data—no cookies or third-party dependencies. These segments can be used onsite & offsite, with connections to platforms like Meta or Google, providing audience extension to maximize reach and campaign performance." },
-    "feature3": { "label": "SMARTER PERSONALIZATION", "title": "Self-Serve, via API or white labeled UI", "desc": "Empower your sellers with a clean, intuitive, fully branded UI to launch and manage campaigns. Backed by smart automation and Kevel's AI-driven optimization, it reduces operational lift while maximizing seller adoption." },
+    "feature1": { "label": "SMARTER PERSONALIZATION", "title": "Sponsored Listings That Match Your User Experience", "desc": "Unlike templated placements, Raneen One lets you build ad units that blend seamlessly with your native search and browse experiences. These listings can be keyword-targeted, ML-ranked, and ROAS-optimized, giving you a performance engine sellers will invest in." },
+    "feature2": { "label": "SMARTER PERSONALIZATION", "title": "Responsibly Activate Your 1P Data", "desc": "Raneen One Audience makes it easy to build privacy-safe, high-conversion audience segments using your own data—no cookies or third-party dependencies. These segments can be used onsite & offsite, with connections to platforms like Meta or Google, providing audience extension to maximize reach and campaign performance." },
+    "feature3": { "label": "SMARTER PERSONALIZATION", "title": "Self-Serve, via API or white labeled UI", "desc": "Empower your sellers with a clean, intuitive, fully branded UI to launch and manage campaigns. Backed by smart automation and Raneen One's AI-driven optimization, it reduces operational lift while maximizing seller adoption." },
     "stories": [
       { "quote": "Raneen One has enabled us to rapidly scale, growing monthly iFood Delivery ad revenue by 20x in a single year.", "author": "Lucas Sampaio, Senior Business Intelligence Analyst, iFood", "stat1": "20x", "stat2": "1900%", "stat1Label": "Ad Revenue", "stat2Label": "Growth", "button1": "Full case study", "button2": "See all" },
       { "quote": "Our partnership with Raneen One allowed us to launch new ad products in record time.", "author": "Sarah Lee, Product Manager, Mercado Libre", "stat1": "15x", "stat2": "120%", "stat1Label": "Faster Launch", "stat2Label": "Revenue Uplift", "button1": "Full case study", "button2": "See all" },
@@ -360,7 +360,7 @@
     "centerTitle": "High-performing ads optimize GMV growth and relevancy",
     "centerDesc": "Drive incrementality, ROAS, and new-to-brand metrics with sponsored listings, native ads, and other unique ad formats that boost advertiser ROI and increase sales.",
     "feature1": { "label": "SMARTER PERSONALIZATION", "title": "Take control of your sponsored listing auctions, driving the high CPCs and value to advertisers.", "desc": "Set up auctions that work for your ad program, including different rate types and first or second-price auctions. Optimize the auctions for your desired performance, whether that’s clicks, impressions, or revenue." },
-    "feature2": { "label": "SMARTER PERSONALIZATION", "title": "Bring your own AI/ML targeting and relevancy models to drive ad and conversion performance.", "desc": "You know your customers best. Using your own first-party data, the Kevel Ad Server carefully selects which ad to serve that will lead to more product off your shelves." },
+    "feature2": { "label": "SMARTER PERSONALIZATION", "title": "Bring your own AI/ML targeting and relevancy models to drive ad and conversion performance.", "desc": "You know your customers best. Using your own first-party data, the Raneen One Ad Server carefully selects which ad to serve that will lead to more product off your shelves." },
     "feature3": { "label": "SMARTER PERSONALIZATION", "title": "Integrate ad serving seamlessly within your existing tech stack. ", "desc": "From campaign management with your own self-serve, to decisioning with your own ML modeling, to reporting with your own BI tools, we integrate with you, not the other way around." },
     "stories": [
       { "quote": "Raneen One has enabled us to rapidly scale, growing monthly iFood Delivery ad revenue by 20x in a single year.", "author": "Lucas Sampaio, Senior Business Intelligence Analyst, iFood", "stat1": "20x", "stat2": "1900%", "stat1Label": "Ad Revenue", "stat2Label": "Growth", "button1": "Full case study", "button2": "See all" },
@@ -389,5 +389,37 @@
         "desc": "Improve your ad operations with an intuitive, AI driven interface that optimizes workflows helping retailers manage inventory, data assets and campaign performance while delivering best-in-class ROAS."
       }
     ]
+  },
+  "about": {
+    "ourMission": "OUR MISSION",
+    "heroTitle": "Helping brands take back the Internet since 2010",
+    "heroDesc": "Raneen One offers the infrastructure APIs needed to quickly build custom ad platforms for sponsored listings, internal promotions, native ads, and more. We are committed to helping publishers drive new revenue and take back the Internet from ad tech giants like Google, Amazon, and Facebook.",
+    "ourStory": "OUR STORY",
+    "legacyTitle": "The legacy of Adzerk",
+    "legacyDesc": "Raneen One began as Adzerk in 2010 when software engineer James Avery wanted better tech for managing his network's ads. While initially being JavaScript-based, Raneen One quickly focused on server-side API ads as the future of the Internet. Soon, Raneen One offered not just an API ad server, but infrastructure tools for companies to build their own ad products. Now, Raneen One's product is a suite of APIs aimed at helping you drive revenue and take back the Internet from the ad tech giants.",
+    "teamPhotoPlaceholder": "[Team photo placeholder]",
+    "valuesBadge": "OUR VALUES",
+    "valuesTitle": "We put our values in action",
+    "values": [
+      { "title": "Make the internet a better place", "desc": "We help innovative brands build user-friendly, privacy-focused ad platforms." },
+      { "title": "We delight our customers", "desc": "We want to bring joy and excitement through moments of delight to our customers." },
+      { "title": "We are all adults", "desc": "We reject micromanagement and trust our employees." },
+      { "title": "Always be crushing", "desc": "We focus on delivering value and crushing it." },
+      { "title": "Embrace diversity", "desc": "We fight to empower underrepresented groups." },
+      { "title": "Deliver innovation", "desc": "We maintain a culture of engineering and creative problem solving." },
+      { "title": "Be open", "desc": "We are dedicated to open source and sharing our knowledge." }
+    ],
+    "presenceTitle": "Presence",
+    "presenceDesc": "Raneen One's commitment to remote-first work allows us to thrive in major locations across the globe.",
+    "presence": {
+      "california": "California",
+      "copenhagen": "Copenhagen",
+      "durham": "Durham",
+      "london": "London",
+      "ny": "New York",
+      "porto": "Porto",
+      "singapore": "Singapore",
+      "texas": "Texas"
+    }
   }
 } 

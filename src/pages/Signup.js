@@ -44,7 +44,6 @@ export default function Signup() {
       background: 'linear-gradient(120deg, #654EFC 0%, #ff4d2d 100%)',
       paddingTop: '100px',
     }}>
-      {/* Blurred gradient overlay for extra gloss */}
       <div style={{
         position: 'absolute',
         inset: 0,
@@ -71,7 +70,6 @@ export default function Signup() {
         zIndex: 2,
         position: 'relative',
       }}>
-        {/* Logo/Icon */}
         <div style={{ marginBottom: 18 }}>
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="24" cy="24" r="24" fill="#ff4d2d" fillOpacity="0.12" />

@@ -18,6 +18,7 @@ import Delivery from './pages/industries/Delivery';
 import Financial from './pages/industries/Financial';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import About from './pages/company/About';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -37,6 +38,7 @@ function AnimatedRoutes() {
             <Route path="/financial" element={<Financial />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </div>
       </CSSTransition>

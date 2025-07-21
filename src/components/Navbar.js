@@ -4,14 +4,14 @@ import { FiChevronDown } from 'react-icons/fi';
 import {
   LuServerCog, LuUsers2, LuSettings2, LuActivitySquare, LuShoppingBag, LuStore, LuTruck, LuCreditCard,
   LuRocket, LuBookOpen, LuPenTool, LuBuilding2, LuUtensilsCrossed, LuCar, LuBadgeCheck, LuStar,
-  LuPenSquare, LuNewspaper, LuUserSquare2, LuBriefcase, LuHand, LuMail
+  LuPenSquare, LuNewspaper, LuUserSquare2, LuHand, LuMail
 } from 'react-icons/lu';
 import ContactModal from "./ContactModal";
 import { FaArrowRight } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-const Navbar = () => {
+const Navbar = ({ whiteBg }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -19,10 +19,13 @@ const Navbar = () => {
   const navRefs = useRef([]);
   const closeTimeout = useRef();
   const { t, i18n } = useTranslation();
+  const location = useLocation();
 
-  // Move NAV_ITEMS here so it can use t
-const NAV_ITEMS = [
-  {
+  // Determine if white background should be forced (e.g., on About page)
+  const forceWhiteBg = whiteBg || location.pathname.startsWith('/about');
+
+  const NAV_ITEMS = [
+    {
       label: t('navbar.products'),
       dropdown: [
         {
@@ -76,37 +79,37 @@ const NAV_ITEMS = [
     },
     {
       label: t('navbar.developers'),
-    dropdown: [
-      {
+      dropdown: [
+        {
           icon: <LuRocket size={24} color="#181f2a" />,
           title: t('navbar.apiQuickstartTitle'),
           desc: t('navbar.apiQuickstartDesc'),
-        link: '/api-quickstart'
-      },
-      {
+          link: '/api-quickstart'
+        },
+        {
           icon: <LuBookOpen size={24} color="#181f2a" />,
           title: t('navbar.knowledgeBaseTitle'),
           desc: t('navbar.knowledgeBaseDesc'),
-        link: '/knowledge-base'
-      },
-      {
+          link: '/knowledge-base'
+        },
+        {
           icon: <LuPenTool size={24} color="#181f2a" />,
           title: t('navbar.toolsTitle'),
           desc: t('navbar.toolsDesc'),
           link: '/tools'
-      },
-      {
+        },
+        {
           icon: <LuActivitySquare size={24} color="#181f2a" />,
           title: t('navbar.apiStatusTitle'),
           desc: t('navbar.apiStatusDesc'),
-        link: '/api-status'
-      }
-    ]
-  },
-  {
+          link: '/api-status'
+        }
+      ]
+    },
+    {
       label: t('navbar.customers'),
-    dropdown: [
-      {
+      dropdown: [
+        {
           icon: <LuBuilding2 size={24} color="#654EFC" />,
           title: t('navbar.mcTitle'),
           desc: t('navbar.mcDesc'),
@@ -117,8 +120,8 @@ const NAV_ITEMS = [
           title: t('navbar.ifoodTitle'),
           desc: t('navbar.ifoodDesc'),
           link: '/customers/ifood'
-      },
-      {
+        },
+        {
           icon: <LuCar size={24} color="#2680EB" />,
           title: t('navbar.edmundsTitle'),
           desc: t('navbar.edmundsDesc'),
@@ -129,8 +132,8 @@ const NAV_ITEMS = [
           title: t('navbar.elcorteTitle'),
           desc: t('navbar.elcorteDesc'),
           link: '/customers/elcorte'
-      },
-      {
+        },
+        {
           icon: <LuStar size={24} color="#181f2a" />,
           title: t('navbar.successStoriesTitle'),
           desc: t('navbar.successStoriesDesc'),
@@ -152,13 +155,13 @@ const NAV_ITEMS = [
           title: t('navbar.newsroomTitle'),
           desc: t('navbar.newsroomDesc'),
           link: '/resources/newsroom'
-      },
-      {
+        },
+        {
           icon: <LuBookOpen size={24} color="#181f2a" />,
           title: t('navbar.retailMediaGuideTitle'),
           desc: t('navbar.retailMediaGuideDesc'),
           link: '/resources/retail-media-guide'
-  },
+        },
         {
           icon: <LuServerCog size={24} color="#181f2a" />,
           title: t('navbar.adServerGuideTitle'),
@@ -174,25 +177,25 @@ const NAV_ITEMS = [
           icon: <LuUserSquare2 size={24} color="#181f2a" />,
           title: t('navbar.aboutTitle'),
           desc: t('navbar.aboutDesc'),
-          link: '/company/about'
+          link: '/about'
         },
-        {
-          icon: <LuBriefcase size={24} color="#181f2a" />,
-          title: t('navbar.careersTitle'),
-          desc: t('navbar.careersDesc'),
-          link: '/company/careers'
-        },
+        // {
+        //   icon: <LuBriefcase size={24} color="#181f2a" />,
+        //   title: t('navbar.careersTitle'),
+        //   desc: t('navbar.careersDesc'),
+        //   link: '/company/careers'
+        // },
         {
           icon: <LuHand size={24} color="#181f2a" />,
           title: t('navbar.partnersTitle'),
           desc: t('navbar.partnersDesc'),
-          link: '/company/partners'
+          link: '/partners'
         },
         {
           icon: <LuMail size={24} color="#181f2a" />,
           title: t('navbar.contactTitle'),
           desc: t('navbar.contactDesc'),
-          link: '/company/contact'
+          link: '/contact'
         }
       ]
     }
@@ -222,61 +225,61 @@ const NAV_ITEMS = [
 
   return (
     <div>
-    <header className={`header${scrolled ? ' scrolled' : ''}`}>
+      <header className={`header${scrolled ? ' scrolled' : ''}${forceWhiteBg ? ' white-bg' : ''}`}>
         <div className="nav-container">
           <Link to={'/'} className='logo-link'>
-        <div className="logo">
+            <div className="logo">
               <img src='media/logo02.png' alt='Raneen One Icon' className='raneenLogo' />
-          raneen 
-          {/* <span>One</span> */}
-        </div>
+              raneen
+              {/* <span>One</span> */}
+            </div>
           </Link>
-        <nav className="nav">
-          {NAV_ITEMS.map((item, idx) => {
-            const hasDropdown = !!item.dropdown;
-            const isOpen = openDropdown === idx;
-            return (
-              <div
-                key={item.label}
-                className={`nav-item-wrapper${isOpen ? ' nav-item-open' : ''}`}
-                onMouseEnter={() => hasDropdown ? handleDropdownOpen(idx) : setOpenDropdown(null)}
-                onMouseLeave={hasDropdown ? handleDropdownClose : undefined}
-                onFocus={() => hasDropdown ? handleDropdownOpen(idx) : setOpenDropdown(null)}
-                onBlur={hasDropdown ? handleDropdownClose : undefined}
-                tabIndex={0}
-                ref={el => navRefs.current[idx] = el}
-                style={{ position: 'relative', display: 'inline-block' }}
-              >
+          <nav className="nav">
+            {NAV_ITEMS.map((item, idx) => {
+              const hasDropdown = !!item.dropdown;
+              const isOpen = openDropdown === idx;
+              return (
+                <div
+                  key={item.label}
+                  className={`nav-item-wrapper${isOpen ? ' nav-item-open' : ''}`}
+                  onMouseEnter={() => hasDropdown ? handleDropdownOpen(idx) : setOpenDropdown(null)}
+                  onMouseLeave={hasDropdown ? handleDropdownClose : undefined}
+                  onFocus={() => hasDropdown ? handleDropdownOpen(idx) : setOpenDropdown(null)}
+                  onBlur={hasDropdown ? handleDropdownClose : undefined}
+                  tabIndex={0}
+                  ref={el => navRefs.current[idx] = el}
+                  style={{ position: 'relative', display: 'inline-block' }}
+                >
                   <Link to={item.link || '#'} className="nav-link">
-                  {item.label}
-                  {hasDropdown && <FiChevronDown style={{ marginLeft: 6, verticalAlign: 'middle' }} size={18} />}
+                    {item.label}
+                    {hasDropdown && <FiChevronDown style={{ marginLeft: 6, verticalAlign: 'middle' }} size={18} />}
                   </Link>
-                {hasDropdown && isOpen && (
-                  <NavDropdown
-                    items={item.dropdown}
-                    openFlyout={openFlyout}
-                    setOpenFlyout={setOpenFlyout}
-                  />
-                )}
-              </div>
-            );
-          })}
-        </nav>
-        <div className="header-actions">
+                  {hasDropdown && isOpen && (
+                    <NavDropdown
+                      items={item.dropdown}
+                      openFlyout={openFlyout}
+                      setOpenFlyout={setOpenFlyout}
+                    />
+                  )}
+                </div>
+              );
+            })}
+          </nav>
+          <div className="header-actions">
             <button className="icon-btn profile-icon" aria-label="User Account" onClick={() => window.location.href = '/login'}>
               <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M4 20c0-4 8-4 8-4s8 0 8 4" /></svg>
             </button>
             <button className="icon-btn" aria-label="Language" onClick={handleLangToggle}>
               {i18n.language === 'ar' ? 'EN' : 'AR'}
-          </button>
+            </button>
             <button className="cta-btn" onClick={() => setModalOpen(true)} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
               {t('navbar.talkToExpert')} <FaArrowRight style={{ marginLeft: 8, verticalAlign: 'middle' }} />
-          </button>
+            </button>
           </div>
         </div>
       </header>
       <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
-      </div>
+    </div>
   );
 };
 
