@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useLayoutEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import HeroSectionWithForm from '../../components/HeroSectionWithForm';
 
@@ -6,7 +6,8 @@ export default function Partner() {
   const { t } = useTranslation();
   const [openIdx, setOpenIdx] = useState(null);
   const descRefs = useRef([]);
-  const accordion = [
+  const [heights, setHeights] = useState([]);
+  const accordion = useMemo(() => [
     {
       title: t('partner.accordion.0.title'),
       desc: t('partner.accordion.0.desc'),
@@ -19,10 +20,16 @@ export default function Partner() {
       title: t('partner.accordion.2.title'),
       desc: t('partner.accordion.2.desc'),
     },
-  ];
+  ], [t]);
+
+  useLayoutEffect(() => {
+    setHeights(descRefs.current.map(ref => ref ? ref.scrollHeight : 0));
+  }, [accordion]);
+
   const handleAccordion = idx => {
     setOpenIdx(openIdx === idx ? null : idx);
   };
+
   return (
     <>
       <HeroSectionWithForm
@@ -116,8 +123,9 @@ export default function Partner() {
                 <div
                   className="partner-accordion-desc-wrap"
                   style={{
-                    maxHeight: openIdx === idx && descRefs.current[idx] ? descRefs.current[idx].scrollHeight + 24 : 0,
+                    maxHeight: openIdx === idx ? (heights[idx] ? heights[idx] + 24 : 200) : 0,
                     opacity: openIdx === idx ? 1 : 0,
+                    pointerEvents: openIdx === idx ? 'auto' : 'none',
                     overflow: 'hidden',
                     transition: 'max-height 0.5s cubic-bezier(.4,0,.2,1), opacity 0.4s cubic-bezier(.4,0,.2,1)',
                   }}
@@ -126,8 +134,12 @@ export default function Partner() {
                     className="partner-accordion-desc"
                     ref={el => (descRefs.current[idx] = el)}
                     aria-hidden={openIdx !== idx}
+                    style={{
+                      opacity: openIdx === idx ? 1 : 0,
+                      transition: 'opacity 0.4s cubic-bezier(.4,0,.2,1)',
+                    }}
                   >
-                    {openIdx === idx && item.desc}
+                    {item.desc}
                   </div>
                 </div>
               </div>
