@@ -80,9 +80,10 @@
     margin-bottom: 16px;
 }
 
-.contact-modal-row-full {
-    width: 100%;
-    margin-bottom: 16px;
+.contact-modal-row-full input,
+.contact-modal-row-full select{
+    width: 100% !important;
+    margin-bottom: 16px !important;
 }
 
 .contact-modal-input {
@@ -125,10 +126,11 @@
 
 .contact-modal-checkbox input[type="checkbox"] {
     accent-color: #ff6a3d;
-    width: 18px;
-    height: 18px;
+    width: 18px !important;
+    height: 18px !important;
     border-radius: 4px;
     margin-right: 6px;
+    transform: translateY(6px);
 }
 
 .contact-modal-submit {

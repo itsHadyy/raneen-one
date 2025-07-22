@@ -43,7 +43,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                 <input placeholder={t('contactModal.phone')} className="contact-modal-input" />
             </div>
             <div className="contact-modal-row-full">
-                <input placeholder={t('contactModal.company')} className="contact-modal-input" />
+                <input placeholder={t('contactModal.company')} className="contact-modal-input contact-modal-row-full" />
             </div>
             <div className="contact-modal-row">
               <select className="contact-modal-input" defaultValue="">

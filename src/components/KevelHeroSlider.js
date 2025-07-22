@@ -80,6 +80,7 @@ export default function KevelHeroSlider() {
             }, 400);
         }, SLIDE_DURATION);
         return () => clearInterval(timerRef.current);
+        // eslint-disable-next-line
     }, [active]);
 
     useEffect(() => {
@@ -96,6 +97,7 @@ export default function KevelHeroSlider() {
         }
         frame = requestAnimationFrame(animateBar);
         return () => cancelAnimationFrame(frame);
+        // eslint-disable-next-line
     }, [active]);
 
     return (

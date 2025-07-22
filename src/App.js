@@ -20,6 +20,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import About from './pages/company/About';
 import Partner from './pages/company/Partner';
+import Contact from './pages/company/Contact';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -41,6 +42,7 @@ function AnimatedRoutes() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/about" element={<About />} />
             <Route path="/partner" element={<Partner />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </CSSTransition>
