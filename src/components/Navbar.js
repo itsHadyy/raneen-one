@@ -24,8 +24,8 @@ const Navbar = ({ whiteBg }) => {
   // Determine if white background should be forced (e.g., on About page)
   const forceWhiteBg = whiteBg || location.pathname.startsWith('/about');
 
-  const NAV_ITEMS = [
-    {
+const NAV_ITEMS = [
+  {
       label: t('navbar.products'),
       dropdown: [
         {
@@ -79,37 +79,37 @@ const Navbar = ({ whiteBg }) => {
     },
     {
       label: t('navbar.developers'),
-      dropdown: [
-        {
+    dropdown: [
+      {
           icon: <LuRocket size={24} color="#181f2a" />,
           title: t('navbar.apiQuickstartTitle'),
           desc: t('navbar.apiQuickstartDesc'),
-          link: '/api-quickstart'
-        },
-        {
+        link: '/api-quickstart'
+      },
+      {
           icon: <LuBookOpen size={24} color="#181f2a" />,
           title: t('navbar.knowledgeBaseTitle'),
           desc: t('navbar.knowledgeBaseDesc'),
-          link: '/knowledge-base'
-        },
-        {
+        link: '/knowledge-base'
+      },
+      {
           icon: <LuPenTool size={24} color="#181f2a" />,
           title: t('navbar.toolsTitle'),
           desc: t('navbar.toolsDesc'),
           link: '/tools'
-        },
-        {
+      },
+      {
           icon: <LuActivitySquare size={24} color="#181f2a" />,
           title: t('navbar.apiStatusTitle'),
           desc: t('navbar.apiStatusDesc'),
-          link: '/api-status'
-        }
-      ]
-    },
-    {
+        link: '/api-status'
+      }
+    ]
+  },
+  {
       label: t('navbar.customers'),
-      dropdown: [
-        {
+    dropdown: [
+      {
           icon: <LuBuilding2 size={24} color="#654EFC" />,
           title: t('navbar.mcTitle'),
           desc: t('navbar.mcDesc'),
@@ -120,8 +120,8 @@ const Navbar = ({ whiteBg }) => {
           title: t('navbar.ifoodTitle'),
           desc: t('navbar.ifoodDesc'),
           link: '/customers/ifood'
-        },
-        {
+      },
+      {
           icon: <LuCar size={24} color="#2680EB" />,
           title: t('navbar.edmundsTitle'),
           desc: t('navbar.edmundsDesc'),
@@ -132,8 +132,8 @@ const Navbar = ({ whiteBg }) => {
           title: t('navbar.elcorteTitle'),
           desc: t('navbar.elcorteDesc'),
           link: '/customers/elcorte'
-        },
-        {
+      },
+      {
           icon: <LuStar size={24} color="#181f2a" />,
           title: t('navbar.successStoriesTitle'),
           desc: t('navbar.successStoriesDesc'),
@@ -155,13 +155,13 @@ const Navbar = ({ whiteBg }) => {
           title: t('navbar.newsroomTitle'),
           desc: t('navbar.newsroomDesc'),
           link: '/resources/newsroom'
-        },
-        {
+      },
+      {
           icon: <LuBookOpen size={24} color="#181f2a" />,
           title: t('navbar.retailMediaGuideTitle'),
           desc: t('navbar.retailMediaGuideDesc'),
           link: '/resources/retail-media-guide'
-        },
+  },
         {
           icon: <LuServerCog size={24} color="#181f2a" />,
           title: t('navbar.adServerGuideTitle'),
@@ -189,7 +189,7 @@ const Navbar = ({ whiteBg }) => {
           icon: <LuHand size={24} color="#181f2a" />,
           title: t('navbar.partnersTitle'),
           desc: t('navbar.partnersDesc'),
-          link: '/partners'
+          link: '/partner'
         },
         {
           icon: <LuMail size={24} color="#181f2a" />,
@@ -228,58 +228,58 @@ const Navbar = ({ whiteBg }) => {
       <header className={`header${scrolled ? ' scrolled' : ''}${forceWhiteBg ? ' white-bg' : ''}`}>
         <div className="nav-container">
           <Link to={'/'} className='logo-link'>
-            <div className="logo">
+        <div className="logo">
               <img src='media/logo02.png' alt='Raneen One Icon' className='raneenLogo' />
-              raneen
-              {/* <span>One</span> */}
-            </div>
+          raneen 
+          {/* <span>One</span> */}
+        </div>
           </Link>
-          <nav className="nav">
-            {NAV_ITEMS.map((item, idx) => {
-              const hasDropdown = !!item.dropdown;
-              const isOpen = openDropdown === idx;
-              return (
-                <div
-                  key={item.label}
-                  className={`nav-item-wrapper${isOpen ? ' nav-item-open' : ''}`}
-                  onMouseEnter={() => hasDropdown ? handleDropdownOpen(idx) : setOpenDropdown(null)}
-                  onMouseLeave={hasDropdown ? handleDropdownClose : undefined}
-                  onFocus={() => hasDropdown ? handleDropdownOpen(idx) : setOpenDropdown(null)}
-                  onBlur={hasDropdown ? handleDropdownClose : undefined}
-                  tabIndex={0}
-                  ref={el => navRefs.current[idx] = el}
-                  style={{ position: 'relative', display: 'inline-block' }}
-                >
+        <nav className="nav">
+          {NAV_ITEMS.map((item, idx) => {
+            const hasDropdown = !!item.dropdown;
+            const isOpen = openDropdown === idx;
+            return (
+              <div
+                key={item.label}
+                className={`nav-item-wrapper${isOpen ? ' nav-item-open' : ''}`}
+                onMouseEnter={() => hasDropdown ? handleDropdownOpen(idx) : setOpenDropdown(null)}
+                onMouseLeave={hasDropdown ? handleDropdownClose : undefined}
+                onFocus={() => hasDropdown ? handleDropdownOpen(idx) : setOpenDropdown(null)}
+                onBlur={hasDropdown ? handleDropdownClose : undefined}
+                tabIndex={0}
+                ref={el => navRefs.current[idx] = el}
+                style={{ position: 'relative', display: 'inline-block' }}
+              >
                   <Link to={item.link || '#'} className="nav-link">
-                    {item.label}
-                    {hasDropdown && <FiChevronDown style={{ marginLeft: 6, verticalAlign: 'middle' }} size={18} />}
+                  {item.label}
+                  {hasDropdown && <FiChevronDown style={{ marginLeft: 6, verticalAlign: 'middle' }} size={18} />}
                   </Link>
-                  {hasDropdown && isOpen && (
-                    <NavDropdown
-                      items={item.dropdown}
-                      openFlyout={openFlyout}
-                      setOpenFlyout={setOpenFlyout}
-                    />
-                  )}
-                </div>
-              );
-            })}
-          </nav>
-          <div className="header-actions">
+                {hasDropdown && isOpen && (
+                  <NavDropdown
+                    items={item.dropdown}
+                    openFlyout={openFlyout}
+                    setOpenFlyout={setOpenFlyout}
+                  />
+                )}
+              </div>
+            );
+          })}
+        </nav>
+        <div className="header-actions">
             <button className="icon-btn profile-icon" aria-label="User Account" onClick={() => window.location.href = '/login'}>
               <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M4 20c0-4 8-4 8-4s8 0 8 4" /></svg>
             </button>
             <button className="icon-btn" aria-label="Language" onClick={handleLangToggle}>
               {i18n.language === 'ar' ? 'EN' : 'AR'}
-            </button>
+          </button>
             <button className="cta-btn" onClick={() => setModalOpen(true)} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
               {t('navbar.talkToExpert')} <FaArrowRight style={{ marginLeft: 8, verticalAlign: 'middle' }} />
-            </button>
+          </button>
           </div>
         </div>
       </header>
       <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
-    </div>
+      </div>
   );
 };
 

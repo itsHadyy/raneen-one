@@ -420,6 +420,56 @@
       "porto": "Porto",
       "singapore": "Singapore",
       "texas": "Texas"
+    },
+    "certificationBadge": "CERTIFICATION",
+    "certificationTitle": "Feel confident working with an industry-certified partner",
+    "certifications": {
+      "0": { "title": "AWS Select-Tier Tech Partner" },
+      "1": { "title": "Official IAB Member" },
+      "2": { "title": "SOC 1 Type II Certified" },
+      "3": { "title": "SOC 2 Type II Certified" }
     }
+  },
+  "partner": {
+    "badge": "Partner with us",
+    "title": "Partner with Raneen One to help empower Retail and Ecommerce Brands",
+    "desc": "Let's work together to drive innovation, excellence and set new standards for retail media ad serving. Become a member of our global network of collaborative partners today.",
+    "whyTitle": "Why Partner With Raneen One?",
+    "whyDesc": "Raneen One's partner program helps retailers, marketplaces, grocers and ecommerce brands build differentiated, in-house retail media networks based on their unique brands and data. Our partners help you to unlock the full potential of our retail media network to drive incrementality and ROAS while boosting advertiser ROI and increasing sales.",
+    "accordion": {
+      "0": {
+        "title": "Digital Agencies & Consultancies",
+        "desc": "Partner with us to unlock new growth opportunities and expand your service offerings. Whether you're enhancing digital strategies or driving digital transformation, our flexible, scalable API-based platform provides the tools and support you need to deliver exceptional results for your clients and maintain a competitive edge."
+      },
+      "1": {
+        "title": "Tech Providers",
+        "desc": "Partner with us to expand your product portfolio and offer innovative technology solutions. Our API-powered solution enables you to meet evolving client needs with seamless integrations and advanced capabilities."
+      },
+      "2": {
+        "title": "Systems Integrators & Operators",
+        "desc": "Join us as a partner to streamline system integrations and drive operational excellence. Our powerful platform helps you accelerate the adoption of composable architectures, boost efficiency, and deliver innovative solutions that enhance your clients' technology ecosystems."
+      }
+    },
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Work Email",
+    "company": "Company",
+    "country": "Select your Country/Region",
+    "help": "How Can We Help?",
+    "firstNamePlaceholder": "First Name",
+    "lastNamePlaceholder": "Last Name",
+    "emailPlaceholder": "Work Email",
+    "companyPlaceholder": "Company",
+    "countryPlaceholder": "Please Select",
+    "helpPlaceholder": "Please Select",
+    "helpOptions": {
+      "demo": "Request a Demo",
+      "pricing": "Pricing Inquiry",
+      "integration": "Integration Support",
+      "other": "Other"
+    },
+    "privacy": "Raneen One is committed to your privacy. We use the information you provide to us to contact you about our relevant content, products, and services. You may unsubscribe from these communications at any time.",
+    "consent": "I consent to marketing communications from Raneen One.",
+    "submit": "Submit"
   }
 } 

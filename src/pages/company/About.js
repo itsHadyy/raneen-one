@@ -96,6 +96,29 @@ export default function About() {
           ))}
         </div>
       </section>
+
+      <section className="about-certification-section">
+        <div className="about-certification-badge">{t('about.certificationBadge')}</div>
+        <h2 className="about-certification-title">{t('about.certificationTitle')}</h2>
+        <div className="about-certification-cards">
+          <div className="about-certification-card">
+            <img className="about-certification-img" src="/media/assets/company/aws.webp" alt="AWS" />
+            <div className="about-certification-label">{t('about.certifications.0.title')}</div>
+          </div>
+          <div className="about-certification-card">
+            <img className="about-certification-img" src="/media/assets/company/iab.webp" alt="IAB" />
+            <div className="about-certification-label">{t('about.certifications.1.title')}</div>
+          </div>
+          <div className="about-certification-card">
+            <img className="about-certification-img" src="/media/assets/company/soc1.webp" alt="SOC 1" />
+            <div className="about-certification-label">{t('about.certifications.2.title')}</div>
+          </div>
+          <div className="about-certification-card">
+            <img className="about-certification-img" src="/media/assets/company/soc2.webp" alt="SOC 2" />
+            <div className="about-certification-label">{t('about.certifications.3.title')}</div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
