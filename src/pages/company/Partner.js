@@ -147,6 +147,15 @@ export default function Partner() {
           </div>
         </div>
       </section>
+      <section className="partner-testimonial-section">
+        <div className="partner-testimonial-quote-icon">&ldquo;</div>
+        <blockquote className="partner-testimonial-quote">{t('partner.testimonial.quote')}</blockquote>
+        <div className="partner-testimonial-company">
+          <span style={{ color: '#5b6be1', fontWeight: 700, fontSize: '1.08em', verticalAlign: 'middle', marginRight: 6 }}>▇</span>
+          {t('partner.testimonial.company')}
+        </div>
+        <div className="partner-testimonial-author">{t('partner.testimonial.author')}</div>
+      </section>
     </>
   );
 }

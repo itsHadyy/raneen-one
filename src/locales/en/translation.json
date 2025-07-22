@@ -470,6 +470,11 @@
     },
     "privacy": "Raneen One is committed to your privacy. We use the information you provide to us to contact you about our relevant content, products, and services. You may unsubscribe from these communications at any time.",
     "consent": "I consent to marketing communications from Raneen One.",
-    "submit": "Submit"
+    "submit": "Submit",
+    "testimonial": {
+      "quote": "“This partnership can help unlock revenue opportunities for retailers, ecommerce and media companies,” said Edwin Fu, Founder and CEO of Placements.io. “By bringing together two powerful platforms, retailers can achieve their goals with greater accuracy and efficiency.”",
+      "company": "Placements.io",
+      "author": "Edwin Fu, Founder and CEO"
+    }
   }
 } 
